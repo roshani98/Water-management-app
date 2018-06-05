@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.application.watermeter.add_user_data">
+
+    <EditText
+        android:id="@+id/add_user_data_username"
+        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/layout_round"
+        android:ems="10"
+        android:hint="Enter your Flat number"
+        android:textColorHint="@android:color/white"
+        android:padding="5dp"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/add_data"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_round"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        android:text="Add" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/round"
+        android:layout_below="@+id/add_user_data_username"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:layout_toRightOf="@id/sdate"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+        android:id="@+id/sdate"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        android:textColor="#569adf"
+        android:layout_toRightOf="@+id/date"
+        android:padding="5dp"
+        android:textSize="25dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="DATE : "
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="#569adf"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Water meter reading"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/add_user_data_username"
+        android:layout_marginTop="40dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/add_user_data_username"
+        android:padding="5dp"
+        android:layout_marginTop="70dp">
+
+    <NumberPicker
+        android:id="@+id/meter1"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0">
+    </NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/meter2"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/meter1"
+        android:background="#E0E0E0">
+    </NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/meter3"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/meter2"
+        android:background="#E0E0E0">
+    </NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/meter4"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/meter3"
+        android:background="#E0E0E0">
+    </NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/meter5"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/meter4"
+        android:background="#E0E0E0">
+    </NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/meter6"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/meter5"
+        android:background="#E0E0E0">
+    </NumberPicker>
+
+        <NumberPicker
+            android:id="@+id/meter7"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/meter6"
+            android:background="#FF8A65">
+        </NumberPicker>
+
+        <NumberPicker
+            android:id="@+id/meter8"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/meter7"
+            android:background="#FF8A65">
+        </NumberPicker>
+
+        <NumberPicker
+            android:id="@+id/meter9"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/meter8"
+            android:background="#FF8A65">
+        </NumberPicker>
+
+    </RelativeLayout>
+</RelativeLayout>

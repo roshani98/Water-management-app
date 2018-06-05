@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.application.watermeter.EnterSocietyDetails">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:hint="Enter cost per unit"
+        android:background="@drawable/up"
+        android:textColorHint="@android:color/white"
+        android:padding="5dp"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter amount of discount"
+        android:background="@drawable/down"
+        android:textColorHint="@android:color/white"
+        android:padding="5dp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="DONE"
+        android:background="@drawable/button_round"
+        android:textColor="@android:color/white"
+        android:inputType="number"/>
+
+    <RadioGroup
+        android:id="@+id/pricing_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/fixed"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Fixed Costing"
+            android:background="@drawable/up"/>
+
+        <RadioButton
+            android:id="@+id/variable"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Fixed + Variable Costing"
+            android:background="@drawable/down"/>
+    </RadioGroup>
+
+</RelativeLayout>
