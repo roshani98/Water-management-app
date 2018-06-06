@@ -16,6 +16,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.ParseException;
+import java.util.Date;
+
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,6 +33,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.*;
 
 public class add_user_data extends AppCompatActivity {
 
@@ -130,7 +134,7 @@ public class add_user_data extends AppCompatActivity {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-                String myFormat = "MMMM dd , yyyy"; //In which you need put here
+                String myFormat = "dd MM yy"; //In which you need put here
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
@@ -183,31 +187,41 @@ public class add_user_data extends AppCompatActivity {
                 String date = selectDate.getText().toString().trim();
 //                String date = add_user_data_date.getSelectedItem().toString();
 
+//                String month = "";
+//                date = String.valueOf(date.charAt(0)) + date.charAt(1);
+//                String day = "";
+//                day = String.valueOf(date.charAt(2)) + date.charAt(3);
+//                String year = "";
+//                year = String.valueOf(date.charAt(4)) + date.charAt(5);
+//
+//                date = "";
+//
+//                date = day + " " + month + " " + year;
 
                 String reading = "";
                 reading = reading + numberPicker1.getValue() + numberPicker2.getValue() + numberPicker3.getValue() + numberPicker4.getValue() + numberPicker5.getValue() + numberPicker6.getValue() + "." + numberPicker7.getValue() + numberPicker8.getValue() + numberPicker9.getValue();
 
                 float read = Float.valueOf(reading);
 
-                if(date.equals("1")){
-                    date = "01";
-                }else if(date.equals("2")){
-                    date = "02";
-                }else if(date.equals("3")){
-                    date = "03";
-                }else if(date.equals("4")){
-                    date = "04";
-                }else if(date.equals("5")){
-                    date = "05";
-                }else if(date.equals("6")){
-                    date = "06";
-                }else if(date.equals("7")){
-                    date = "07";
-                }else if(date.equals("8")){
-                    date = "08";
-                }else if(date.equals("9")){
-                    date = "09";
-                }
+//                if(date.equals("1")){
+//                    date = "01";
+//                }else if(date.equals("2")){
+//                    date = "02";
+//                }else if(date.equals("3")){
+//                    date = "03";
+//                }else if(date.equals("4")){
+//                    date = "04";
+//                }else if(date.equals("5")){
+//                    date = "05";
+//                }else if(date.equals("6")){
+//                    date = "06";
+//                }else if(date.equals("7")){
+//                    date = "07";
+//                }else if(date.equals("8")){
+//                    date = "08";
+//                }else if(date.equals("9")){
+//                    date = "09";
+//                }
 
 //                if(month.equals("January")){
 //                    month = "01";
@@ -341,19 +355,19 @@ public class add_user_data extends AppCompatActivity {
 
                         //Toast.makeText(getApplicationContext(), reading0, Toast.LENGTH_LONG).show();
 
-                        String date0 = map.get("Date0").toString();
-                        String date1 = map.get("Date1").toString();
-                        String date2 = map.get("Date2").toString();
-                        String date3 = map.get("Date3").toString();
-                        String date4 = map.get("Date4").toString();
-                        String date5 = map.get("Date5").toString();
-                        String date6 = map.get("Date6").toString();
-                        String date7 = map.get("Date7").toString();
-                        String date8 = map.get("Date8").toString();
-                        String date9 = map.get("Date9").toString();
-                        String date10 = map.get("Date10").toString();
-                        String date11 = map.get("Date11").toString();
-                        String date12 = map.get("Date12").toString();
+                        String date0 = map.get("Date0").toString().trim();
+                        String date1 = map.get("Date1").toString().trim();
+                        String date2 = map.get("Date2").toString().trim();
+                        String date3 = map.get("Date3").toString().trim();
+                        String date4 = map.get("Date4").toString().trim();
+                        String date5 = map.get("Date5").toString().trim();
+                        String date6 = map.get("Date6").toString().trim();
+                        String date7 = map.get("Date7").toString().trim();
+                        String date8 = map.get("Date8").toString().trim();
+                        String date9 = map.get("Date9").toString().trim();
+                        String date10 = map.get("Date10").toString().trim();
+                        String date11 = map.get("Date11").toString().trim();
+                        String date12 = map.get("Date12").toString().trim();
 
                         String amount0 = map.get("Amount0").toString();
                         String amount1 = map.get("Amount1").toString();
@@ -373,32 +387,243 @@ public class add_user_data extends AppCompatActivity {
                         String method = map.get("Method").toString();
                         Float reading_in_float = Float.parseFloat(reading);
                         Float discount_in_float = Float.parseFloat(discount);
-                        reading_in_float = reading_in_float - discount_in_float;
+                        //reading_in_float = reading_in_float - discount_in_float;
                         Float previous_reading;
                         Float ans = null;
                         Float cost_in_float = Float.parseFloat(cost);
                         Float finalamount_in_float = Float.parseFloat(finalamount);
-                        if(reading0.equals("0")) {
-                            reading0 = reading;
-                            date0 = date;
-                            amount0 = "0";
-                        }else if(reading1.equals("0")){
-                            reading1 = reading;
-                            previous_reading = Float.parseFloat(reading0);
-                            date1 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount1 = String.valueOf(ans);
 
+                        String month = "";
+                        month = String.valueOf(date.charAt(3)) + date.charAt(4);
+
+                       // Toast.makeText(getApplicationContext(),date0,Toast.LENGTH_LONG).show();
+
+                        boolean a;
+                        int f=0;
+                        int g=0;
+                        a = check(date0,month);
+                        if(a==true){
+                            float one = Float.parseFloat(reading0);
+                            float two = Float.parseFloat(reading);
+                            if(two>one){
+                                reading0 = "0";
+                                finalamount_in_float -= Float.parseFloat(amount0);
+                            }else{
+                                reading0 = reading;
+                                g=1;
                             }
-                        }else if(reading2.equals("0")){
-                            reading2 = reading;
-                            previous_reading = Float.parseFloat(reading1);
-                            date2 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount2 = String.valueOf(ans);
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date1, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading1);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading1 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount1);
+                                }else{
+                                    reading1 = reading;
+                                    g=1;
+                                }
                             }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date2, month);
+                            float one = Float.parseFloat(reading2);
+                            float two = Float.parseFloat(reading);
+                            if(two>one){
+                                reading2 = "0";
+                                finalamount_in_float -= Float.parseFloat(amount2);
+                            }else{
+                                reading2 = reading;
+                                g=1;
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date3, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading3);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading3 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount3);
+                                }else{
+                                    reading3 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date4, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading4);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading4 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount4);
+                                }else{
+                                    reading4 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date5, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading5);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading5 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount5);
+                                }else{
+                                    reading5 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date6, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading6);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading6 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount6);
+                                }else{
+                                    reading6 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date7, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading7);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading7 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount7);
+                                }else{
+                                    reading7 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date8, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading8);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading8 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount8);
+                                }else{
+                                    reading8 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date9, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading9);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading9 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount9);
+                                }else{
+                                    reading9 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date10, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading10);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading10 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount10);
+                                }else{
+                                    reading10 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date11, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading11);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading11 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount11);
+                                }else{
+                                    reading11 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+                        if(f==0) {
+                            a = check(date12, month);
+                            if (a == true) {
+                                float one = Float.parseFloat(reading12);
+                                float two = Float.parseFloat(reading);
+                                if(two>one){
+                                    reading12 = "0";
+                                    finalamount_in_float -= Float.parseFloat(amount12);
+                                }else{
+                                    reading12 = reading;
+                                    g=1;
+                                }
+                            }
+                            f=1;
+                        }
+
+                        if(g==0) {
+                            if (reading0.equals("0")) {
+                                reading0 = reading;
+                                date0 = date;
+                                amount0 = "0";
+                            } else if (reading1.equals("0")) {
+                                reading1 = reading;
+                                previous_reading = Float.parseFloat(reading0);
+                                date1 = date;
+                                try {
+                                    reading_in_float = discounted(date1, date0, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount1 = String.valueOf(ans);
+                                }
+                            } else if (reading2.equals("0")) {
+                                reading2 = reading;
+                                previous_reading = Float.parseFloat(reading1);
+                                date2 = date;
+                                try {
+                                    reading_in_float = discounted(date2, date1, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount2 = String.valueOf(ans);
+                                }
 //                            reading2 = reading;
 //                            date2 = date;
 //                            Float a = Float.parseFloat(reading1);
@@ -409,14 +634,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading3.equals("0")){
-                            reading3 = reading;
-                            previous_reading = Float.parseFloat(reading2);
-                            date3 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount3 = String.valueOf(ans);
-                            }
+                            } else if (reading3.equals("0")) {
+                                reading3 = reading;
+                                previous_reading = Float.parseFloat(reading2);
+                                date3 = date;
+                                try {
+                                    reading_in_float = discounted(date3, date2, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount3 = String.valueOf(ans);
+                                }
 //                            reading3 = reading;
 //                            date3 = date;
 //                            Float a = Float.parseFloat(reading2);
@@ -427,14 +657,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading4.equals("0")){
-                            reading4 = reading;
-                            previous_reading = Float.parseFloat(reading3);
-                            date4 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount4 = String.valueOf(ans);
-                            }
+                            } else if (reading4.equals("0")) {
+                                reading4 = reading;
+                                previous_reading = Float.parseFloat(reading3);
+                                date4 = date;
+                                try {
+                                    reading_in_float = discounted(date4, date3, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount4 = String.valueOf(ans);
+                                }
 //                            reading4 = reading;
 //                            date4 = date;
 //                            Float a = Float.parseFloat(reading3);
@@ -445,15 +680,20 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading5.equals("0")){
-                            reading5 = reading;
-                            previous_reading = Float.parseFloat(reading4);
-                            date5 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount5 = String.valueOf(ans);
-                            }
-                            //reading5 = reading;
+                            } else if (reading5.equals("0")) {
+                                reading5 = reading;
+                                previous_reading = Float.parseFloat(reading4);
+                                date5 = date;
+                                try {
+                                    reading_in_float = discounted(date5, date4, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount5 = String.valueOf(ans);
+                                }
+                                //reading5 = reading;
 //                            date5 = date;
 //                            Float a = Float.parseFloat(reading4);
 //                            Float b = Float.parseFloat(reading5);
@@ -463,14 +703,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading6.equals("0")){
-                            reading6 = reading;
-                            previous_reading = Float.parseFloat(reading5);
-                            date6 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount6 = String.valueOf(ans);
-                            }
+                            } else if (reading6.equals("0")) {
+                                reading6 = reading;
+                                previous_reading = Float.parseFloat(reading5);
+                                date6 = date;
+                                try {
+                                    reading_in_float = discounted(date6, date5, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount6 = String.valueOf(ans);
+                                }
 //                            reading6 = reading;
 //                            date6 = date;
 //                            Float a = Float.parseFloat(reading5);
@@ -481,14 +726,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading7.equals("0")){
-                            reading7 = reading;
-                            previous_reading = Float.parseFloat(reading6);
-                            date7 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount7 = String.valueOf(ans);
-                            }
+                            } else if (reading7.equals("0")) {
+                                reading7 = reading;
+                                previous_reading = Float.parseFloat(reading6);
+                                date7 = date;
+                                try {
+                                    reading_in_float = discounted(date7, date6, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount7 = String.valueOf(ans);
+                                }
 //                            reading7 = reading;
 //                            date7 = date;
 //                            Float a = Float.parseFloat(reading6);
@@ -499,14 +749,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading8.equals("0")){
-                            reading8 = reading;
-                            previous_reading = Float.parseFloat(reading7);
-                            date8 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount8 = String.valueOf(ans);
-                            }
+                            } else if (reading8.equals("0")) {
+                                reading8 = reading;
+                                previous_reading = Float.parseFloat(reading7);
+                                date8 = date;
+                                try {
+                                    reading_in_float = discounted(date8, date7, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount8 = String.valueOf(ans);
+                                }
 //                            reading8 = reading;
 //                            date8 = date;
 //                            Float a = Float.parseFloat(reading7);
@@ -517,14 +772,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading9.equals("0")){
-                            reading9 = reading;
-                            previous_reading = Float.parseFloat(reading8);
-                            date9 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount9 = String.valueOf(ans);
-                            }
+                            } else if (reading9.equals("0")) {
+                                reading9 = reading;
+                                previous_reading = Float.parseFloat(reading8);
+                                date9 = date;
+                                try {
+                                    reading_in_float = discounted(date9, date8, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount9 = String.valueOf(ans);
+                                }
 //                            reading9 = reading;
 //                            date9 = date;
 //                            Float a = Float.parseFloat(reading8);
@@ -535,14 +795,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading10.equals("0")){
-                            reading10 = reading;
-                            previous_reading = Float.parseFloat(reading9);
-                            date10 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount10 = String.valueOf(ans);
-                            }
+                            } else if (reading10.equals("0")) {
+                                reading10 = reading;
+                                previous_reading = Float.parseFloat(reading9);
+                                date10 = date;
+                                try {
+                                    reading_in_float = discounted(date10, date11, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount10 = String.valueOf(ans);
+                                }
 //                            reading10 = reading;
 //                            date10 = date;
 //                            Float a = Float.parseFloat(reading9);
@@ -553,14 +818,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading11.equals("0")){
-                            reading11 = reading;
-                            previous_reading = Float.parseFloat(reading10);
-                            date11 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount11 = String.valueOf(ans);
-                            }
+                            } else if (reading11.equals("0")) {
+                                reading11 = reading;
+                                previous_reading = Float.parseFloat(reading10);
+                                date11 = date;
+                                try {
+                                    reading_in_float = discounted(date11, date12, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount11 = String.valueOf(ans);
+                                }
 //                            reading11 = reading;
 //                            date11 = date;
 //                            Float a = Float.parseFloat(reading10);
@@ -571,14 +841,19 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else if(reading12.equals("0")){
-                            reading12 = reading;
-                            previous_reading = Float.parseFloat(reading11);
-                            date12 = date;
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            if(ans>0) {
-                                amount12 = String.valueOf(ans);
-                            }
+                            } else if (reading12.equals("0")) {
+                                reading12 = reading;
+                                previous_reading = Float.parseFloat(reading11);
+                                date12 = date;
+                                try {
+                                    reading_in_float = discounted(date12, date11, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                if (ans > 0) {
+                                    amount12 = String.valueOf(ans);
+                                }
 //                            reading12 = reading;
 //                            date12 = date;
 //                            Float a = Float.parseFloat(reading11);
@@ -589,58 +864,65 @@ public class add_user_data extends AppCompatActivity {
 //                            }else{
 //                                difference = "0";
 //                            }
-                        }else{
-                            reading0 = reading1;
-                            reading1 = reading2;
-                            reading2 = reading3;
-                            reading3 = reading4;
-                            reading4 = reading5;
-                            reading5 = reading6;
-                            reading6 = reading7;
-                            reading7 = reading8;
-                            reading8 = reading9;
-                            reading9 = reading10;
-                            reading10 = reading11;
-                            reading11 = reading12;
-                            reading12 = reading;
-                            date0 = date1;
-                            date1 = date2;
-                            date2 = date3;
-                            date3 = date4;
-                            date4 = date5;
-                            date5 = date6;
-                            date6 = date7;
-                            date7 = date8;
-                            date8 = date9;
-                            date9 = date10;
-                            date10 = date11;
-                            date11 = date12;
-                            date12 = date;
-                            previous_reading = Float.parseFloat(reading11);
-                            ans = (reading_in_float - previous_reading )*(cost_in_float);
-                            finalamount_in_float = finalamount_in_float - Float.parseFloat(amount0);
-                            amount0 = amount1;
-                            amount1 = amount2;
-                            amount2 = amount3;
-                            amount3 = amount4;
-                            amount4 = amount5;
-                            amount5 = amount6;
-                            amount6 = amount7;
-                            amount7 = amount8;
-                            amount8 = amount9;
-                            amount9 = amount10;
-                            amount10 = amount11;
-                            amount11 = amount12;
-                            if(ans>0) {
-                                amount12 = String.valueOf(ans);
-                            }else{
-                                amount12 = "0";
+                            } else {
+                                reading0 = reading1;
+                                reading1 = reading2;
+                                reading2 = reading3;
+                                reading3 = reading4;
+                                reading4 = reading5;
+                                reading5 = reading6;
+                                reading6 = reading7;
+                                reading7 = reading8;
+                                reading8 = reading9;
+                                reading9 = reading10;
+                                reading10 = reading11;
+                                reading11 = reading12;
+                                reading12 = reading;
+                                date0 = date1;
+                                date1 = date2;
+                                date2 = date3;
+                                date3 = date4;
+                                date4 = date5;
+                                date5 = date6;
+                                date6 = date7;
+                                date7 = date8;
+                                date8 = date9;
+                                date9 = date10;
+                                date10 = date11;
+                                date11 = date12;
+                                date12 = date;
+                                previous_reading = Float.parseFloat(reading11);
+                                try {
+                                    reading_in_float = discounted(date12, date11, discount_in_float, reading_in_float);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                ans = (reading_in_float - previous_reading) * (cost_in_float);
+                                finalamount_in_float = finalamount_in_float - Float.parseFloat(amount0);
+                                amount0 = amount1;
+                                amount1 = amount2;
+                                amount2 = amount3;
+                                amount3 = amount4;
+                                amount4 = amount5;
+                                amount5 = amount6;
+                                amount6 = amount7;
+                                amount7 = amount8;
+                                amount8 = amount9;
+                                amount9 = amount10;
+                                amount10 = amount11;
+                                amount11 = amount12;
+                                if (ans > 0) {
+                                    amount12 = String.valueOf(ans);
+                                } else {
+                                    amount12 = "0";
+                                }
                             }
                         }
-                        if(ans>0){
-                            finalamount_in_float = finalamount_in_float + ans;
-                            final_amount = String.valueOf(finalamount_in_float);
-                        }
+                            if (ans != null && ans > 0) {
+                                finalamount_in_float += ans;
+                                final_amount = String.valueOf(finalamount_in_float);
+                            }
+
 //                        Float float_final_amount = Float.parseFloat(final_amount);
 //                        Float c = Float.parseFloat(difference);
 //                        Float float_cost = Float.parseFloat(cost);
@@ -754,5 +1036,27 @@ public class add_user_data extends AppCompatActivity {
                 Log.d( "error ",databaseError.toString());
             }
         });
+    }
+
+    public boolean check(String date0, String month){
+        if(!date0.equals("0")){
+            String months = "";
+            months = months + date0.charAt(3) + date0.charAt(4);
+            if(months.equals(month)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public float discounted(String date0 , String date1 , float discount , float reading) throws ParseException {
+//        int days = 0;
+        long days;
+        DateFormat format = new SimpleDateFormat("dd MM yy", Locale.ENGLISH);
+        Date one = format.parse(date0);
+        Date two = format.parse(date1);
+        days = one.getTime() - two.getTime();
+        reading = reading - (discount * days);
+        return reading;
     }
 }
