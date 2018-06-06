@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
+            "outputFile": "/Users/roshani/Documents/GitHub/Final/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
             "map": [
                 {
-                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/65456edfcc1f1aaa53690382322e8737/res/values-ms/values-ms.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fd9b2eec64167b8c3fb06777c1c111e2/res/values-ms/values-ms.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/679289448e1987205b1896adaa004d4d/res/values-ms/values.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/d885ae93329d0821e348455ffc6d4c19/res/values-ms/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/b73092e3590e0d9cd92779e2120cc5ca/res/values-ms/values.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/2fcb6d271a2d56ddf131c229fd9bd5df/res/values-ms/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
