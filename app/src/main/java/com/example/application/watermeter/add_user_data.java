@@ -180,23 +180,8 @@ public class add_user_data extends AppCompatActivity {
             public void onClick(View v) {
 
                 String username = add_user_data_username.getText().toString();
-                //String reading = add_user_data_reading.getText().toString();
-
-//                String month = add_user_data_month.getSelectedItem().toString();
 
                 String date = selectDate.getText().toString().trim();
-//                String date = add_user_data_date.getSelectedItem().toString();
-
-//                String month = "";
-//                date = String.valueOf(date.charAt(0)) + date.charAt(1);
-//                String day = "";
-//                day = String.valueOf(date.charAt(2)) + date.charAt(3);
-//                String year = "";
-//                year = String.valueOf(date.charAt(4)) + date.charAt(5);
-//
-//                date = "";
-//
-//                date = day + " " + month + " " + year;
 
                 String reading = "";
                 reading = reading + numberPicker1.getValue() + numberPicker2.getValue() + numberPicker3.getValue() + numberPicker4.getValue() + numberPicker5.getValue() + numberPicker6.getValue() + "." + numberPicker7.getValue() + numberPicker8.getValue() + numberPicker9.getValue();

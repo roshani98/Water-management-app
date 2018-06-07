@@ -42,17 +42,10 @@ public class admin_signup extends AppCompatActivity {
     private EditText admin_signup_password;
     private EditText admin_signup_password_2;
     private Button admin_signup_submit;
-
-    //    private RadioGroup pricing_method;
     private RadioButton radioButton;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
-
-//    private ArrayAdapter<CharSequence> methods;
-//    private EditText cost;
-//    private EditText discount;
-//    private Spinner method;
 
     private TextView usernames;
 
@@ -73,16 +66,8 @@ public class admin_signup extends AppCompatActivity {
         admin_signup_area = (EditText) findViewById(R.id.admin_signup_area);
         admin_signup_city = (Spinner) findViewById(R.id.admin_signup_city);
         admin_signup_pincode = (EditText) findViewById(R.id.admin_signup_pincode);
-
-//        pricing_method = (RadioGroup) findViewById(R.id.pricing_method);
-
-
         usernames = (TextView)findViewById(R.id.username);
 
-//        method = (Spinner)findViewById(R.id.method);
-//        methods = ArrayAdapter.createFromResource(this,R.array.Methods,android.R.layout.simple_spinner_item);
-//        methods.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        method.setAdapter(methods);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         myDatabase = FirebaseDatabase.getInstance().getReference();
@@ -140,17 +125,6 @@ public class admin_signup extends AppCompatActivity {
                 final String area = admin_signup_area.getText().toString().trim();
                 final String pincode = admin_signup_pincode.getText().toString().trim();
                 final String password_2 = admin_signup_password_2.getText().toString().trim();
-//                final String pricing = ((RadioButton) findViewById(pricing_method.getCheckedRadioButtonId())).getText().toString().trim();
-
-//                final String costs = cost.getText().toString().trim();
-//                final String discounts = discount.getText().toString().trim();
-
-
-
-//                if(TextUtils.isEmpty(username[0])) {
-//                    Toast.makeText(admin_signup.this,"Please enter your username",Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
 
                 if(TextUtils.isEmpty(city)){
                     Toast.makeText(admin_signup.this,"Please enter the name of your city",Toast.LENGTH_SHORT).show();
@@ -163,7 +137,7 @@ public class admin_signup extends AppCompatActivity {
                 }
 
                 if(pincode.isEmpty() || pincode.length() != 6){
-                    Toast.makeText(admin_signup.this,"The pincode must of 6 digits.",Toast.LENGTH_SHORT).show();
+                    admin_signup_pincode.setError("The pincode must of 6 digits");
                     return;
                 }
 

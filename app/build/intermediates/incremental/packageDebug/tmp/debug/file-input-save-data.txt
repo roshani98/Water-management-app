@@ -1,11 +1,7 @@
 #Internal package file, do not edit.
-#Wed Jun 06 18:15:52 IST 2018
-1.base=/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/26
+#Wed Jun 06 19:57:52 IST 2018
 0.baseType=DIRECTORY
-1.baseType=DIRECTORY
-count=2
-1.set=DEX
+0.base=/Users/roshani/Documents/GitHub/Final/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/0
 0.path=classes.dex
 0.set=DEX
-0.base=/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/27
-1.path=classes.dex
+count=1
