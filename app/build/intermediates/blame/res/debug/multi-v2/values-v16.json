@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/roshani/Documents/GitHub/Final/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fd9b2eec64167b8c3fb06777c1c111e2/res/values-v16/values-v16.xml",
+                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/55e4233a5d38f4d0ae9ec4b991c4c13f/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a5b54ee1675e5b6adab12b1bcf66306c/res/values-v16/values-v16.xml",
+                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7a76462ca9f2b718510a1d4c34458b71/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
