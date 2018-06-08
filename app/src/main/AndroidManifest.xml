@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.application.watermeter">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +28,8 @@
         <activity android:name=".user_logged_in" />
         <activity android:name=".user_change_password" />
         <activity android:name=".EnterSocietyDetails" />
-        <activity android:name=".bill"></activity>
+        <activity android:name=".bill" />
+        <activity android:name=".admin_change_details"></activity>
     </application>
 
 </manifest>

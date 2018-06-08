@@ -400,7 +400,7 @@
         <item>Udupi </item>
         <item>Ujjain </item>
         <item>Unnao </item>
-            <item>Ujjain </item>>
+        <item>Ujjain </item>>
         <item>Vidisha </item>
         <item>Vadodra </item>
         <item>Valsad </item>
@@ -418,5 +418,5 @@
         <item>Yamunanagar </item>
         <item>Yelahanka </item>
     </string-array>
-            
+
 </resources>
