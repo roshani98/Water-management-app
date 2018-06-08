@@ -1,4 +1,13 @@
-#Tue Jun 05 19:24:44 IST 2018
-base.0=/Users/roshani/Documents/GitHub/Master/Water-Meter/app/build/intermediates/transforms/dexMerger/debug/0
+#Fri Jun 08 17:36:10 IST 2018
+path.3=classes.dex
+path.2=classes.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.3=/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/14
+base.2=/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/11
+base.1=/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/13
+base.0=/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/12

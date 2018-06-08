@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/roshani/Documents/GitHub/Master/Water-Meter/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fd9b2eec64167b8c3fb06777c1c111e2/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/55e4233a5d38f4d0ae9ec4b991c4c13f/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

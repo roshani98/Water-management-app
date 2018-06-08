@@ -2,169 +2,96 @@
 <instant-run
     abi="x86"
     api-level="23"
-    build-mode="FULL"
+    build-mode="COLD"
     density="420dpi"
     format="10"
-    plugin-version="3.1.1"
-    timestamp="1526288712914"
-    token="8183343259998719595"
-    verifier="FULL_BUILD_REQUESTED" >
+    ir-eligibility="COMPATIBLE"
+    plugin-version="3.1.3"
+    timestamp="1528459735854"
+    token="-8053799592131506758"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="663" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="69" />
     <task
         name="verifier"
-        duration="0" />
+        duration="21" />
 
     <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1526288712914"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1528459558585"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="METHOD_DELETED"
+        timestamp="1528459668073"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1528459735854"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/C:\Users\Abhin\AndroidStudioProjects\WaterMeter\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-Meter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 
