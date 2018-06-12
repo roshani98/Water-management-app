@@ -818,9 +818,10 @@ int drawable notification_template_icon_low_bg 0x7f080088
 int drawable notification_tile_bg 0x7f080089
 int drawable notify_panel_notification_icon_bg 0x7f08008a
 int drawable round 0x7f08008b
-int drawable tooltip_frame_dark 0x7f08008c
-int drawable tooltip_frame_light 0x7f08008d
-int drawable up 0x7f08008e
+int drawable round_text 0x7f08008c
+int drawable tooltip_frame_dark 0x7f08008d
+int drawable tooltip_frame_light 0x7f08008e
+int drawable up 0x7f08008f
 int id ALT 0x7f090000
 int id Admin 0x7f090001
 int id CTRL 0x7f090002

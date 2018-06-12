@@ -3579,9 +3579,10 @@ public final class R {
     public static final int notification_tile_bg=0x7f080089;
     public static final int notify_panel_notification_icon_bg=0x7f08008a;
     public static final int round=0x7f08008b;
-    public static final int tooltip_frame_dark=0x7f08008c;
-    public static final int tooltip_frame_light=0x7f08008d;
-    public static final int up=0x7f08008e;
+    public static final int round_text=0x7f08008c;
+    public static final int tooltip_frame_dark=0x7f08008d;
+    public static final int tooltip_frame_light=0x7f08008e;
+    public static final int up=0x7f08008f;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
