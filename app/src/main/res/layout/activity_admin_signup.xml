@@ -32,18 +32,18 @@
         android:padding="5dp"
         android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/admin_signup_area"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:background="#569adf"
-        android:ems="10"
-        android:hint="Enter your Area"
-        android:textColorHint="@android:color/white"
-        android:padding="5dp"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/admin_signup_area"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="#569adf"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Enter your Area"
+            android:textColorHint="@android:color/white"
+            android:padding="5dp"
+            android:inputType="textPersonName" />
 
     <Spinner
         android:id="@+id/admin_signup_city"

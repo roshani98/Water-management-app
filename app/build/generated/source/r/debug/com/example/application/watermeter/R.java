@@ -3924,6 +3924,7 @@ public final class R {
     public static final int ic_launcher_round=0x7f0c0002;
     public static final int icon=0x7f0c0003;
     public static final int icon1=0x7f0c0004;
+    public static final int info=0x7f0c0005;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0d0000;

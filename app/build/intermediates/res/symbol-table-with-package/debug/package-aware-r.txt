@@ -1156,6 +1156,7 @@ int mipmap ic_launcher_foreground 0x7f0c0001
 int mipmap ic_launcher_round 0x7f0c0002
 int mipmap icon 0x7f0c0003
 int mipmap icon1 0x7f0c0004
+int mipmap info 0x7f0c0005
 int string abc_action_bar_home_description 0x7f0d0000
 int string abc_action_bar_home_description_format 0x7f0d0001
 int string abc_action_bar_home_subtitle_description_format 0x7f0d0002
