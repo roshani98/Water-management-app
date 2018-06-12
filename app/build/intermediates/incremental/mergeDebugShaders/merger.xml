@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/debug/shaders"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="/Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/debug/shaders"/></dataSet></merger>
->>>>>>> upstream/master

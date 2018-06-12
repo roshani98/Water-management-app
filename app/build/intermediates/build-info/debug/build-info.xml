@@ -1,61 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
 <<<<<<< HEAD
-<<<<<<< HEAD
     abi="x86"
     api-level="23"
 =======
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="27"
 >>>>>>> 7a35966c7e2a6ef7f88ddea967d8e5a2eae59e0d
-=======
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="27"
->>>>>>> upstream/master
     build-mode="FULL"
     density="420dpi"
     format="10"
     plugin-version="3.1.3"
 <<<<<<< HEAD
-<<<<<<< HEAD
     timestamp="1528803237482"
 =======
     timestamp="1528802221040"
 >>>>>>> 7a35966c7e2a6ef7f88ddea967d8e5a2eae59e0d
-=======
-    timestamp="1528802221040"
->>>>>>> upstream/master
     token="-8053799592131506758"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
 <<<<<<< HEAD
-<<<<<<< HEAD
         duration="0" />
 =======
         duration="1363" />
 >>>>>>> 7a35966c7e2a6ef7f88ddea967d8e5a2eae59e0d
-=======
-        duration="1363" />
->>>>>>> upstream/master
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
 <<<<<<< HEAD
-<<<<<<< HEAD
         duration="0" />
-=======
-        duration="589" />
->>>>>>> upstream/master
     <task
         name="verifier"
-        duration="183" />
+        duration="0" />
 
     <artifact
-<<<<<<< HEAD
         location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
@@ -167,83 +149,11 @@
         location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-=======
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
->>>>>>> upstream/master
         location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-<<<<<<< HEAD
 <<<<<<< HEAD
         timestamp="1528803237482"
         verifier="FULL_BUILD_REQUESTED" >
@@ -351,80 +261,6 @@
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-=======
-        timestamp="1528802221040"
-        verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
->>>>>>> upstream/master
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
     </build>
