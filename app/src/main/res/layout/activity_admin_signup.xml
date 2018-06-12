@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.application.watermeter.admin_signup">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <Button
         android:id="@+id/admin_signup_submit"
         android:layout_width="200dp"
@@ -75,8 +78,9 @@
         android:background="#569adf"
         android:ems="10"
         android:hint="Username"
-        android:textSize="15dp"
+        android:textSize="18sp"
         android:textColorHint="@android:color/white"
+        android:gravity="center_vertical"
         android:padding="5dp"/>
 
     <android.support.design.widget.TextInputLayout
@@ -118,4 +122,5 @@
         android:backgroundTint="@android:color/transparent"/>
     </android.support.design.widget.TextInputLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

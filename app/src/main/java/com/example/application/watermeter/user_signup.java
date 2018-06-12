@@ -128,7 +128,7 @@ public class user_signup extends AppCompatActivity {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-                String myFormat = "MMMM dd , yyyy"; //In which you need put here
+                String myFormat = "dd MM yy"; //In which you need put here
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
@@ -172,6 +172,8 @@ public class user_signup extends AppCompatActivity {
                 final String username = user_flat.getText().toString().trim();
                 final String mobile = user_signup_mobile_number.getText().toString().trim();
                 final String date = selectDate.getText().toString().trim();
+
+
 
                 if(TextUtils.isEmpty(username)) {
                     Toast.makeText(user_signup.this,"Please enter the flat Number",Toast.LENGTH_SHORT).show();

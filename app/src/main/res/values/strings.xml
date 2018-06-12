@@ -57,8 +57,9 @@
     </string-array>
 
     <string-array name="city_names">
+        <item>Select your City</item>
         <item>Ambaji </item>
-        <item>Ayodhya Map</item>
+        <item>Ayodhya</item>
         <item>Abids </item>
         <item>Agra </item>
         <item>Ahmedabad </item>
@@ -400,7 +401,7 @@
         <item>Udupi </item>
         <item>Ujjain </item>
         <item>Unnao </item>
-            <item>Ujjain </item>>
+        <item>Ujjain </item>>
         <item>Vidisha </item>
         <item>Vadodra </item>
         <item>Valsad </item>
@@ -418,5 +419,5 @@
         <item>Yamunanagar </item>
         <item>Yelahanka </item>
     </string-array>
-            
+
 </resources>

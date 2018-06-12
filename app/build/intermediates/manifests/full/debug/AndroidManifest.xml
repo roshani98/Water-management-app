@@ -49,6 +49,7 @@
         <activity android:name="com.example.application.watermeter.user_change_password" />
         <activity android:name="com.example.application.watermeter.EnterSocietyDetails" />
         <activity android:name="com.example.application.watermeter.bill" />
+        <activity android:name="com.example.application.watermeter.admin_change_details" />
 
         <meta-data
             android:name="android.support.VERSION"

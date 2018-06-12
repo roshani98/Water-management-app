@@ -1,11 +1,23 @@
 package com.example.application.watermeter;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import static android.app.DownloadManager.*;
 
 public class admin_logged_in extends AppCompatActivity {
 
@@ -21,7 +33,6 @@ public class admin_logged_in extends AppCompatActivity {
     private String Username;
     private String City;
     private String username_password;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,8 +126,26 @@ public class admin_logged_in extends AppCompatActivity {
 //        String Username = intent.getStringExtra("Username");
 //        String City = intent.getStringExtra("City");
 //        String username_password = intent.getStringExtra("username_password");
-
         Intent i = new Intent(getApplicationContext(), add_user_data.class);
+        i.putExtra("Area",Area);
+        i.putExtra("Cost",Cost);
+        i.putExtra("Discount",Discount);
+        i.putExtra("Method",Method);
+        i.putExtra("Password",Password);
+        i.putExtra("Pincode",Pincode);
+        i.putExtra("Society",Society);
+        i.putExtra("Username",Username);
+        i.putExtra("City",City);
+        i.putExtra("username_password",username_password);
+//        i.putExtra("username", username);
+//        i.putExtra("password", password);
+//        i.putExtra("society",society);
+        startActivity(i);
+        finish();
+    }
+
+    public void change(View view){
+        Intent i = new Intent(getApplicationContext(), admin_change_details.class);
         i.putExtra("Area",Area);
         i.putExtra("Cost",Cost);
         i.putExtra("Discount",Discount);

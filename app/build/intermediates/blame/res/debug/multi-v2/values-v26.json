@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/roshani/Documents/GitHub/Master/Water-Meter/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fd9b2eec64167b8c3fb06777c1c111e2/res/values-v26/values-v26.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/03ccb950cd7786d974ff77c625b791ee/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ac49c82c632749c8c91b3d143b18184e/res/values-v26/values-v26.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f83acb3631cc7fca439be69f071e29ed/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
