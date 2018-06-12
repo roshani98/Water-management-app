@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"name":"main","index":16,"scopes":["SUB_PROJECTS","PROJECT","EXTERNAL_LIBRARIES"],"types":["DEX"],"format":"DIRECTORY","present":true}]
+=======
+[{"name":"main","index":0,"scopes":["PROJECT","SUB_PROJECTS","EXTERNAL_LIBRARIES"],"types":["DEX"],"format":"DIRECTORY","present":true}]
+>>>>>>> upstream/master

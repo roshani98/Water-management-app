@@ -1,9 +1,16 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+=======
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+>>>>>>> upstream/master
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/roshani/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/8402ce09fec64a48097a629c2e809038/AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f83acb3631cc7fca439be69f071e29ed/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/03ccb950cd7786d974ff77c625b791ee/AndroidManifest.xml:17:1-31:12
@@ -29,6 +36,7 @@ MERGED from [com.android.support:support-media-compat:26.1.0] /Users/roshani/.gr
 MERGED from [com.android.support:support-core-utils:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/8c571d48b7d626989b10828561e40674/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7be9ae85ef497d99184b04ffc6dbafa8/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/bfdac462ad806b932cd559b1c99f64c0/AndroidManifest.xml:17:1-30:12
+<<<<<<< HEAD
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
@@ -56,6 +64,35 @@ ADDED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src
 		ADDED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:6:22-78
 application
 ADDED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:8:5-33:19
+=======
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+	package
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:3:5-49
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:1-35:12
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:5:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:6:22-78
+application
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:8:5-33:19
+>>>>>>> upstream/master
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/roshani/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/8402ce09fec64a48097a629c2e809038/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/roshani/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/8402ce09fec64a48097a629c2e809038/AndroidManifest.xml:5:5-20
 MERGED from [com.android.support:design:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f83acb3631cc7fca439be69f071e29ed/AndroidManifest.xml:25:5-29:19
@@ -103,6 +140,7 @@ MERGED from [com.android.support:support-compat:26.1.0] /Users/roshani/.gradle/c
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/bfdac462ad806b932cd559b1c99f64c0/AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/bfdac462ad806b932cd559b1c99f64c0/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
+<<<<<<< HEAD
 		ADDED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
 		ADDED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml:11:9-41
@@ -176,6 +214,81 @@ uses-sdk
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml
+=======
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:11:9-41
+	android:roundIcon
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:10:9-37
+	android:allowBackup
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:14:9-40
+activity#com.example.application.watermeter.MainActivity
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:15:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:19:27-74
+activity#com.example.application.watermeter.admin_login
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:22:9-49
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:22:19-46
+activity#com.example.application.watermeter.user_login
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:23:9-48
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:23:19-45
+activity#com.example.application.watermeter.admin_logged_in
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:24:9-53
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:24:19-50
+activity#com.example.application.watermeter.admin_signup
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:25:9-50
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:25:19-47
+activity#com.example.application.watermeter.user_signup
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:26:9-49
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:26:19-46
+activity#com.example.application.watermeter.add_user_data
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:27:9-51
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:27:19-48
+activity#com.example.application.watermeter.user_logged_in
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:28:9-52
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:28:19-49
+activity#com.example.application.watermeter.user_change_password
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:29:9-58
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:29:19-55
+activity#com.example.application.watermeter.EnterSocietyDetails
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:30:9-57
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:30:19-54
+activity#com.example.application.watermeter.bill
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:31:9-42
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:31:19-39
+activity#com.example.application.watermeter.admin_change_details
+ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:32:9-67
+	android:name
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml:32:19-55
+uses-sdk
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+>>>>>>> upstream/master
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/roshani/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/8402ce09fec64a48097a629c2e809038/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/roshani/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/8402ce09fec64a48097a629c2e809038/AndroidManifest.xml:4:5-43
 MERGED from [com.android.support:design:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f83acb3631cc7fca439be69f071e29ed/AndroidManifest.xml:21:5-23:62
@@ -226,6 +339,7 @@ MERGED from [com.android.support:support-compat:26.1.0] /Users/roshani/.gradle/c
 MERGED from [com.android.support:support-compat:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7be9ae85ef497d99184b04ffc6dbafa8/AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/bfdac462ad806b932cd559b1c99f64c0/AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/bfdac462ad806b932cd559b1c99f64c0/AndroidManifest.xml:20:5-22:41
+<<<<<<< HEAD
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml
 INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
@@ -238,6 +352,20 @@ INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/
 		INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml
 		ADDED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/roshani/Documents/GitHub/Projects/Water-management-app/app/src/main/AndroidManifest.xml
+=======
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f83acb3631cc7fca439be69f071e29ed/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/roshani/Documents/GitHub/Master/Water-management-app/app/src/main/AndroidManifest.xml
+>>>>>>> upstream/master
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f83acb3631cc7fca439be69f071e29ed/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/03ccb950cd7786d974ff77c625b791ee/AndroidManifest.xml:26:9-28:38

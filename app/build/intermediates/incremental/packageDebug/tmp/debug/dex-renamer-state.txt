@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Tue Jun 12 17:36:56 IST 2018
 base.0=/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/16
+=======
+#Tue Jun 12 17:59:01 IST 2018
+base.0=/Users/roshani/Documents/GitHub/Master/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/0
+>>>>>>> upstream/master
 path.0=classes.dex
 renamed.0=classes.dex
