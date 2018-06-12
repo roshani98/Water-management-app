@@ -2072,8 +2072,9 @@
         <item>2017</item>
         <item>2018</item>
     </string-array><string-array name="city_names">
+        <item>Select your City</item>
         <item>Ambaji </item>
-        <item>Ayodhya Map</item>
+        <item>Ayodhya</item>
         <item>Abids </item>
         <item>Agra </item>
         <item>Ahmedabad </item>
