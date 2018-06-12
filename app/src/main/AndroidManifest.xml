@@ -29,7 +29,8 @@
         <activity android:name=".user_change_password" />
         <activity android:name=".EnterSocietyDetails" />
         <activity android:name=".bill" />
-        <activity android:name=".admin_change_details"></activity>
+        <activity android:name=".admin_change_details" />
+        <activity android:name=".admin_change_method"></activity>
     </application>
 
 </manifest>
