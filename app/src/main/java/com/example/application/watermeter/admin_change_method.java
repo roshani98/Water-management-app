@@ -68,6 +68,9 @@ public class admin_change_method extends AppCompatActivity {
 
         // String method = "2";
 
+        cost.setText(Cost);
+        discount.setText(Discount);
+
         pricing_method = (RadioGroup) findViewById(R.id.pricing_method);
         fixed = (RadioButton) findViewById(R.id.fixed);
         variable = (RadioButton) findViewById(R.id.variable);
