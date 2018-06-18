@@ -76,6 +76,9 @@ public class bill extends AppCompatActivity {
     private TextView after1;
 
     private TextView reading1;
+
+    private TextView cost1;
+
     private String Area;
     private String Cost;
     private String Discount;
@@ -86,14 +89,15 @@ public class bill extends AppCompatActivity {
     private String Username;
     private String City;
 
+    private String Date0;
+    private String Date1;
 
     EditText editText;
     Button button;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-    private String Date0;
-    private String Date1;
+
 
     private String Reading0;
 
@@ -104,12 +108,15 @@ public class bill extends AppCompatActivity {
 //        button = (Button) findViewById(R.id.button);
 
         month1 = (TextView) findViewById(R.id.textView4);
+        actual1 = (TextView) findViewById(R.id.textView5);
+        after1 = (TextView) findViewById(R.id.textView6);
+        cost1 = (TextView) findViewById(R.id.textView7);
+
         month2 = (TextView) findViewById(R.id.textView8);
         month3 = (TextView) findViewById(R.id.textView12);
         month4 = (TextView) findViewById(R.id.textView16);
 
-        actual1 = (TextView) findViewById(R.id.textView5);
-        after1 = (TextView) findViewById(R.id.textView6);
+
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
@@ -172,7 +179,7 @@ public class bill extends AppCompatActivity {
 
         Long reading0 = Long.valueOf(Reading0) - Long.valueOf(Discount);
         after1.setText(String.valueOf(reading0));
-
+        
 
         if(Date1.charAt(3) == '1' && Date1.charAt(2) == '0') {
             month2.setText("January");
