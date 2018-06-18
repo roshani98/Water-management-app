@@ -61,6 +61,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="500dp"
         android:background="@drawable/button_round"
+        android:onClick="change_method"
         android:padding="5dp"
         android:text="Change Pricing Method"
         android:textColor="@android:color/white" />

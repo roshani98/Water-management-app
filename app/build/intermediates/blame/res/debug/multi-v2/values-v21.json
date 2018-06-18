@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/roshani/Documents/GitHub/Master/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7be9ae85ef497d99184b04ffc6dbafa8/res/values-v21/values-v21.xml",

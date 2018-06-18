@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/roshani/Documents/GitHub/Master/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
+            "outputFile": "/Users/roshani/Documents/GitHub/Projects/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/935cf73b7856454cf8b5a298fd50bc1b/res/values-cs/values.xml",
