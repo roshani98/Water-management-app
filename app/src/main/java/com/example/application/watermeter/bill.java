@@ -179,9 +179,7 @@ public class bill extends AppCompatActivity {
 
         Long reading0 = Long.valueOf(Reading0) - Long.valueOf(Discount);
         after1.setText(String.valueOf(reading0));
-
-        cost1.setText(Cost);
-
+        
 
         if(Date1.charAt(3) == '1' && Date1.charAt(2) == '0') {
             month2.setText("January");
