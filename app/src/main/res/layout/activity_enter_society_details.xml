@@ -53,19 +53,40 @@
         android:padding="5dp"
         android:layout_centerHorizontal="true">
 
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/up">
         <RadioButton
             android:id="@+id/fixed"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Fixed Costing" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/info"
+            android:layout_gravity="center_vertical"
+            android:onClick="fixed"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:text="Fixed Costing"
-            android:background="@drawable/up"/>
-
+            android:background="@drawable/down">
         <RadioButton
             android:id="@+id/variable"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="50dp"
-            android:text="Fixed + Variable Costing"
-            android:background="@drawable/down"/>
+            android:text="Fixed + Variable Costing" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/info"
+                android:layout_gravity="center_vertical"
+                android:onClick="variable"/>
+        </LinearLayout>
     </RadioGroup>
 
 </RelativeLayout>

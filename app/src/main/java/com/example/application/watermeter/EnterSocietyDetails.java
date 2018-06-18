@@ -1,5 +1,7 @@
 package com.example.application.watermeter;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.sax.EndElementListener;
 import android.support.v7.app.AppCompatActivity;
@@ -169,4 +171,39 @@ public class EnterSocietyDetails extends AppCompatActivity {
             }
 
         });}
+
+    public void fixed(View view) {
+        AlertDialog.Builder helpBuilder = new AlertDialog.Builder(this);
+//        helpBuilder.setTitle("");
+        helpBuilder.setMessage("In this method of payment there is no discount given to the users.");
+        helpBuilder.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing but close the dialog
+                    }
+                });
+
+        // Remember, create doesn't show the dialog
+        AlertDialog helpDialog = helpBuilder.create();
+        helpDialog.show();
+    }
+
+    public void variable(View view) {
+        AlertDialog.Builder helpBuilder = new AlertDialog.Builder(this);
+//        helpBuilder.setTitle("Area");
+        helpBuilder.setMessage("In this method of pricing a certain discount of units of water is given to the user. " +
+                "The discount of units is given on a per day basis.");
+        helpBuilder.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing but close the dialog
+                    }
+                });
+
+        // Remember, create doesn't show the dialog
+        AlertDialog helpDialog = helpBuilder.create();
+        helpDialog.show();
+    }
 }

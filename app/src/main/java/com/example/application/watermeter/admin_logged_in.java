@@ -37,22 +37,7 @@ public class admin_logged_in extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_logged_in);
-//        change = (Button)findViewById(R.id.change);
-//        Intent intent = getIntent();
-//        String username = intent.getStringExtra("Username");
-//        String password = intent.getStringExtra("Password");
-//        String society = intent.getStringExtra("Society");
-//        String cost = intent.getStringExtra("Cost");
 
-//        admin_username = (TextView) findViewById(R.id.admin_username);
-//        admin_username.setText("Welcome to your dashboard\n");
-
-//        change.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
         Intent intent = getIntent();
         Area = intent.getStringExtra("Area");
         Cost = intent.getStringExtra("Cost");
@@ -68,28 +53,10 @@ public class admin_logged_in extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //super.activity();
-        //super.onBackPressed();
         finish();
     }
 
     public void choosen_add_user(View view) {
-
-//        Intent intent = getIntent();
-//        String Area = intent.getStringExtra("Area");
-//        String Cost = intent.getStringExtra("Cost");
-//        String Discount = intent.getStringExtra("Discount");
-//        String Method = intent.getStringExtra("Method");
-//        String Password = intent.getStringExtra("Password");
-//        String Pincode = intent.getStringExtra("Pincode");
-//        String Society = intent.getStringExtra("Society");
-//        String Username = intent.getStringExtra("Username");
-//        String City = intent.getStringExtra("City");
-//        String username_password = intent.getStringExtra("username_password");
-//        String username = intent.getStringExtra("username");
-//        String password = intent.getStringExtra("password");
-////      String society = intent.getStringExtra("society");
-//        String cost = intent.getStringExtra("cost");
 
         Intent i = new Intent(getApplicationContext(), user_signup.class);
         i.putExtra("Area",Area);
@@ -102,30 +69,12 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("Username",Username);
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
-//        i.putExtra("username", username);
-//        i.putExtra("password", password);
-//        i.putExtra("society",society);
-//        i.putExtra("cost",cost);
         startActivity(i);
         finish();
     }
 
     public void choosen_add_user_data(View view){
 
-//        Intent intent = getIntent();
-//        String username = intent.getStringExtra("username");
-//        String password = intent.getStringExtra("password");
-//        String society = intent.getStringExtra("society");
-//        String Area = intent.getStringExtra("Area");
-//        String Cost = intent.getStringExtra("Cost");
-//        String Discount = intent.getStringExtra("Discount");
-//        String Method = intent.getStringExtra("Method");
-//        String Password = intent.getStringExtra("Password");
-//        String Pincode = intent.getStringExtra("Pincode");
-//        String Society = intent.getStringExtra("Society");
-//        String Username = intent.getStringExtra("Username");
-//        String City = intent.getStringExtra("City");
-//        String username_password = intent.getStringExtra("username_password");
         Intent i = new Intent(getApplicationContext(), add_user_data.class);
         i.putExtra("Area",Area);
         i.putExtra("Cost",Cost);
@@ -137,9 +86,6 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("Username",Username);
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
-//        i.putExtra("username", username);
-//        i.putExtra("password", password);
-//        i.putExtra("society",society);
         startActivity(i);
         finish();
     }
@@ -156,9 +102,6 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("Username",Username);
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
-//        i.putExtra("username", username);
-//        i.putExtra("password", password);
-//        i.putExtra("society",society);
         startActivity(i);
         finish();
     }
