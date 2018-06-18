@@ -136,90 +136,90 @@ public class bill extends AppCompatActivity {
         Date1 = intent.getStringExtra("Date1");
         Reading0 = intent.getStringExtra("Reading0");
 
-        if(Date0.charAt(3) == '1' && Date0.charAt(2) == '0') {
+        if(Date0.charAt(4) == '1' && Date0.charAt(3) == '0') {
             month1.setText("January");
         }
-        else if (Date0.charAt(3) == '2' && Date0.charAt(2) == '0') {
+        else if (Date0.charAt(4) == '2' && Date0.charAt(3) == '0') {
             month1.setText("February");
         }
-        else if (Date0.charAt(3) == '3') {
+        else if (Date0.charAt(4) == '3') {
             month1.setText("March");
         }
-        else if (Date0.charAt(3) == '4') {
+        else if (Date0.charAt(4) == '4') {
             month1.setText("April");
         }
-        else if (Date0.charAt(3) == '5') {
+        else if (Date0.charAt(4) == '5') {
             month1.setText("May");
         }
-        else if (Date0.charAt(3) == '6') {
+        else if (Date0.charAt(4) == '6') {
             month1.setText("June");
         }
-        else if (Date0.charAt(3) == '7') {
+        else if (Date0.charAt(4) == '7') {
             month1.setText("July");
         }
-        else if (Date0.charAt(3) == '8') {
+        else if (Date0.charAt(4) == '8') {
             month1.setText("August");
         }
-        else if (Date0.charAt(3) == '9') {
+        else if (Date0.charAt(4) == '9') {
             month1.setText("September");
         }
-        else if (Date0.charAt(3) == '0') {
+        else if (Date0.charAt(4) == '0') {
             month1.setText("October");
         }
-        else if (Date0.charAt(3) == '1') {
+        else if (Date0.charAt(4) == '1') {
             month1.setText("November");
         }
-        else if (Date0.charAt(3) == '2') {
+        else if (Date0.charAt(4) == '2') {
             month1.setText("December");
         }
-        else if (Date0.charAt(2) == '0' && Date0.charAt(3) == '0') {
+        else if (Date0.charAt(3) == '0' && Date0.charAt(4) == '0') {
             month1.setText("");
         }
         actual1.setText(Reading0);
 
-        Long reading0 = Long.valueOf(Reading0) - Long.valueOf(Discount);
-        after1.setText(String.valueOf(reading0));
-        
+//        Long reading0 = Long.valueOf(Reading0) - Long.valueOf(Discount);
+//        after1.setText(String.valueOf(reading0));
 
-        if(Date1.charAt(3) == '1' && Date1.charAt(2) == '0') {
-            month2.setText("January");
-        }
-        else if (Date1.charAt(3) == '2' && Date1.charAt(2) == '0') {
-            month2.setText("February");
-        }
-        else if (Date1.charAt(3) == '3') {
-            month2.setText("March");
-        }
-        else if (Date1.charAt(3) == '4') {
-            month2.setText("April");
-        }
-        else if (Date1.charAt(3) == '5') {
-            month2.setText("May");
-        }
-        else if (Date1.charAt(3) == '6') {
-            month2.setText("June");
-        }
-        else if (Date1.charAt(3) == '7') {
-            month2.setText("July");
-        }
-        else if (Date1.charAt(3) == '8') {
-            month2.setText("August");
-        }
-        else if (Date1.charAt(3) == '9') {
-            month2.setText("September");
-        }
-        else if (Date1.charAt(3) == '0') {
-            month2.setText("October");
-        }
-        else if (Date1.charAt(3) == '1') {
-            month2.setText("November");
-        }
-        else if (Date1.charAt(3) == '2') {
-            month2.setText("December");
-        }
-        else if (Date1.charAt(2) == '0' && Date0.charAt(3) == '0') {
-            month2.setText("");
-        }
+
+//        if(Date1.charAt(3) == '1' && Date1.charAt(2) == '0') {
+//            month2.setText("January");
+//        }
+//        else if (Date1.charAt(3) == '2' && Date1.charAt(2) == '0') {
+//            month2.setText("February");
+//        }
+//        else if (Date1.charAt(3) == '3') {
+//            month2.setText("March");
+//        }
+//        else if (Date1.charAt(3) == '4') {
+//            month2.setText("April");
+//        }
+//        else if (Date1.charAt(3) == '5') {
+//            month2.setText("May");
+//        }
+//        else if (Date1.charAt(3) == '6') {
+//            month2.setText("June");
+//        }
+//        else if (Date1.charAt(3) == '7') {
+//            month2.setText("July");
+//        }
+//        else if (Date1.charAt(3) == '8') {
+//            month2.setText("August");
+//        }
+//        else if (Date1.charAt(3) == '9') {
+//            month2.setText("September");
+//        }
+//        else if (Date1.charAt(3) == '0') {
+//            month2.setText("October");
+//        }
+//        else if (Date1.charAt(3) == '1') {
+//            month2.setText("November");
+//        }
+//        else if (Date1.charAt(3) == '2') {
+//            month2.setText("December");
+//        }
+//        else if (Date1.charAt(2) == '0' && Date0.charAt(3) == '0') {
+//            month2.setText("");
+//        }
     }
 
 
