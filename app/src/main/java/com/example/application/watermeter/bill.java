@@ -335,26 +335,25 @@ public class bill extends AppCompatActivity {
     }
 
 
-    public void createPdf(View view) {
-
-        Document document = new Document();
-        String str = Environment.getExternalStorageDirectory() + "/myPdf.pdf";
-
-        try {
-            PdfWriter.getInstance(document,new FileOutputStream(str));
-            document.open();
-            document.add(new Paragraph(editText.getText().toString()));
-            document.setPageSize(PageSize.A4);
-            document.addCreationDate();
-            document.addAuthor("Android ");
-            document.addCreator("Roshani");
-            document.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        }
-    }
-
+//    public void createPdf(View view) {
+//
+//        Document document = new Document();
+//        String str = Environment.getExternalStorageDirectory() + "/myPdf.pdf";
+//
+//        try {
+//            PdfWriter.getInstance(document,new FileOutputStream(str));
+//            document.open();
+//            document.add(new Paragraph(editText.getText().toString()));
+//            document.setPageSize(PageSize.A4);
+//            document.addCreationDate();
+//            document.addAuthor("Android ");
+//            document.addCreator("Roshani");
+//            document.close();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (DocumentException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 }
