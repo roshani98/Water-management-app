@@ -72,8 +72,13 @@ public class bill extends AppCompatActivity {
 
     private TextView actual1;
     private TextView actual2;
+    private TextView actual3;
+    private TextView actual4;
 
     private TextView after1;
+    private TextView after2;
+    private TextView after3;
+    private TextView after4;
 
     private TextView reading1;
 
@@ -91,6 +96,8 @@ public class bill extends AppCompatActivity {
 
     private String Date0;
     private String Date1;
+    private String Date2;
+    private String Date3;
 
     EditText editText;
     Button button;
@@ -98,8 +105,10 @@ public class bill extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
 
-
     private String Reading0;
+    private String Reading1;
+    private String Reading2;
+    private String Reading3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,8 +122,16 @@ public class bill extends AppCompatActivity {
         cost1 = (TextView) findViewById(R.id.textView7);
 
         month2 = (TextView) findViewById(R.id.textView8);
+        actual2 = (TextView) findViewById(R.id.textView9);
+        after2 = (TextView) findViewById(R.id.textView10);
+
         month3 = (TextView) findViewById(R.id.textView12);
+        actual3 = (TextView) findViewById(R.id.textView13);
+        after3 = (TextView) findViewById(R.id.textView14);
+
         month4 = (TextView) findViewById(R.id.textView16);
+        actual4 = (TextView) findViewById(R.id.textView17);
+        after4 = (TextView) findViewById(R.id.textView18);
 
 
 
@@ -134,92 +151,187 @@ public class bill extends AppCompatActivity {
         City = intent.getStringExtra("City");
         Date0 = intent.getStringExtra("Date0");
         Date1 = intent.getStringExtra("Date1");
+        Date2 = intent.getStringExtra("Date2");
+        Date3 = intent.getStringExtra("Date3");
         Reading0 = intent.getStringExtra("Reading0");
+        Reading1 = intent.getStringExtra("Reading1");
+        Reading2 = intent.getStringExtra("Reading2");
+        Reading3 = intent.getStringExtra("Reading3");
 
-        if(Date0.charAt(4) == '1' && Date0.charAt(3) == '0') {
-            month1.setText("January");
-        }
-        else if (Date0.charAt(4) == '2' && Date0.charAt(3) == '0') {
-            month1.setText("February");
-        }
-        else if (Date0.charAt(4) == '3') {
-            month1.setText("March");
-        }
-        else if (Date0.charAt(4) == '4') {
-            month1.setText("April");
-        }
-        else if (Date0.charAt(4) == '5') {
-            month1.setText("May");
-        }
-        else if (Date0.charAt(4) == '6') {
-            month1.setText("June");
-        }
-        else if (Date0.charAt(4) == '7') {
-            month1.setText("July");
-        }
-        else if (Date0.charAt(4) == '8') {
-            month1.setText("August");
-        }
-        else if (Date0.charAt(4) == '9') {
-            month1.setText("September");
-        }
-        else if (Date0.charAt(4) == '0') {
-            month1.setText("October");
-        }
-        else if (Date0.charAt(4) == '1') {
-            month1.setText("November");
-        }
-        else if (Date0.charAt(4) == '2') {
-            month1.setText("December");
-        }
-        else if (Date0.charAt(3) == '0' && Date0.charAt(4) == '0') {
+        if (Date0.length() == 1)
+        {
             month1.setText("");
+            after1.setText("");
+            actual1.setText("");
         }
-        actual1.setText(Reading0);
+        else {
+            if (Date0.charAt(1) == '/') {
+                if (Date0.charAt(0) == '1') {
+                    month1.setText("January");
+                } else if (Date0.charAt(0) == '2') {
+                    month1.setText("February");
+                } else if (Date0.charAt(0) == '3') {
+                    month1.setText("March");
+                } else if (Date0.charAt(0) == '4') {
+                    month1.setText("April");
+                } else if (Date0.charAt(0) == '5') {
+                    month1.setText("May");
+                } else if (Date0.charAt(0) == '6') {
+                    month1.setText("June");
+                } else if (Date0.charAt(0) == '7') {
+                    month1.setText("July");
+                } else if (Date0.charAt(0) == '8') {
+                    month1.setText("August");
+                } else if (Date0.charAt(0) == '9') {
+                    month1.setText("September");
+                }
+            }
+                else if (Date0.charAt(1) == '0') {
+                    month1.setText("October");
+                } else if (Date0.charAt(1) == '1') {
+                    month1.setText("November");
+                } else if (Date0.charAt(1) == '2') {
+                    month1.setText("December");
+                }
+            Float reading = Float.valueOf(Reading0);
+            actual1.setText(String.valueOf(reading));
 
-//        Long reading0 = Long.valueOf(Reading0) - Long.valueOf(Discount);
-//        after1.setText(String.valueOf(reading0));
+            Float final_amt = reading - Float.valueOf(Discount);
+            after1.setText(String.valueOf(final_amt));
+        }
+
+//        Float cost = Float.valueOf(Cost) * final_amt;
+//        cost1.setText(String.valueOf(cost));
+
+// For month 2
+        if (Date1.length() == 1)
+        {
+            month2.setText("");
+            actual2.setText("");
+            after2.setText("");
+        }
+        else {
+            if (Date1.charAt(1) == '/') {
+                if (Date1.charAt(0) == '1') {
+                    month2.setText("January");
+                } else if (Date1.charAt(0) == '2') {
+                    month2.setText("February");
+                } else if (Date1.charAt(0) == '3') {
+                    month2.setText("March");
+                } else if (Date1.charAt(0) == '4') {
+                    month2.setText("April");
+                } else if (Date1.charAt(0) == '5') {
+                    month2.setText("May");
+                } else if (Date1.charAt(0) == '6') {
+                    month2.setText("June");
+                } else if (Date1.charAt(0) == '7') {
+                    month2.setText("July");
+                } else if (Date1.charAt(0) == '8') {
+                    month2.setText("August");
+                } else if (Date1.charAt(0) == '9') {
+                    month2.setText("September");
+                }
+            }
+                else if (Date1.charAt(1) == '0') {
+                    month2.setText("October");
+                } else if (Date1.charAt(1) == '1') {
+                    month2.setText("November");
+                } else if (Date1.charAt(1) == '2') {
+                    month2.setText("December");
+                }
+            Float reading = Float.valueOf(Reading1);
+            actual2.setText(String.valueOf(reading));
+
+            Float final_amt = reading - Float.valueOf(Discount);
+            after2.setText(String.valueOf(final_amt));
+        }
 
 
-//        if(Date1.charAt(3) == '1' && Date1.charAt(2) == '0') {
-//            month2.setText("January");
-//        }
-//        else if (Date1.charAt(3) == '2' && Date1.charAt(2) == '0') {
-//            month2.setText("February");
-//        }
-//        else if (Date1.charAt(3) == '3') {
-//            month2.setText("March");
-//        }
-//        else if (Date1.charAt(3) == '4') {
-//            month2.setText("April");
-//        }
-//        else if (Date1.charAt(3) == '5') {
-//            month2.setText("May");
-//        }
-//        else if (Date1.charAt(3) == '6') {
-//            month2.setText("June");
-//        }
-//        else if (Date1.charAt(3) == '7') {
-//            month2.setText("July");
-//        }
-//        else if (Date1.charAt(3) == '8') {
-//            month2.setText("August");
-//        }
-//        else if (Date1.charAt(3) == '9') {
-//            month2.setText("September");
-//        }
-//        else if (Date1.charAt(3) == '0') {
-//            month2.setText("October");
-//        }
-//        else if (Date1.charAt(3) == '1') {
-//            month2.setText("November");
-//        }
-//        else if (Date1.charAt(3) == '2') {
-//            month2.setText("December");
-//        }
-//        else if (Date1.charAt(2) == '0' && Date0.charAt(3) == '0') {
-//            month2.setText("");
-//        }
+        // For month 3
+
+        if (Date2.length() == 1)
+        {
+            month3.setText("");
+            actual3.setText("");
+            after3.setText("");
+        }
+        else {
+            if(Date2.charAt(1) == '/') {
+                if (Date2.charAt(0) == '1') {
+                    month3.setText("January");
+                } else if (Date2.charAt(0) == '2') {
+                    month3.setText("February");
+                } else if (Date2.charAt(0) == '3') {
+                    month3.setText("March");
+                } else if (Date2.charAt(0) == '4') {
+                    month3.setText("April");
+                } else if (Date2.charAt(0) == '5') {
+                    month3.setText("May");
+                } else if (Date2.charAt(0) == '6') {
+                    month3.setText("June");
+                } else if (Date2.charAt(0) == '7') {
+                    month3.setText("July");
+                } else if (Date2.charAt(0) == '8') {
+                    month3.setText("August");
+                } else if (Date2.charAt(0) == '9') {
+                    month3.setText("September");
+                }
+            }
+                else if (Date2.charAt(1) == '0') {
+                    month3.setText("October");
+                } else if (Date2.charAt(1) == '1') {
+                    month3.setText("November");
+                } else if (Date2.charAt(1) == '2') {
+                    month3.setText("December");
+                }
+            Float reading = Float.valueOf(Reading2);
+            actual3.setText(String.valueOf(reading));
+
+            Float final_amt = reading - Float.valueOf(Discount);
+            after3.setText(String.valueOf(final_amt));
+        }
+
+        if (Date3.length() == 1)
+        {
+            month4.setText("");
+            actual4.setText("");
+            after4.setText("");
+        }
+        else {
+            if(Date3.charAt(1) == '/') {
+                if (Date3.charAt(0) == '1') {
+                    month4.setText("January");
+                } else if (Date3.charAt(0) == '2') {
+                    month4.setText("February");
+                } else if (Date3.charAt(0) == '3') {
+                    month4.setText("March");
+                } else if (Date3.charAt(0) == '4') {
+                    month4.setText("April");
+                } else if (Date3.charAt(0) == '5') {
+                    month4.setText("May");
+                } else if (Date3.charAt(0) == '6') {
+                    month4.setText("June");
+                } else if (Date3.charAt(0) == '7') {
+                    month4.setText("July");
+                } else if (Date3.charAt(0) == '8') {
+                    month4.setText("August");
+                } else if (Date3.charAt(0) == '9') {
+                    month4.setText("September");
+                }
+            }
+                else if (Date3.charAt(1) == '0') {
+                    month3.setText("October");
+                } else if (Date3.charAt(1) == '1') {
+                    month3.setText("November");
+                } else if (Date3.charAt(1) == '2') {
+                    month3.setText("December");
+                }
+            Float reading = Float.valueOf(Reading3);
+            actual4.setText(String.valueOf(reading));
+
+            Float final_amt = reading - Float.valueOf(Discount);
+            after4.setText(String.valueOf(final_amt));
+        }
     }
 
 
