@@ -6,20 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.ParseException;
 import java.util.Date;
 
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,10 +27,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
-import java.util.*;
 
 public class add_user_data extends AppCompatActivity {
 
@@ -118,23 +113,18 @@ public class add_user_data extends AppCompatActivity {
         numberPicker9.setWrapSelectorWheel(true);
 
 
-//        numberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-//            @Override
-//            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
-//
-//            }
-//        });
-
         final Calendar myCalendar = Calendar.getInstance();
 
-        String currentDateTimeString = DateFormat.getDateInstance(DateFormat.LONG).format(new Date());
+        String currentDateTimeString = DateFormat.getDateInstance(DateFormat.SHORT).format(new Date());
 
         selectDate.setText(currentDateTimeString);
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-                String myFormat = "MM dd yy"; //In which you need put here
+
+                String myFormat = "MM dd yy"; //In which you need put herr
+
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
@@ -150,8 +140,6 @@ public class add_user_data extends AppCompatActivity {
             }
 
         };
-
-
 
 
         selectDate.setOnClickListener(new View.OnClickListener() {
@@ -271,8 +259,6 @@ public class add_user_data extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        startActivity(new Intent(this,admin_logged_in.class));
-//        //super.onBackPressed();
         finish();
     }
 

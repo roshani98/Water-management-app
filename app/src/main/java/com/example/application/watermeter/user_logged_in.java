@@ -133,46 +133,6 @@ public class user_logged_in extends AppCompatActivity {
         username_password = intent.getStringExtra("username_password");
         admin = intent.getStringExtra("Admin");
 
-//        username = intent.getStringExtra("username");
-//        password = intent.getStringExtra("password");
-//        String society = intent.getStringExtra("society");
-//        String username_password = intent.getStringExtra("username_password");
-//        String flat = intent.getStringExtra("flat");
-//        String cost = intent.getStringExtra("cost");
-//        String final_amount = intent.getStringExtra("final_amount");
-
-
-//        String reading0 = intent.getStringExtra("Reading0");
-//        String reading1 = intent.getStringExtra("Reading1");
-//        String reading2 = intent.getStringExtra("Reading2");
-//        String reading3 = intent.getStringExtra("Reading3");
-//        String reading4 = intent.getStringExtra("Reading4");
-//        String reading5 = intent.getStringExtra("Reading5");
-//        String reading6 = intent.getStringExtra("Reading6");
-//        String reading7 = intent.getStringExtra("Reading7");
-//        String reading8 = intent.getStringExtra("Reading8");
-//        String reading9 = intent.getStringExtra("Reading9");
-//        String reading10 = intent.getStringExtra("Reading10");
-//        String reading11 = intent.getStringExtra("Reading11");
-//        String reading12 = intent.getStringExtra("Reading12");
-//        String date0 = intent.getStringExtra("Date0");
-//        String date1 = intent.getStringExtra("Date1");
-//        String date2 = intent.getStringExtra("Date2");
-//        String date3 = intent.getStringExtra("Date3");
-//        String date4 = intent.getStringExtra("Date4");
-//        String date5 = intent.getStringExtra("Date5");
-//        String date6 = intent.getStringExtra("Date6");
-//        String date7 = intent.getStringExtra("Date7");
-//        String date8 = intent.getStringExtra("Date8");
-//        String date9 = intent.getStringExtra("Date9");
-//        String date10 = intent.getStringExtra("Date10");
-//        String date11 = intent.getStringExtra("Date11");
-//        String date12 = intent.getStringExtra("Date12");
-
-
-
-        //admin = intent.getStringExtra("admin");
-
         String info = "Hello " + Username + ", \n\n" ;
         info = info + "Society Name :\t \t \t " + Society + "\n\n";
         info = info + "Flat Number :\t \t \t " + Flat + "\n\n";
@@ -184,120 +144,11 @@ public class user_logged_in extends AppCompatActivity {
         String year = "";
 
         int a = 0;
-
-        if(!Reading0.equals("0")){
-            a++;
-            info = info + convert(a,Date0,Reading0,Amount0);
-        }
-        if(!Reading1.equals("0")){
-            a++;
-            info = info + convert(a,Date1,Reading1,Amount1);
-        }
-        if(!Reading2.equals("0")){
-            a++;
-            info = info + convert(a,Date2,Reading2,Amount2);
-        }
-        if(!Reading3.equals("0")){
-            a++;
-            info = info + convert(a,Date3,Reading3,Amount3);
-        }
-        if(!Reading4.equals("0")){
-            a++;
-            info = info + convert(a,Date4,Reading4,Amount4);
-        }
-        if(!Reading5.equals("0")){
-            a++;
-            info = info + convert(a,Date5,Reading5,Amount5);
-        }
-        if(!Reading6.equals("0")){
-            a++;
-            info = info + convert(a,Date6,Reading6,Amount6);
-        }
-        if(!Reading7.equals("0")){
-            a++;
-            info = info + convert(a,Date7,Reading7,Amount7);
-        }
-        if(!Reading8.equals("0")){
-            a++;
-            info = info + convert(a,Date8,Reading8,Amount8);
-        }
-        if(!Reading9.equals("0")){
-            a++;
-            info = info + convert(a,Date9,Reading9,Amount9);
-        }
-        if(!Reading10.equals("0")){
-            a++;
-            info = info + convert(a,Date10,Reading10,Amount10);
-        }
-        if(!Reading11.equals("0")){
-            a++;
-            info = info + convert(a,Date11,Reading11,Amount11);
-        }
-        if(!Reading12.equals("0")){
-            a++;
-            info = info + convert(a,Date12,Reading12,Amount12);
-        }
-
         info = info + "Final Amount : \t \t \t" + Final_Amount + "\n\n";
 //        user_info.setText(info);
     }
 
-    public String convert(int a, String day,String Reading,String Amount){
-        String date = "" + day.charAt(0) + day.charAt(1);
-        String month = "" + day.charAt(2) + day.charAt(3);
-        String year = "" + day.charAt(4) + day.charAt(5) + day.charAt(6) + day.charAt(7);
 
-        if(date.equals("01")){
-            date = "1";
-        }else if(date.equals("02")){
-            date = "2";
-        }else if(date.equals("03")){
-            date = "3";
-        }else if(date.equals("04")){
-            date = "4";
-        }else if(date.equals("05")){
-            date = "5";
-        }else if(date.equals("06")){
-            date = "6";
-        }else if(date.equals("07")){
-            date = "7";
-        }else if(date.equals("08")){
-            date = "8";
-        }else if(date.equals("09")){
-            date = "9";
-        }
-
-        if(month.equals("01")){
-            month = "January";
-        }else if(month.equals("02")){
-            month = "February";
-        }else if(month.equals("03")){
-            month = "March";
-        }else if(month.equals("04")){
-            month = "April";
-        }else if(month.equals("05")){
-            month = "May";
-        }else if(month.equals("06")){
-            month = "June";
-        }else if(month.equals("07")){
-            month = "July";
-        }else if(month.equals("08")){
-            month = "August";
-        }else if(month.equals("09")){
-            month = "September";
-        }else if(month.equals("10")){
-            month = "August";
-        }else if(month.equals("11")){
-            month = "November";
-        }else if(month.equals("12")){
-            month = "December";
-        }
-
-        String info = "";
-
-        info = info + String.valueOf(a) + ") " + date + " " + month + " " + year + "\t \t" + Reading  + "\t \t"+ Amount + "\n\n";
-        return info;
-    }
 
     public void choosen_change_password(View view){
         Intent i = new Intent(getApplicationContext(), user_change_password.class);

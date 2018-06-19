@@ -57,49 +57,122 @@ public class bill extends AppCompatActivity {
 //    private File dir;
 //    private File file;
 
-    private TextView month1;
-    private TextView month2;
-    private TextView month3;
-    private TextView month4;
-    private TextView month5;
-    private TextView month6;
-    private TextView month7;
-    private TextView month8;
-    private TextView month9;
-    private TextView month10;
-    private TextView month11;
-    private TextView month12;
+    private TextView discount0;
+    private TextView discount1;
+    private TextView discount2;
+    private TextView discount3;
+    private TextView discount4;
+    private TextView discount5;
+    private TextView discount6;
+    private TextView discount7;
+    private TextView discount8;
+    private TextView discount9;
+    private TextView discount10;
+    private TextView discount11;
+    private TextView discount12;
 
-    private TextView actual1;
-    private TextView actual2;
-
-    private TextView after1;
-
-    private TextView reading1;
-
-    private TextView cost1;
-
-    private String Area;
-    private String Cost;
-    private String Discount;
-    private String Method;
-    private String Password;
-    private String Pincode;
-    private String Society;
-    private String Username;
-    private String City;
+    private TextView date0;
+    private TextView date1;
+    private TextView date2;
+    private TextView date3;
+    private TextView date4;
+    private TextView date5;
+    private TextView date6;
+    private TextView date7;
+    private TextView date8;
+    private TextView date9;
+    private TextView date10;
+    private TextView date11;
+    private TextView date12;
 
     private String Date0;
     private String Date1;
+    private String Date2;
+    private String Date3;
+    private String Date4;
+    private String Date5;
+    private String Date6;
+    private String Date7;
+    private String Date8;
+    private String Date9;
+    private String Date10;
+    private String Date11;
+    private String Date12;
+
+    private TextView reading0;
+    private TextView reading1;
+    private TextView reading2;
+    private TextView reading3;
+    private TextView reading4;
+    private TextView reading5;
+    private TextView reading6;
+    private TextView reading7;
+    private TextView reading8;
+    private TextView reading9;
+    private TextView reading10;
+    private TextView reading11;
+    private TextView reading12;
+
+    private String Reading0;
+    private String Reading1;
+    private String Reading2;
+    private String Reading3;
+    private String Reading4;
+    private String Reading5;
+    private String Reading6;
+    private String Reading7;
+    private String Reading8;
+    private String Reading9;
+    private String Reading10;
+    private String Reading11;
+    private String Reading12;
+
+    private TextView amount0;
+    private TextView amount1;
+    private TextView amount2;
+    private TextView amount3;
+    private TextView amount4;
+    private TextView amount5;
+    private TextView amount6;
+    private TextView amount7;
+    private TextView amount8;
+    private TextView amount9;
+    private TextView amount10;
+    private TextView amount11;
+    private TextView amount12;
+
+    private String Amount0;
+    private String Amount1;
+    private String Amount2;
+    private String Amount3;
+    private String Amount4;
+    private String Amount5;
+    private String Amount6;
+    private String Amount7;
+    private String Amount8;
+    private String Amount9;
+    private String Amount10;
+    private String Amount11;
+    private String Amount12;
+
+    private String Area;
+    private String City;
+    private String Cost;
+
+    private String Discount;
+    private String Final_Amount;
+    private String Flat;
+    private String Method;
+    private String Mobile_Number;
+    private String Password;
+    private String Pincode;
+
+    private String Society;
+    private String Username;
+    private String username_password;
 
     EditText editText;
     Button button;
-
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
-
-
-    private String Reading0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,142 +180,292 @@ public class bill extends AppCompatActivity {
         setContentView(R.layout.activity_bill);
 //        button = (Button) findViewById(R.id.button);
 
-        month1 = (TextView) findViewById(R.id.textView4);
-        actual1 = (TextView) findViewById(R.id.textView5);
-        after1 = (TextView) findViewById(R.id.textView6);
-        cost1 = (TextView) findViewById(R.id.textView7);
+        date0 = (TextView) findViewById(R.id.textView4);
+        reading0 = (TextView) findViewById(R.id.textView5);
+        discount0 = (TextView) findViewById(R.id.textView6);
+        amount0 = (TextView) findViewById(R.id.textView7);
 
-        month2 = (TextView) findViewById(R.id.textView8);
-        month3 = (TextView) findViewById(R.id.textView12);
-        month4 = (TextView) findViewById(R.id.textView16);
+        date1 = (TextView) findViewById(R.id.textView8);
+        reading1 = (TextView) findViewById(R.id.textView9);
+        discount1 = (TextView) findViewById(R.id.textView10);
+        amount1 = (TextView) findViewById(R.id.textView11);
 
-
-
-        databaseReference = FirebaseDatabase.getInstance().getReference();
-
-        String str = String.valueOf(databaseReference.child("Admin").orderByChild("Username"));
+        date2 = (TextView) findViewById(R.id.textView12);
+        reading2 = (TextView) findViewById(R.id.textView13);
+        discount2 = (TextView) findViewById(R.id.textView14);
+        amount2 = (TextView) findViewById(R.id.textView15);
 
         Intent intent = getIntent();
+        Amount0 = intent.getStringExtra("Amount0");
+        Amount1 = intent.getStringExtra("Amount1");
+        Amount2 = intent.getStringExtra("Amount2");
+        Amount3 = intent.getStringExtra("Amount3");
+        Amount4 = intent.getStringExtra("Amount4");
+        Amount5 = intent.getStringExtra("Amount5");
+        Amount6 = intent.getStringExtra("Amount6");
+        Amount7 = intent.getStringExtra("Amount7");
+        Amount8 = intent.getStringExtra("Amount8");
+        Amount9 = intent.getStringExtra("Amount9");
+        Amount10 = intent.getStringExtra("Amount10");
+        Amount11 = intent.getStringExtra("Amount11");
+        Amount12 = intent.getStringExtra("Amount12");
         Area = intent.getStringExtra("Area");
-        Cost = intent.getStringExtra("Cost");
-        Discount = intent.getStringExtra("Discount");
-        Method = intent.getStringExtra("Method");
-        Password = intent.getStringExtra("Password");
-        Pincode = intent.getStringExtra("Pincode");
-        Society = intent.getStringExtra("Society");
-        Username = intent.getStringExtra("Username");
-        City = intent.getStringExtra("City");
+        City = intent.getStringExtra("Area");
+        Cost = intent.getStringExtra("Area");
         Date0 = intent.getStringExtra("Date0");
         Date1 = intent.getStringExtra("Date1");
+        Date2 = intent.getStringExtra("Date2");
+        Date3 = intent.getStringExtra("Date3");
+        Date4 = intent.getStringExtra("Date4");
+        Date5 = intent.getStringExtra("Date5");
+        Date6 = intent.getStringExtra("Date6");
+        Date7 = intent.getStringExtra("Date7");
+        Date8 = intent.getStringExtra("Date8");
+        Date9 = intent.getStringExtra("Date9");
+        Date10 = intent.getStringExtra("Date10");
+        Date11 = intent.getStringExtra("Date11");
+        Date12 = intent.getStringExtra("Date12");
+        Discount = intent.getStringExtra("Discount");
+        Final_Amount = intent.getStringExtra("Final_Amount");
+        Flat = intent.getStringExtra("Flat");
+        Method = intent.getStringExtra("Method");
+        Mobile_Number = intent.getStringExtra("Mobile_Number");
+        Password = intent.getStringExtra("Password");
+        Pincode = intent.getStringExtra("Pincode");
         Reading0 = intent.getStringExtra("Reading0");
+        Reading1 = intent.getStringExtra("Reading1");
+        Reading2 = intent.getStringExtra("Reading2");
+        Reading3 = intent.getStringExtra("Reading3");
+        Reading4 = intent.getStringExtra("Reading4");
+        Reading5 = intent.getStringExtra("Reading5");
+        Reading6 = intent.getStringExtra("Reading6");
+        Reading7 = intent.getStringExtra("Reading7");
+        Reading8 = intent.getStringExtra("Reading8");
+        Reading9 = intent.getStringExtra("Reading9");
+        Reading10 = intent.getStringExtra("Reading10");
+        Reading11 = intent.getStringExtra("Reading11");
+        Reading12 = intent.getStringExtra("Reading12");
+        Society = intent.getStringExtra("Society");
+        Username = intent.getStringExtra("Username");
+        username_password = intent.getStringExtra("username_password");
 
-        if(Date0.charAt(4) == '1' && Date0.charAt(3) == '0') {
-            month1.setText("January");
+        if (Date0.length() == 1) {
+            setnull(date0,reading0,discount0,amount0);
         }
-        else if (Date0.charAt(4) == '2' && Date0.charAt(3) == '0') {
-            month1.setText("February");
+        else {
+            date0.setText(month(Date0));
+            Float reading = Float.valueOf(Reading0);
+            reading0.setText(String.valueOf(reading));
+            Float final_amt = Float.valueOf(Amount0);
+            amount0.setText(String.valueOf(final_amt));
+            Float discount = final_amt - reading;
+            discount0.setText(String.valueOf(discount));
         }
-        else if (Date0.charAt(4) == '3') {
-            month1.setText("March");
-        }
-        else if (Date0.charAt(4) == '4') {
-            month1.setText("April");
-        }
-        else if (Date0.charAt(4) == '5') {
-            month1.setText("May");
-        }
-        else if (Date0.charAt(4) == '6') {
-            month1.setText("June");
-        }
-        else if (Date0.charAt(4) == '7') {
-            month1.setText("July");
-        }
-        else if (Date0.charAt(4) == '8') {
-            month1.setText("August");
-        }
-        else if (Date0.charAt(4) == '9') {
-            month1.setText("September");
-        }
-        else if (Date0.charAt(4) == '0') {
-            month1.setText("October");
-        }
-        else if (Date0.charAt(4) == '1') {
-            month1.setText("November");
-        }
-        else if (Date0.charAt(4) == '2') {
-            month1.setText("December");
-        }
-        else if (Date0.charAt(3) == '0' && Date0.charAt(4) == '0') {
-            month1.setText("");
-        }
-        actual1.setText(Reading0);
 
-//        Long reading0 = Long.valueOf(Reading0) - Long.valueOf(Discount);
-//        after1.setText(String.valueOf(reading0));
+        if (Date1.length() == 1) {
+            setnull(date1,reading1,discount1,amount1);
+        }
+        else {
+            date1.setText(month(Date1));
+            Float reading = Float.valueOf(Reading1);
+            reading1.setText(String.valueOf(reading));
+            Float final_amt = Float.valueOf(Amount0);
+            amount1.setText(String.valueOf(final_amt));
+            Float discount = final_amt - reading;
+            discount1.setText(String.valueOf(discount));
+        }
 
+        if (Date2.length() == 1) {
+            setnull(date2,reading2,discount2,amount2);
+        }
+        else {
+            date2.setText(month(Date2));
+            Float reading = Float.valueOf(Reading2);
+            reading2.setText(String.valueOf(reading));
+            Float final_amt = Float.valueOf(Amount2);
+            amount2.setText(String.valueOf(final_amt));
+            Float discount = final_amt - reading;
+            discount2.setText(String.valueOf(discount));
+        }
 
-//        if(Date1.charAt(3) == '1' && Date1.charAt(2) == '0') {
-//            month2.setText("January");
+//        if (Date3.length() == 1){
+//            setnull(date3,reading3,discount3,amount3);
+//        } else {
+//            date3.setText(month(Date3));
+//            Float reading = Float.valueOf(Reading3);
+//            reading3.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount3);
+//            amount3.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount3.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '2' && Date1.charAt(2) == '0') {
-//            month2.setText("February");
+//
+//        if (Date4.length() == 1){
+//            setnull(date4,reading4,discount4,amount4);
+//        }else {
+//            date4.setText(month(Date4));
+//            Float reading = Float.valueOf(Reading4);
+//            reading4.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount4);
+//            amount4.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount4.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '3') {
-//            month2.setText("March");
+//
+//        if (Date5.length() == 1){
+//            setnull(date5,reading5,discount5,amount5);
+//        }else {
+//            date5.setText(month(Date5));
+//            Float reading = Float.valueOf(Reading5);
+//            reading5.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount5);
+//            amount5.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount5.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '4') {
-//            month2.setText("April");
+//
+//        if (Date6.length() == 1){
+//            setnull(date6,reading6,discount6,amount6);
+//        }else {
+//            date6.setText(month(Date6));
+//            Float reading = Float.valueOf(Reading6);
+//            reading6.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount6);
+//            amount6.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount6.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '5') {
-//            month2.setText("May");
+//
+//        if (Date7.length() == 1){
+//            setnull(date7,reading7,discount7,amount7);
+//        }else {
+//            date7.setText(month(Date7));
+//            Float reading = Float.valueOf(Reading7);
+//            reading7.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount7);
+//            amount7.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount7.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '6') {
-//            month2.setText("June");
+//
+//        if (Date8.length() == 1){
+//            setnull(date8,reading8,discount8,amount8);
+//        }else {
+//            date8.setText(month(Date2));
+//            Float reading = Float.valueOf(Reading8);
+//            reading8.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount8);
+//            amount8.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount8.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '7') {
-//            month2.setText("July");
+//
+//        if (Date9.length() == 1){
+//            setnull(date9,reading9,discount9,amount9);
+//        }else {
+//            date9.setText(month(Date9));
+//            Float reading = Float.valueOf(Reading9);
+//            reading9.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount9);
+//            amount9.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount9.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '8') {
-//            month2.setText("August");
+//
+//        if (Date10.length() == 1){
+//            setnull(date10,reading10,discount10,amount10);
+//        }else {
+//            date10.setText(month(Date10));
+//            Float reading = Float.valueOf(Reading10);
+//            reading10.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount10);
+//            amount10.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount10.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '9') {
-//            month2.setText("September");
+//
+//        if (Date11.length() == 1){
+//            setnull(date11,reading11,discount7,amount11);
+//        }else {
+//            date11.setText(month(Date11));
+//            Float reading = Float.valueOf(Reading11);
+//            reading11.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount11);
+//            amount11.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount11.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '0') {
-//            month2.setText("October");
+//
+//        if (Date12.length() == 1){
+//            setnull(date12,reading12,discount12,amount12);
+//        }else {
+//            date12.setText(month(Date12));
+//            Float reading = Float.valueOf(Reading12);
+//            reading12.setText(String.valueOf(reading));
+//            Float final_amt = Float.valueOf(Amount12);
+//            amount12.setText(String.valueOf(final_amt));
+//            Float discount = final_amt - reading;
+//            discount12.setText(String.valueOf(discount));
 //        }
-//        else if (Date1.charAt(3) == '1') {
-//            month2.setText("November");
-//        }
-//        else if (Date1.charAt(3) == '2') {
-//            month2.setText("December");
-//        }
-//        else if (Date1.charAt(2) == '0' && Date0.charAt(3) == '0') {
-//            month2.setText("");
-//        }
+
+    }
+
+    public void setnull(TextView a,TextView b, TextView c,TextView d){
+        a.setText("");
+        b.setText("");
+        c.setText("");
+        d.setText("");
+    }
+
+    public String month(String a){
+        if(a.charAt(1) == '/'){
+            if(a.charAt(0) == '1'){
+                return "January";
+            }else if(a.charAt(0) == '2'){
+                return "February";
+            }else if(a.charAt(0) == '3'){
+                return "March";
+            }else if(a.charAt(0) == '4'){
+                return "April";
+            }else if(a.charAt(0) == '5'){
+                return "May";
+            }else if(a.charAt(0) == '6'){
+                return "June";
+            }else if(a.charAt(0) == '7'){
+                return "July";
+            }else if(a.charAt(0) == '8'){
+                return "August";
+            }else if(a.charAt(0) == '9'){
+                return "September";
+            }
+        }else if(a.charAt(1) == '0'){
+            return "October";
+        }else if(a.charAt(1)=='1'){
+            return "November";
+        }
+        return "December";
     }
 
 
-    public void createPdf(View view) {
-
-        Document document = new Document();
-        String str = Environment.getExternalStorageDirectory() + "/myPdf.pdf";
-
-        try {
-            PdfWriter.getInstance(document,new FileOutputStream(str));
-            document.open();
-            document.add(new Paragraph(editText.getText().toString()));
-            document.setPageSize(PageSize.A4);
-            document.addCreationDate();
-            document.addAuthor("Android ");
-            document.addCreator("Roshani");
-            document.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        }
-    }
-
+//    public void createPdf(View view) {
+//
+//        Document document = new Document();
+//        String str = Environment.getExternalStorageDirectory() + "/myPdf.pdf";
+//
+//        try {
+//            PdfWriter.getInstance(document,new FileOutputStream(str));
+//            document.open();
+//            document.add(new Paragraph(editText.getText().toString()));
+//            document.setPageSize(PageSize.A4);
+//            document.addCreationDate();
+//            document.addAuthor("Android ");
+//            document.addCreator("Roshani");
+//            document.close();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (DocumentException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 }
