@@ -118,6 +118,9 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("Username",Username);
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
+//        i.putExtra("username", username);
+//        i.putExtra("password", password);
+//        i.putExtra("society",society);
         startActivity(i);
         finish();
     }

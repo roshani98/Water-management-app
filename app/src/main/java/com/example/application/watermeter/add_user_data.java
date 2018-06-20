@@ -122,7 +122,9 @@ public class add_user_data extends AppCompatActivity {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-                String myFormat = "M/dd/yy"; //In which you need put here
+
+                String myFormat = "MM dd yy"; //In which you need put herr
+
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
