@@ -195,58 +195,6 @@ public class bill extends AppCompatActivity {
         discount2 = (TextView) findViewById(R.id.textView14);
         amount2 = (TextView) findViewById(R.id.textView15);
 
-
-        date3 = (TextView) findViewById(R.id.textView16);
-        reading3 = (TextView) findViewById(R.id.textView17);
-        discount3 = (TextView) findViewById(R.id.textView18);
-        amount3 = (TextView) findViewById(R.id.textView19);
-
-        date4 = (TextView) findViewById(R.id.textView20);
-        reading4 = (TextView) findViewById(R.id.textView21);
-        discount4 = (TextView) findViewById(R.id.textView22);
-        amount4 = (TextView) findViewById(R.id.textView23);
-
-        date5 = (TextView) findViewById(R.id.textView24);
-        reading5 = (TextView) findViewById(R.id.textView25);
-        discount5 = (TextView) findViewById(R.id.textView26);
-        amount5 = (TextView) findViewById(R.id.textView27);
-
-        date6 = (TextView) findViewById(R.id.textView28);
-        reading6 = (TextView) findViewById(R.id.textView29);
-        discount6 = (TextView) findViewById(R.id.textView30);
-        amount6 = (TextView) findViewById(R.id.textView31);
-
-        date7 = (TextView) findViewById(R.id.textView32);
-        reading7 = (TextView) findViewById(R.id.textView33);
-        discount7 = (TextView) findViewById(R.id.textView34);
-        amount7 = (TextView) findViewById(R.id.textView35);
-
-        date8 = (TextView) findViewById(R.id.textView36);
-        reading8 = (TextView) findViewById(R.id.textView37);
-        discount8 = (TextView) findViewById(R.id.textView38);
-        amount8 = (TextView) findViewById(R.id.textView39);
-
-        date9 = (TextView) findViewById(R.id.textView40);
-        reading9 = (TextView) findViewById(R.id.textView41);
-        discount9 = (TextView) findViewById(R.id.textView42);
-        amount9 = (TextView) findViewById(R.id.textView43);
-
-        date10 = (TextView) findViewById(R.id.textView44);
-        reading10 = (TextView) findViewById(R.id.textView45);
-        discount10 = (TextView) findViewById(R.id.textView46);
-        amount10 = (TextView) findViewById(R.id.textView47);
-
-        date11 = (TextView) findViewById(R.id.textView48);
-        reading11 = (TextView) findViewById(R.id.textView49);
-        discount11 = (TextView) findViewById(R.id.textView50);
-        amount11 = (TextView) findViewById(R.id.textView51);
-
-        date12 = (TextView) findViewById(R.id.textView52);
-        reading12 = (TextView) findViewById(R.id.textView53);
-        discount12 = (TextView) findViewById(R.id.textView54);
-        amount12 = (TextView) findViewById(R.id.textView55);
-
-
         Intent intent = getIntent();
         Amount0 = intent.getStringExtra("Amount0");
         Amount1 = intent.getStringExtra("Amount1");
@@ -325,7 +273,6 @@ public class bill extends AppCompatActivity {
             amount1.setText(String.valueOf(final_amt));
             Float discount = final_amt - reading;
             discount1.setText(String.valueOf(discount));
-
         }
 
         if (Date2.length() == 1) {
@@ -460,142 +407,6 @@ public class bill extends AppCompatActivity {
 //            Float discount = final_amt - reading;
 //            discount12.setText(String.valueOf(discount));
 //        }
-
-        }
-
-        if (Date2.length() == 1) {
-            setnull(date2,reading2,discount2,amount2);
-        }
-        else {
-            date2.setText(month(Date2));
-            Float reading = Float.valueOf(Reading2);
-            reading2.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount2);
-            amount2.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount2.setText(String.valueOf(discount));
-        }
-
-        if (Date3.length() == 1){
-            setnull(date3,reading3,discount3,amount3);
-        } else {
-            date3.setText(month(Date3));
-            Float reading = Float.valueOf(Reading3);
-            reading3.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount3);
-            amount3.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount3.setText(String.valueOf(discount));
-        }
-
-        if (Date4.length() == 1){
-            setnull(date4,reading4,discount4,amount4);
-        }else {
-            date4.setText(month(Date4));
-            Float reading = Float.valueOf(Reading4);
-            reading4.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount4);
-            amount4.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount4.setText(String.valueOf(discount));
-        }
-
-        if (Date5.length() == 1){
-            setnull(date5,reading5,discount5,amount5);
-        }else {
-            date5.setText(month(Date5));
-            Float reading = Float.valueOf(Reading5);
-            reading5.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount5);
-            amount5.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount5.setText(String.valueOf(discount));
-        }
-
-        if (Date6.length() == 1){
-            setnull(date6,reading6,discount6,amount6);
-        }else {
-            date6.setText(month(Date6));
-            Float reading = Float.valueOf(Reading6);
-            reading6.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount6);
-            amount6.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount6.setText(String.valueOf(discount));
-        }
-
-        if (Date7.length() == 1){
-            setnull(date7,reading7,discount7,amount7);
-        }else {
-            date7.setText(month(Date7));
-            Float reading = Float.valueOf(Reading7);
-            reading7.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount7);
-            amount7.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount7.setText(String.valueOf(discount));
-        }
-
-        if (Date8.length() == 1){
-            setnull(date8,reading8,discount8,amount8);
-        }else {
-            date8.setText(month(Date2));
-            Float reading = Float.valueOf(Reading8);
-            reading8.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount8);
-            amount8.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount8.setText(String.valueOf(discount));
-        }
-
-        if (Date9.length() == 1){
-            setnull(date9,reading9,discount9,amount9);
-        }else {
-            date9.setText(month(Date9));
-            Float reading = Float.valueOf(Reading9);
-            reading9.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount9);
-            amount9.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount9.setText(String.valueOf(discount));
-        }
-
-        if (Date10.length() == 1){
-            setnull(date10,reading10,discount10,amount10);
-        }else {
-            date10.setText(month(Date10));
-            Float reading = Float.valueOf(Reading10);
-            reading10.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount10);
-            amount10.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount10.setText(String.valueOf(discount));
-        }
-
-        if (Date11.length() == 1){
-            setnull(date11,reading11,discount7,amount11);
-        }else {
-            date11.setText(month(Date11));
-            Float reading = Float.valueOf(Reading11);
-            reading11.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount11);
-            amount11.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount11.setText(String.valueOf(discount));
-        }
-
-        if (Date12.length() == 1){
-            setnull(date12,reading12,discount12,amount12);
-        }else {
-            date12.setText(month(Date12));
-            Float reading = Float.valueOf(Reading12);
-            reading12.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount12);
-            amount12.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount12.setText(String.valueOf(discount));
-        }
-
 
     }
 
