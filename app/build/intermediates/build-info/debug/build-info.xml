@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="24"
+    abi="x86"
+    api-level="23"
     build-mode="COLD"
-    density="xhdpi"
+    density="420dpi"
     format="10"
+    ir-eligibility="FIELD_TYPE_CHANGE"
     plugin-version="3.1.3"
-    timestamp="1529594673018"
+    timestamp="1529604769038"
     token="-8053799592131506758"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1180" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="77" />
     <task
         name="verifier"
-        duration="0" />
+        duration="11" />
 
+    <artifact
+        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
     <artifact
         location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1529594471315"
+        timestamp="1529603902557"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
@@ -39,9 +49,6 @@
             type="SPLIT" />
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
@@ -64,23 +71,24 @@
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="FIELD_TYPE_CHANGE"
+        timestamp="1529604547324"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1529594619149"
+        ir-eligibility="FIELD_TYPE_CHANGE"
+        timestamp="1529604769038"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1529594673018"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />

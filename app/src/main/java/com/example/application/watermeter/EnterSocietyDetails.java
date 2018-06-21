@@ -92,8 +92,12 @@ public class EnterSocietyDetails extends AppCompatActivity {
             public void onClick(View view) {
                 final String costs = cost.getText().toString().trim();
                 final String discounts = discount.getText().toString().trim();
-                final String pricing = ((RadioButton) findViewById(pricing_method.getCheckedRadioButtonId())).getText().toString().trim();
-
+                String pricing = "";//((RadioButton) findViewById(pricing_method.getCheckedRadioButtonId())).getText().toString().trim();
+                if(fixed.isChecked()){
+                    pricing = "Method 1";
+                }else{
+                    pricing  = "Method 2";
+                }
                 if(TextUtils.isEmpty(costs)){
                     Toast.makeText(EnterSocietyDetails.this,"Please enter cost per unit",Toast.LENGTH_SHORT).show();
                     return;
@@ -108,6 +112,7 @@ public class EnterSocietyDetails extends AppCompatActivity {
                         .child("Admin").child(username)
                         .orderByChild("username_password").equalTo(y);
 
+                final String finalPricing = pricing;
                 q.addListenerForSingleValueEvent(new ValueEventListener(){
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -132,7 +137,7 @@ public class EnterSocietyDetails extends AppCompatActivity {
                                 userData.put("username_password", y);
 
 
-                                if(pricing.equals("Method 1")){
+                                if(finalPricing.equals("Method 1")){
                                     userData.put("Method",String.valueOf(1));
                                 }else{
                                     userData.put("Method",String.valueOf(2));
