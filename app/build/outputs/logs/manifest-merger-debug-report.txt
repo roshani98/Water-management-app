@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/fe23fdeb34a14f6291eeb32426fb8eb1/AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:26.1.0] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7a01b1f5ab9262b829a610fc7ff5aa4f/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/55e4233a5d38f4d0ae9ec4b991c4c13f/AndroidManifest.xml:17:1-31:12
@@ -29,20 +29,20 @@ MERGED from [com.android.support:support-media-compat:26.1.0] /Users/nish_1612/.
 MERGED from [com.android.support:support-core-utils:26.1.0] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/5ee7ba986f6a82ffd4dc6238f97dfa69/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7a76462ca9f2b718510a1d4c34458b71/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/cf859bd2fdf1ed07f7dfbe5a7d0b1117/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml
-		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml
-		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:2:11-69
@@ -55,7 +55,7 @@ ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/A
 	android:name
 		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:6:22-78
 application
-ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:8:5-34:19
+ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:8:5-35:19
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/fe23fdeb34a14f6291eeb32426fb8eb1/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.0.4] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/firebase-core-11.0.4.aar/fe23fdeb34a14f6291eeb32426fb8eb1/AndroidManifest.xml:5:5-20
 MERGED from [com.android.support:design:26.1.0] /Users/nish_1612/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7a01b1f5ab9262b829a610fc7ff5aa4f/AndroidManifest.xml:25:5-29:19
@@ -173,9 +173,13 @@ ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/A
 	android:name
 		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:32:19-55
 activity#com.example.application.watermeter.admin_change_method
-ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:33:9-66
+ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:33:9-57
 	android:name
 		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:33:19-54
+activity#com.example.application.watermeter.admin_generate_statement
+ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:34:9-71
+	android:name
+		ADDED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml:34:19-59
 uses-sdk
 INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/AndroidManifest.xml

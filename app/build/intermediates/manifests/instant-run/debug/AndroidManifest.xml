@@ -51,6 +51,7 @@
         <activity android:name="com.example.application.watermeter.bill" />
         <activity android:name="com.example.application.watermeter.admin_change_details" />
         <activity android:name="com.example.application.watermeter.admin_change_method" />
+        <activity android:name="com.example.application.watermeter.admin_generate_statement" />
 
         <meta-data
             android:name="android.support.VERSION"

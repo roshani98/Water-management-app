@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="23"
+    abi="armeabi-v7a,armeabi"
+    api-level="24"
     build-mode="COLD"
-    density="420dpi"
+    density="xhdpi"
     format="10"
     plugin-version="3.1.3"
-    timestamp="1529570585845"
+    timestamp="1529594673018"
     token="-8053799592131506758"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,9 +23,13 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
+
     <build
         build-mode="FULL"
-        timestamp="1529565752068"
+        timestamp="1529594471315"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -66,7 +70,20 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1529570585845"
-        verifier="COLD_SWAP_REQUESTED" />
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1529594619149"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1529594673018"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
 
 </instant-run>

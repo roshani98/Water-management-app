@@ -39,6 +39,7 @@
         android:textColor="@android:color/white"
         android:layout_marginTop="300dp"
         android:layout_centerHorizontal="true"
+        android:onClick="generate_statement"
         android:padding="5dp"
         android:text="Generate Bill" />
 

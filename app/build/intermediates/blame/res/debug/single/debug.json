@@ -1152,6 +1152,10 @@
         "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/55e4233a5d38f4d0ae9ec4b991c4c13f/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/res/merged/debug/layout_activity_admin_generate_statement.xml.flat",
+        "source": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/src/main/res/layout/activity_admin_generate_statement.xml"
+    },
+    {
         "merged": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_light.xml.flat",
         "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/bf42d6833de0638c0206712e452b966d/res/drawable/common_google_signin_btn_text_light.xml"
     },

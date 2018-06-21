@@ -118,9 +118,22 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("Username",Username);
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
-//        i.putExtra("username", username);
-//        i.putExtra("password", password);
-//        i.putExtra("society",society);
+        startActivity(i);
+        finish();
+    }
+
+    public void generate_statement(View view) {
+        Intent i = new Intent(getApplicationContext(), admin_generate_statement.class);
+        i.putExtra("Area",Area);
+        i.putExtra("Cost",Cost);
+        i.putExtra("Discount",Discount);
+        i.putExtra("Method",Method);
+        i.putExtra("Password",Password);
+        i.putExtra("Pincode",Pincode);
+        i.putExtra("Society",Society);
+        i.putExtra("Username",Username);
+        i.putExtra("City",City);
+        i.putExtra("username_password",username_password);
         startActivity(i);
         finish();
     }

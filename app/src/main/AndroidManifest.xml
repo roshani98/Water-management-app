@@ -30,7 +30,8 @@
         <activity android:name=".EnterSocietyDetails" />
         <activity android:name=".bill" />
         <activity android:name=".admin_change_details" />
-        <activity android:name=".admin_change_method"></activity>
+        <activity android:name=".admin_change_method" />
+        <activity android:name=".admin_generate_statement"></activity>
     </application>
 
 </manifest>
