@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +34,7 @@ import org.w3c.dom.Text;
 import static android.widget.LinearLayout.VERTICAL;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
@@ -51,7 +54,9 @@ public class admin_generate_statement extends AppCompatActivity {
     private String Username;
     private String City;
     private String username_password;
-    private DatabaseReference myDatabase;
+    private DatabaseReference mDatabase;
+    private TextView textView;
+    private TextView textView1;
 
     private List<TextView> TextList = new ArrayList<TextView>();
 
@@ -60,45 +65,35 @@ public class admin_generate_statement extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_generate_statement);
 
-        LinearLayout linearLayout = new LinearLayout(this);
-        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT);
-        linearLayout.setLayoutParams(params);
-        linearLayout.setOrientation(VERTICAL);
+//        LinearLayout linearLayout = new LinearLayout(this);
+//        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT);
+//        linearLayout.setLayoutParams(params);
+//        linearLayout.setOrientation(VERTICAL);
 
-        myDatabase = FirebaseDatabase.getInstance().getReference();
+        textView = (TextView)findViewById(R.id.textView);
+        textView1 = (TextView) findViewById(R.id.textView1);
 
-        Query q = myDatabase
-                .child("Admin")
-                .orderByChild("username");
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        final long[] size = new long[1];
+//        Query q = myDatabase
+//                .child("Admin")
+//                .orderByChild("username");
+//
+//        final long[] size = new long[1];
+//
+//        q.addListenerForSingleValueEvent(new ValueEventListener(){
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//
+//                size[0] = dataSnapshot.getChildrenCount();
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
-        q.addListenerForSingleValueEvent(new ValueEventListener(){
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                size[0] = dataSnapshot.getChildrenCount();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-        if (size[0] != 0) {
-            linearLayout.addView(tableLayout((int) size[0]));
-            linearLayout.addView(submitButton());
-            setContentView(linearLayout);
-        }
-        else {
-            linearLayout.addView(tableLayout(10));
-            linearLayout.addView(submitButton());
-            setContentView(linearLayout);
-        }
-
-
-//        gridView = (GridView) findViewById(R.id.all_users);
         Intent intent = getIntent();
         Area = intent.getStringExtra("Area");
         Cost = intent.getStringExtra("Cost");
@@ -110,66 +105,66 @@ public class admin_generate_statement extends AppCompatActivity {
         Username = intent.getStringExtra("Username");
         City = intent.getStringExtra("City");
         username_password = intent.getStringExtra("username_password");
-    }
+        final String[] str = {""};
 
-    private Button submitButton() {
-        Button button = new Button(this);
-        button.setHeight(WRAP_CONTENT);
-        button.setText("Submit");
-        button.setOnClickListener(submitListener);
-        return button;
-    }
+        Query query = mDatabase
+                .child("Admin").child(Username)
+                .orderByChild("username_password");
 
-    // Access the value of the EditText
+        query.addListenerForSingleValueEvent(new ValueEventListener(){
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
 
-    private View.OnClickListener submitListener = new View.OnClickListener() {
-        public void onClick(View view) {
-            StringBuilder stringBuilder = new StringBuilder();
-            for (TextView Textview : TextList) {
-                stringBuilder.append(Textview.getText().toString());
+                if(dataSnapshot.getValue()!=null) {
+
+                    Log.d("dataSnapshot ", dataSnapshot.toString());
+
+                    HashMap<String, Object> studentdata = (HashMap<String, Object>) dataSnapshot.getValue();
+                    Log.d("dataSnapshot ", studentdata.toString());
+
+
+                    for (String key : studentdata.keySet()) {
+
+                        Object mObject = studentdata.get(key);
+                        HashMap<String, Object> map = (HashMap<String, Object>) mObject;
+
+                        HashMap<String, Object> userData = new HashMap<String, Object>();
+
+                        if(!map.get("Username").toString().equals(Username)){
+
+                            textView.append( map.get("Username").toString()+"\n\n");
+                            textView1.append(map.get("Final Amount").toString() + "\n\n");
+                        }
+                    }
+
+                }else {
+                    Toast.makeText(getApplicationContext(), "Sorry cant find the user in the database", Toast.LENGTH_LONG).show();
+
+                }
+
             }
-        }
-    };
 
-    // Using a TableLayout as it provides you with a neat ordering structure
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
 
-    private TableLayout tableLayout(int count) {
-        TableLayout tableLayout = new TableLayout(this);
-        tableLayout.setStretchAllColumns(true);
-        int noOfRows = count;
-        for (int i = 0; i < noOfRows; i++) {
-            int rowId = 5 * i;
-            tableLayout.addView(createOneFullRow(rowId));
-        }
-        int individualCells = count % 5;
-        tableLayout.addView(createLeftOverCells(individualCells, count));
-        return tableLayout;
+            }});
+
+//        if (size[0] != 0) {
+//            linearLayout.addView(tableLayout((int) size[0]));
+//            linearLayout.addView(submitButton());
+//            setContentView(linearLayout);
+//        }
+//        else {
+//            linearLayout.addView(tableLayout(10));
+//            linearLayout.addView(submitButton());
+//            setContentView(linearLayout);
+//        }
+
+
+//        gridView = (GridView) findViewById(R.id.all_users);
+//        Toast.makeText(getApplicationContext(), str[0].toString(), Toast.LENGTH_LONG).show();
+//        textView.setText(str[0]);
+
     }
 
-    private TableRow createLeftOverCells(int individualCells, int count) {
-        TableRow tableRow = new TableRow(this);
-        tableRow.setPadding(0, 10, 0, 0);
-        int rowId = count - individualCells;
-        for (int i = 1; i <= individualCells; i++) {
-            tableRow.addView(textView(String.valueOf(rowId + i)));
-        }
-        return tableRow;
-    }
-
-    private TableRow createOneFullRow(int rowId) {
-        TableRow tableRow = new TableRow(this);
-        tableRow.setPadding(0, 10, 0, 0);
-        for (int i = 1; i <= 5; i++) {
-            tableRow.addView(textView(String.valueOf(rowId + i)));
-        }
-        return tableRow;
-    }
-
-    private TextView textView(String hint) {
-        TextView textView = new EditText(this);
-        textView.setId(Integer.valueOf(hint));
-        textView.setHint(hint);
-        TextList.add(textView);
-        return textView;
-    }
 }

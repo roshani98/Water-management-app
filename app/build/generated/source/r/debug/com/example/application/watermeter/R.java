@@ -3800,11 +3800,11 @@ public final class R {
     public static final int tableRow7=0x7f0900d4;
     public static final int tableRow8=0x7f0900d5;
     public static final int tableRow9=0x7f0900d6;
-    public static final int tablelayout=0x7f0900d7;
-    public static final int text=0x7f0900d8;
-    public static final int text2=0x7f0900d9;
-    public static final int textSpacerNoButtons=0x7f0900da;
-    public static final int textSpacerNoTitle=0x7f0900db;
+    public static final int text=0x7f0900d7;
+    public static final int text2=0x7f0900d8;
+    public static final int textSpacerNoButtons=0x7f0900d9;
+    public static final int textSpacerNoTitle=0x7f0900da;
+    public static final int textView=0x7f0900db;
     public static final int textView0=0x7f0900dc;
     public static final int textView1=0x7f0900dd;
     public static final int textView10=0x7f0900de;

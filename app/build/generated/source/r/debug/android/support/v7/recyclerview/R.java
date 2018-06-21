@@ -101,8 +101,8 @@ public final class R {
         public static final int notification_main_column_container = 0x7f090090;
         public static final int right_icon = 0x7f09009c;
         public static final int right_side = 0x7f09009d;
-        public static final int text = 0x7f0900d8;
-        public static final int text2 = 0x7f0900d9;
+        public static final int text = 0x7f0900d7;
+        public static final int text2 = 0x7f0900d8;
         public static final int time = 0x7f090117;
         public static final int title = 0x7f090118;
     }

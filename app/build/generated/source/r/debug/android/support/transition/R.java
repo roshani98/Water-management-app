@@ -98,8 +98,8 @@ public final class R {
         public static final int save_non_transition_alpha = 0x7f09009f;
         public static final int save_scale_type = 0x7f0900a0;
         public static final int status_bar_latest_event_content = 0x7f0900c4;
-        public static final int text = 0x7f0900d8;
-        public static final int text2 = 0x7f0900d9;
+        public static final int text = 0x7f0900d7;
+        public static final int text2 = 0x7f0900d8;
         public static final int time = 0x7f090117;
         public static final int title = 0x7f090118;
         public static final int transition_current_scene = 0x7f09011e;

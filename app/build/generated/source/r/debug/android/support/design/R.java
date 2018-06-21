@@ -865,10 +865,10 @@ public final class R {
         public static final int submenuarrow = 0x7f0900c5;
         public static final int submit_area = 0x7f0900c7;
         public static final int tabMode = 0x7f0900c8;
-        public static final int text = 0x7f0900d8;
-        public static final int text2 = 0x7f0900d9;
-        public static final int textSpacerNoButtons = 0x7f0900da;
-        public static final int textSpacerNoTitle = 0x7f0900db;
+        public static final int text = 0x7f0900d7;
+        public static final int text2 = 0x7f0900d8;
+        public static final int textSpacerNoButtons = 0x7f0900d9;
+        public static final int textSpacerNoTitle = 0x7f0900da;
         public static final int text_input_password_toggle = 0x7f090114;
         public static final int textinput_counter = 0x7f090115;
         public static final int textinput_error = 0x7f090116;

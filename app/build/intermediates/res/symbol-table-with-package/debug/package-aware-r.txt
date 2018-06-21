@@ -1038,11 +1038,11 @@ int id tableRow6 0x7f0900d3
 int id tableRow7 0x7f0900d4
 int id tableRow8 0x7f0900d5
 int id tableRow9 0x7f0900d6
-int id tablelayout 0x7f0900d7
-int id text 0x7f0900d8
-int id text2 0x7f0900d9
-int id textSpacerNoButtons 0x7f0900da
-int id textSpacerNoTitle 0x7f0900db
+int id text 0x7f0900d7
+int id text2 0x7f0900d8
+int id textSpacerNoButtons 0x7f0900d9
+int id textSpacerNoTitle 0x7f0900da
+int id textView 0x7f0900db
 int id textView0 0x7f0900dc
 int id textView1 0x7f0900dd
 int id textView10 0x7f0900de
