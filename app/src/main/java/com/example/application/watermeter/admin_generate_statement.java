@@ -57,6 +57,8 @@ public class admin_generate_statement extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private TextView textView;
 
+    private TextView textView1;
+
     private List<TextView> TextList = new ArrayList<TextView>();
 
     @Override
@@ -70,6 +72,31 @@ public class admin_generate_statement extends AppCompatActivity {
 //        linearLayout.setOrientation(VERTICAL);
 
         textView = (TextView)findViewById(R.id.textView);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+//        Query q = myDatabase
+//                .child("Admin")
+//                .orderByChild("username");
+//
+//        final long[] size = new long[1];
+//
+//        q.addListenerForSingleValueEvent(new ValueEventListener(){
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//
+//                size[0] = dataSnapshot.getChildrenCount();
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+
+
+        textView = (TextView)findViewById(R.id.textView);
+        textView1 = (TextView) findViewById(R.id.textView1);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -113,24 +140,31 @@ public class admin_generate_statement extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.getValue()!=null) {
+
+                if (dataSnapshot.getValue() != null) {
 
                     Log.d("dataSnapshot ", dataSnapshot.toString());
 
-                    HashMap<String, Object> studentdata = (HashMap<String, Object>) dataSnapshot.getValue();
-                    Log.d("dataSnapshot ", studentdata.toString());
+
+                    if (dataSnapshot.getValue() != null) {
+
+                        Log.d("dataSnapshot ", dataSnapshot.toString());
+
+                        HashMap<String, Object> studentdata = (HashMap<String, Object>) dataSnapshot.getValue();
+                        Log.d("dataSnapshot ", studentdata.toString());
 
 
-                    for (String key : studentdata.keySet()) {
+                        for (String key : studentdata.keySet()) {
 
-                        Object mObject = studentdata.get(key);
-                        HashMap<String, Object> map = (HashMap<String, Object>) mObject;
+                            Object mObject = studentdata.get(key);
+                            HashMap<String, Object> map = (HashMap<String, Object>) mObject;
 
-                        HashMap<String, Object> userData = new HashMap<String, Object>();
+                            HashMap<String, Object> userData = new HashMap<String, Object>();
 
-                        if(!map.get("Username").toString().equals(Username)){
+                            if (!map.get("Username").toString().equals(Username)) {
 
-                            textView.append( map.get("Username").toString() + "\t \t \t" + map.get("Final Amount").toString() + "\n");
+
+                                textView.append(map.get("Username").toString() + "\t \t \t" + map.get("Final Amount").toString() + "\n");
 
 //                            Log.d("Map",map.toString());
 //                            userData.put("Username", map.get("Username").toString());
@@ -198,14 +232,19 @@ public class admin_generate_statement extends AppCompatActivity {
 //
 //                            Toast.makeText(getApplicationContext(), "One user updated", Toast.LENGTH_LONG).show();
 
+
+                                textView.append(map.get("Username").toString() + "\n\n");
+                                textView1.append(map.get("Final Amount").toString() + "\n\n");
+
+                            }
                         }
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Sorry cant find the user in the database", Toast.LENGTH_LONG).show();
+
                     }
 
-                }else {
-                    Toast.makeText(getApplicationContext(), "Sorry cant find the user in the database", Toast.LENGTH_LONG).show();
-
                 }
-
             }
 
             @Override
@@ -293,3 +332,5 @@ public class admin_generate_statement extends AppCompatActivity {
 //        return textView;
 //    }
 }
+
+

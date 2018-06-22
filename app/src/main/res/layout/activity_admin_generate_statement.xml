@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"/>-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin_generate_statement"
-    android:id="@+id/tablelayout">
+    tools:context=".admin_generate_statement">
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="House Number"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:background="#E3F2FD"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="#EEEEEE"
+                android:text="Cost(in Rupees)"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:padding="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:padding="5dp"
+                android:layout_weight="1"/>
+            </TableRow>
+    </TableLayout>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="357dp"
         android:layout_height="315dp"
         android:layout_weight="1" />
-</RelativeLayout>
+
+</LinearLayout>
+</ScrollView>
