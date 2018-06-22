@@ -122,7 +122,7 @@ public class add_user_data extends AppCompatActivity {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-                String myFormat = "M/dd/yy"; //In which you need put here
+                String myFormat = "dd/MM/yy"; //In which you need put here
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
@@ -1021,11 +1021,29 @@ public class add_user_data extends AppCompatActivity {
     public float discounted(String date0 , String date1 , float discount , float reading) throws ParseException {
 //        int days = 0;
         long days;
-        DateFormat format = new SimpleDateFormat("dd MM yy", Locale.ENGLISH);
+        DateFormat format = new SimpleDateFormat("dd/MM/yy", Locale.ENGLISH);
         Date one = format.parse(date0);
         Date two = format.parse(date1);
-        days = one.getTime() - two.getTime();
+        Calendar cCal = Calendar.getInstance();
+        cCal.setTime(one);
+        int Year0 = cCal.get(Calendar.YEAR);
+        int Month0 = cCal.get(Calendar.MONTH);
+        int Day0 = cCal.get(Calendar.DAY_OF_MONTH);
+        Calendar eCal = Calendar.getInstance();
+        eCal.setTime(two);
+        int Year1 = eCal.get(Calendar.YEAR);
+        int Month1 = eCal.get(Calendar.MONTH);
+        int Day1 = eCal.get(Calendar.DAY_OF_MONTH);
+        Calendar date2 = Calendar.getInstance();
+        Calendar date3 = Calendar.getInstance();
+        date2.clear();
+        date2.set(Year0,Month0,Day0);
+        date3.clear();
+        date3.set(Year1,Month1,Day1);
+        days = date2.getTimeInMillis() - date3.getTimeInMillis();
+        days = days/(24 * 60 * 60 * 1000);
+        Toast.makeText(getApplicationContext(), String.valueOf(days), Toast.LENGTH_LONG).show();
         reading = reading - (discount * days);
-        return reading;
+        return days;
     }
 }

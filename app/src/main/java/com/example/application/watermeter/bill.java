@@ -319,7 +319,7 @@ public class bill extends AppCompatActivity {
             date1.setText(month(Date1));
             Float reading = Float.valueOf(Reading1);
             reading1.setText(String.valueOf(reading));
-            Float final_amt = Float.valueOf(Amount0);
+            Float final_amt = Float.valueOf(Amount1);
             amount1.setText(String.valueOf(final_amt));
             Float discount = final_amt - reading;
             discount1.setText(String.valueOf(discount));
@@ -468,29 +468,29 @@ public class bill extends AppCompatActivity {
     }
 
     public String month(String a){
-        if(a.charAt(1) == '/'){
-            if(a.charAt(0) == '1'){
+        if(a.charAt(3) == '0'){
+            if(a.charAt(4) == '1'){
                 return "January";
-            }else if(a.charAt(0) == '2'){
+            }else if(a.charAt(4) == '2'){
                 return "February";
-            }else if(a.charAt(0) == '3'){
+            }else if(a.charAt(4) == '3'){
                 return "March";
-            }else if(a.charAt(0) == '4'){
+            }else if(a.charAt(4) == '4'){
                 return "April";
-            }else if(a.charAt(0) == '5'){
+            }else if(a.charAt(4) == '5'){
                 return "May";
-            }else if(a.charAt(0) == '6'){
+            }else if(a.charAt(4) == '6'){
                 return "June";
-            }else if(a.charAt(0) == '7'){
+            }else if(a.charAt(4) == '7'){
                 return "July";
-            }else if(a.charAt(0) == '8'){
+            }else if(a.charAt(4) == '8'){
                 return "August";
-            }else if(a.charAt(0) == '9'){
+            }else if(a.charAt(4) == '9'){
                 return "September";
             }
-        }else if(a.charAt(1) == '0'){
+        }else if(a.charAt(4) == '0'){
             return "October";
-        }else if(a.charAt(1)=='1'){
+        }else if(a.charAt(4)=='1'){
             return "November";
         }
         return "December";
