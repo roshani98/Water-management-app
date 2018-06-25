@@ -66,8 +66,6 @@ public class admin_change_method extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        // String method = "2";
-
         cost.setText(Cost);
         discount.setText(Discount);
 
@@ -80,16 +78,11 @@ public class admin_change_method extends AppCompatActivity {
         }else{
             variable.setChecked(true);
         }
-//        pricing_method.addView(fixed);
-//        pricing_method.addView(variable);
-
 
     }
 
     public void save_method_changes(View view){
-        String pricing = "";//((RadioButton) findViewById(pricing_method.getCheckedRadioButtonId())).getText().toString().trim();
-//        Toast.makeText(getApplicationContext(),pricing,Toast.LENGTH_LONG).show();
-
+        String pricing = "";
         if(fixed.isChecked()){
             pricing="Fixed Costing";
         }else{
@@ -98,12 +91,6 @@ public class admin_change_method extends AppCompatActivity {
 
         Cost = cost.getText().toString().trim();
         Discount = discount.getText().toString().trim();
-
-//        if(pricing.equals("Method 1")){
-//            Method="1";
-//        }else{
-//            Method = "2";
-//        }
 
         Query query = mDatabase
                 .child("Admin").child(Username)

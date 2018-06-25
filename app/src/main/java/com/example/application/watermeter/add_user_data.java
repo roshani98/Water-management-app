@@ -174,75 +174,6 @@ public class add_user_data extends AppCompatActivity {
 
                 float read = Float.valueOf(reading);
 
-//                if(date.equals("1")){
-//                    date = "01";
-//                }else if(date.equals("2")){
-//                    date = "02";
-//                }else if(date.equals("3")){
-//                    date = "03";
-//                }else if(date.equals("4")){
-//                    date = "04";
-//                }else if(date.equals("5")){
-//                    date = "05";
-//                }else if(date.equals("6")){
-//                    date = "06";
-//                }else if(date.equals("7")){
-//                    date = "07";
-//                }else if(date.equals("8")){
-//                    date = "08";
-//                }else if(date.equals("9")){
-//                    date = "09";
-//                }
-
-//                if(month.equals("January")){
-//                    month = "01";
-//                }else if(month.equals("February")){
-//                    if(date.equals("29") || date.equals("30") || date.equals("31")){
-//                        Toast.makeText(getApplicationContext(),"Invalid Date Entered",Toast.LENGTH_LONG).show();
-//                        return ;
-//                    }
-//                    month = "02";
-//                }else if(month.equals("March")){
-//                    month = "03";
-//                }else if(month.equals("April")){
-//                    if(date.equals("31")){
-//                        Toast.makeText(getApplicationContext(),"Invalid Date Entered",Toast.LENGTH_LONG).show();
-//                        return ;
-//                    }
-//                    month = "04";
-//                }else if(month.equals("May")){
-//                    month = "05";
-//                }else if(month.equals("June")){
-//                    if(date.equals("31")){
-//                        Toast.makeText(getApplicationContext(),"Invalid Date Entered",Toast.LENGTH_LONG).show();
-//                        return ;
-//                    }
-//                    month = "06";
-//                }else if(month.equals("July")){
-//                    month = "07";
-//                }else if(month.equals("August")){
-//                    month = "08";
-//                }else if(month.equals("September")){
-//                    if(date.equals("31")){
-//                        Toast.makeText(getApplicationContext(),"Invalid Date Entered",Toast.LENGTH_LONG).show();
-//                        return ;
-//                    }
-//                    month = "09";
-//                }else if(month.equals("October")){
-//                    month = "10";
-//                }else if(month.equals("November")){
-//                    if(date.equals("31")){
-//                        Toast.makeText(getApplicationContext(),"Invalid Date Entered",Toast.LENGTH_LONG).show();
-//                        return ;
-//                    }
-//                    month = "11";
-//                }else if(month.equals("December")) {
-//                    month = "12";
-//                }
-//
-//                final String initial_date = date + month + add_user_data_year.getSelectedItem().toString();
-
-
                 if(username!=null && reading!=null){
                     fetchData(username,reading,date);
                 }else if(username==null){
@@ -263,10 +194,6 @@ public class add_user_data extends AppCompatActivity {
     public void fetchData(final String username, final String reading, final String date ){
 
         final Intent intent = getIntent();
-
-//        String username1 = intent.getStringExtra("Username");
-//        String password1 = intent.getStringExtra("Password");
-//        String society1 = intent.getStringExtra("Society");
 
         final String Area = intent.getStringExtra("Area");
         final String Cost = intent.getStringExtra("Cost");
@@ -305,8 +232,6 @@ public class add_user_data extends AppCompatActivity {
                         String cost = map.get("Cost").toString();
                         String final_amount = map.get("Final Amount").toString();
 
-                        //String password = map.get("Password").toString();
-                        //String username_password = map.get("username_password").toString();
 
                         String reading0 = map.get("Reading0").toString();
                         String reading1 = map.get("Reading1").toString();
@@ -321,8 +246,6 @@ public class add_user_data extends AppCompatActivity {
                         String reading10 = map.get("Reading10").toString();
                         String reading11 = map.get("Reading11").toString();
                         String reading12 = map.get("Reading12").toString();
-
-                        //Toast.makeText(getApplicationContext(), reading0, Toast.LENGTH_LONG).show();
 
                         String date0 = map.get("Date0").toString().trim();
                         String date1 = map.get("Date1").toString().trim();
@@ -364,8 +287,6 @@ public class add_user_data extends AppCompatActivity {
 
                         String month = "";
                         month = String.valueOf(date.charAt(3)) + date.charAt(4);
-
-                       // Toast.makeText(getApplicationContext(),date0,Toast.LENGTH_LONG).show();
 
                         boolean a;
                         int f=0;
@@ -593,16 +514,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount2 = String.valueOf(ans);
                                 }
-//                            reading2 = reading;
-//                            date2 = date;
-//                            Float a = Float.parseFloat(reading1);
-//                            Float b = Float.parseFloat(reading2);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading3.equals("0")) {
                                 reading3 = reading;
                                 previous_reading = Float.parseFloat(reading2);
@@ -616,16 +527,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount3 = String.valueOf(ans);
                                 }
-//                            reading3 = reading;
-//                            date3 = date;
-//                            Float a = Float.parseFloat(reading2);
-//                            Float b = Float.parseFloat(reading3);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading4.equals("0")) {
                                 reading4 = reading;
                                 previous_reading = Float.parseFloat(reading3);
@@ -639,16 +540,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount4 = String.valueOf(ans);
                                 }
-//                            reading4 = reading;
-//                            date4 = date;
-//                            Float a = Float.parseFloat(reading3);
-//                            Float b = Float.parseFloat(reading4);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading5.equals("0")) {
                                 reading5 = reading;
                                 previous_reading = Float.parseFloat(reading4);
@@ -662,16 +553,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount5 = String.valueOf(ans);
                                 }
-                                //reading5 = reading;
-//                            date5 = date;
-//                            Float a = Float.parseFloat(reading4);
-//                            Float b = Float.parseFloat(reading5);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading6.equals("0")) {
                                 reading6 = reading;
                                 previous_reading = Float.parseFloat(reading5);
@@ -685,16 +566,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount6 = String.valueOf(ans);
                                 }
-//                            reading6 = reading;
-//                            date6 = date;
-//                            Float a = Float.parseFloat(reading5);
-//                            Float b = Float.parseFloat(reading6);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading7.equals("0")) {
                                 reading7 = reading;
                                 previous_reading = Float.parseFloat(reading6);
@@ -708,16 +579,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount7 = String.valueOf(ans);
                                 }
-//                            reading7 = reading;
-//                            date7 = date;
-//                            Float a = Float.parseFloat(reading6);
-//                            Float b = Float.parseFloat(reading7);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading8.equals("0")) {
                                 reading8 = reading;
                                 previous_reading = Float.parseFloat(reading7);
@@ -731,16 +592,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount8 = String.valueOf(ans);
                                 }
-//                            reading8 = reading;
-//                            date8 = date;
-//                            Float a = Float.parseFloat(reading7);
-//                            Float b = Float.parseFloat(reading8);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading9.equals("0")) {
                                 reading9 = reading;
                                 previous_reading = Float.parseFloat(reading8);
@@ -754,16 +605,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount9 = String.valueOf(ans);
                                 }
-//                            reading9 = reading;
-//                            date9 = date;
-//                            Float a = Float.parseFloat(reading8);
-//                            Float b = Float.parseFloat(reading9);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading10.equals("0")) {
                                 reading10 = reading;
                                 previous_reading = Float.parseFloat(reading9);
@@ -777,16 +618,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount10 = String.valueOf(ans);
                                 }
-//                            reading10 = reading;
-//                            date10 = date;
-//                            Float a = Float.parseFloat(reading9);
-//                            Float b = Float.parseFloat(reading10);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading11.equals("0")) {
                                 reading11 = reading;
                                 previous_reading = Float.parseFloat(reading10);
@@ -800,16 +631,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount11 = String.valueOf(ans);
                                 }
-//                            reading11 = reading;
-//                            date11 = date;
-//                            Float a = Float.parseFloat(reading10);
-//                            Float b = Float.parseFloat(reading11);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else if (reading12.equals("0")) {
                                 reading12 = reading;
                                 previous_reading = Float.parseFloat(reading11);
@@ -823,16 +644,6 @@ public class add_user_data extends AppCompatActivity {
                                 if (ans > 0) {
                                     amount12 = String.valueOf(ans);
                                 }
-//                            reading12 = reading;
-//                            date12 = date;
-//                            Float a = Float.parseFloat(reading11);
-//                            Float b = Float.parseFloat(reading12);
-//                            Float ans = b-a;
-//                            if(ans>0) {
-//                                difference = String.valueOf(ans);
-//                            }else{
-//                                difference = "0";
-//                            }
                             } else {
                                 reading0 = reading1;
                                 reading1 = reading2;
@@ -891,14 +702,6 @@ public class add_user_data extends AppCompatActivity {
                                 finalamount_in_float += ans;
                                 final_amount = String.valueOf(finalamount_in_float);
                             }
-
-//                        Float float_final_amount = Float.parseFloat(final_amount);
-//                        Float c = Float.parseFloat(difference);
-//                        Float float_cost = Float.parseFloat(cost);
-//                        Float amount = float_cost*c;
-//                        float_final_amount = amount + float_final_amount;
-//
-//                        final_amount = String.valueOf(float_final_amount);
 
                         Intent intent = getIntent();
 
@@ -959,20 +762,12 @@ public class add_user_data extends AppCompatActivity {
                         userData.put("Mobile Number", map.get("Mobile Number").toString());
                         userData.put("Pincode", map.get("Pincode").toString());
 
-                        //fbDatabaseReference.child(username1).orderByChild("Username").equalTo(username).removeValue();
-
-                        //fbDatabaseReference.child("Admin").child(username1).push().updateChildren(userData);
                         fbDatabaseReference.child("Admin").child(username1).push().updateChildren(userData);
 
 
                         for(DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {
                             areaSnapshot.getRef().setValue(null);
                         }
-
-
-                        //dataSnapshot.getRef().child(username1).orderByChild("Username").equalTo(username).removeValue();
-
-                        //Toast.makeText(getApplicationContext(), a.toString(), Toast.LENGTH_LONG).show();
 
                         Intent i = new Intent(getApplicationContext(), admin_logged_in.class);
 
@@ -1019,7 +814,6 @@ public class add_user_data extends AppCompatActivity {
     }
 
     public float discounted(String date0 , String date1 , float discount , float reading) throws ParseException {
-//        int days = 0;
         long days;
         DateFormat format = new SimpleDateFormat("dd/MM/yy", Locale.ENGLISH);
         Date one = format.parse(date0);
@@ -1042,8 +836,7 @@ public class add_user_data extends AppCompatActivity {
         date3.set(Year1,Month1,Day1);
         days = date2.getTimeInMillis() - date3.getTimeInMillis();
         days = days/(24 * 60 * 60 * 1000);
-        Toast.makeText(getApplicationContext(), String.valueOf(days), Toast.LENGTH_LONG).show();
         reading = reading - (discount * days);
-        return days;
+        return reading;
     }
 }

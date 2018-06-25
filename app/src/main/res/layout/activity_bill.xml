@@ -33,30 +33,30 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:background="#EEEEEE"
-                android:textStyle="bold"
                 android:padding="2dp"
-                android:text="Actual Amount"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
+                android:text="Actual Reading"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:background="#E3F2FD"
-                android:textStyle="bold"
                 android:padding="2dp"
-                android:text="After Discount"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
+                android:text="Discounted Units"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:background="#EEEEEE"
-                android:textStyle="bold"
                 android:padding="2dp"
-                android:text="Cost"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
+                android:text="Net Balance"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
 
         </TableRow>
 

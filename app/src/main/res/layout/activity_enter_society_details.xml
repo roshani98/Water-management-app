@@ -24,14 +24,14 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@+id/editText"
-        android:layout_marginTop="2dp"
         android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="Enter amount of discount"
+        android:layout_marginTop="2dp"
         android:background="@drawable/down"
-        android:textColorHint="@android:color/white"
+        android:ems="10"
+        android:hint="Enter free units of discount"
+        android:inputType="number"
         android:padding="5dp"
-        android:inputType="number" />
+        android:textColorHint="@android:color/white" />
 
     <Button
         android:id="@+id/done"

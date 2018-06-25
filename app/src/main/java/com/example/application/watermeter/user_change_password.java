@@ -26,7 +26,6 @@ public class user_change_password extends AppCompatActivity {
     private String admin;
     private String Password;
     private String Username;
-//    private String username_password;
 
     FirebaseDatabase fbDatabase;
     DatabaseReference fbDatabaseReference;
@@ -50,7 +49,6 @@ public class user_change_password extends AppCompatActivity {
         Password = intent.getStringExtra("Password");
 
         Username = intent.getStringExtra("Username");
-//        username_password = intent.getStringExtra("username_password");
         admin = intent.getStringExtra("Admin");
     }
 
