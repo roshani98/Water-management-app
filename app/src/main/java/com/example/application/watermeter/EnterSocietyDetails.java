@@ -62,6 +62,7 @@ public class EnterSocietyDetails extends AppCompatActivity {
                 discount.setText("");
                 discount.setFocusable(true);
                 discount.setEnabled(true);
+                //method = "2";
             }
 
         final String username = intent.getStringExtra("username");
@@ -168,10 +169,11 @@ public class EnterSocietyDetails extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-
+                        // Do nothing but close the dialog
                     }
                 });
 
+        // Remember, create doesn't show the dialog
         AlertDialog helpDialog = helpBuilder.create();
         helpDialog.show();
     }
@@ -184,10 +186,11 @@ public class EnterSocietyDetails extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-
+                        // Do nothing but close the dialog
                     }
                 });
 
+        // Remember, create doesn't show the dialog
         AlertDialog helpDialog = helpBuilder.create();
         helpDialog.show();
     }

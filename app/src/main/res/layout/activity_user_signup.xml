@@ -41,12 +41,13 @@
 
         android:layout_below="@+id/bal_amt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
         android:background="@drawable/down"
         android:ems="10"
-        android:hint="Enter mobile number"
-        android:padding="5dp"
+
         android:textColorHint="@android:color/white"
+        android:padding="5dp"
+        android:hint="Enter mobile number"
+
         android:inputType="number" />
 
     <RelativeLayout

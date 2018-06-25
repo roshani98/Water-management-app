@@ -237,6 +237,8 @@ public class add_user_data extends AppCompatActivity {
                         String final_amount = map.get("Final Amount").toString().trim();
                         String balance = map.get("Balance").toString().trim();
 
+                        //String password = map.get("Password").toString();
+                        //String username_password = map.get("username_password").toString();
 
                         String reading0 = map.get("Reading0").toString().trim();
                         String reading1 = map.get("Reading1").toString().trim();
@@ -251,6 +253,8 @@ public class add_user_data extends AppCompatActivity {
                         String reading10 = map.get("Reading10").toString().trim();
                         String reading11 = map.get("Reading11").toString().trim();
                         String reading12 = map.get("Reading12").toString().trim();
+
+                        //Toast.makeText(getApplicationContext(), reading0, Toast.LENGTH_LONG).show();
 
                         String date0 = map.get("Date0").toString().trim();
                         String date1 = map.get("Date1").toString().trim();
@@ -294,6 +298,8 @@ public class add_user_data extends AppCompatActivity {
                         Float balance_in_float = Float.parseFloat(balance);
                         String month = "";
                         month = String.valueOf(date.charAt(3)) + date.charAt(4);
+
+                       // Toast.makeText(getApplicationContext(),date0,Toast.LENGTH_LONG).show();
 
                         boolean a;
                         int f=0;
@@ -628,6 +634,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount9 = String.valueOf(ans);
                                 }
+
                             } else if (reading10.equals("0")) {
                                 reading10 = reading;
                                 previous_reading = Float.parseFloat(reading9);
@@ -642,6 +649,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount10 = String.valueOf(ans);
                                 }
+
                             } else if (reading11.equals("0")) {
                                 reading11 = reading;
                                 previous_reading = Float.parseFloat(reading10);

@@ -72,6 +72,7 @@ public class user_logged_in extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_logged_in);
 
+
         Intent intent = getIntent();
 
         Amount0 = intent.getStringExtra("Amount0");
@@ -141,7 +142,7 @@ public class user_logged_in extends AppCompatActivity {
 
         int a = 0;
         info = info + "Final Amount : \t \t \t" + Final_Amount + "\n\n";
-
+//        user_info.setText(info);
     }
 
 

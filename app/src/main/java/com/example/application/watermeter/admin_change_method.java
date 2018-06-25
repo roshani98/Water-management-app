@@ -66,6 +66,8 @@ public class admin_change_method extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        // String method = "2";
+
         cost.setText(Cost);
         discount.setText(Discount);
 

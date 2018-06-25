@@ -55,6 +55,7 @@ public class user_signup extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        //super.onBackPressed();
         finish();
     }
 
@@ -152,6 +153,7 @@ public class user_signup extends AppCompatActivity {
         selectDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // TODO Auto-generated method stub
                 new DatePickerDialog(user_signup.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
