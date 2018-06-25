@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,6 +11,18 @@
     android:layout_width="match_parent"
     android:orientation="vertical">
 
+    <Spinner
+        android:id="@+id/month"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:entries="@array/Months">
+
+    </Spinner>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,44 +34,101 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="House Number"
-                android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:background="#E3F2FD"
                 android:textSize="20sp"
+                android:padding="5dp"
                 android:gravity="center"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                android:text="Units Consumed"
                 android:background="#EEEEEE"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="#E3F2FD"
                 android:text="Cost(in Rupees)"
-                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Balance Amt"
+                android:background="#EEEEEE"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="#E3F2FD"
+                android:text="Amt left after Deduction"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"/>
+
         </TableRow>
 
-        <TableRow>
+        <TableRow android:layout_marginTop="10dp">
             <TextView
                 android:id="@+id/textView"
-                android:layout_margin="10dp"
+                android:layout_margin="2dp"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
-                android:padding="5dp"
-                android:layout_weight="1" />
+                android:padding="5dp" />
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
-                android:padding="5dp"
-                android:layout_weight="1"/>
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:padding="5dp" />
+
             </TableRow>
     </TableLayout>
-
+    </HorizontalScrollView>
 </LinearLayout>
 </ScrollView>

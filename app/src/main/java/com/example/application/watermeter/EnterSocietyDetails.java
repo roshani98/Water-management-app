@@ -48,8 +48,6 @@ public class EnterSocietyDetails extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        // String method = "2";
-
         pricing_method = (RadioGroup) findViewById(R.id.pricing_method);
         fixed = (RadioButton) findViewById(R.id.fixed);
         variable = (RadioButton) findViewById(R.id.variable);
@@ -73,27 +71,20 @@ public class EnterSocietyDetails extends AppCompatActivity {
         final String city = intent.getStringExtra("city");
         final String area = intent.getStringExtra("area");
         final String pincode = intent.getStringExtra("pincode");
-//        final String pricing = intent.getStringExtra("pricing");
         final String costs = intent.getStringExtra("cost");
         final String y = intent.getStringExtra("username_password");
-        //final String discounts = intent.getStringExtra("discount");
-        //final String method = intent.getStringExtra("method");
-//
-//        if(method.equals("Method 1")){
-//            discount.setText("0");
-//            discount.setFocusable(false);
-//            discount.setEnabled(false);
-//        }
 
-
-        //final String finalMethod = method;
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String costs = cost.getText().toString().trim();
                 final String discounts = discount.getText().toString().trim();
-                final String pricing = ((RadioButton) findViewById(pricing_method.getCheckedRadioButtonId())).getText().toString().trim();
-
+                String pricing = "";
+                if(fixed.isChecked()){
+                    pricing = "Method 1";
+                }else{
+                    pricing  = "Method 2";
+                }
                 if(TextUtils.isEmpty(costs)){
                     Toast.makeText(EnterSocietyDetails.this,"Please enter cost per unit",Toast.LENGTH_SHORT).show();
                     return;
@@ -108,6 +99,7 @@ public class EnterSocietyDetails extends AppCompatActivity {
                         .child("Admin").child(username)
                         .orderByChild("username_password").equalTo(y);
 
+                final String finalPricing = pricing;
                 q.addListenerForSingleValueEvent(new ValueEventListener(){
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -127,17 +119,15 @@ public class EnterSocietyDetails extends AppCompatActivity {
                                 userData.put("City",city);
                                 userData.put("Area",area);
                                 userData.put("Pincode",pincode);
-//                                userData.put("Pricing_method",pricing);
                                 userData.put("Password", password);
                                 userData.put("username_password", y);
 
 
-                                if(pricing.equals("Method 1")){
+                                if(finalPricing.equals("Method 1")){
                                     userData.put("Method",String.valueOf(1));
                                 }else{
                                     userData.put("Method",String.valueOf(2));
                                 }
-//                                userData.put("Method", finalMethod);
                                 userData.put("Cost",costs);
                                 userData.put("Discount",discounts);
 
@@ -174,7 +164,6 @@ public class EnterSocietyDetails extends AppCompatActivity {
 
     public void fixed(View view) {
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(this);
-//        helpBuilder.setTitle("");
         helpBuilder.setMessage("In this method of payment there is no discount given to the users.");
         helpBuilder.setPositiveButton("Ok",
                 new DialogInterface.OnClickListener() {
@@ -191,7 +180,6 @@ public class EnterSocietyDetails extends AppCompatActivity {
 
     public void variable(View view) {
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(this);
-//        helpBuilder.setTitle("Area");
         helpBuilder.setMessage("In this method of pricing a certain discount of units of water is given to the user. " +
                 "The discount of units is given on a per day basis.");
         helpBuilder.setPositiveButton("Ok",

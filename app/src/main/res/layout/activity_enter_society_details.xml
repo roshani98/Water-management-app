@@ -27,7 +27,7 @@
         android:layout_marginTop="2dp"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="Enter amount of discount"
+        android:hint="Enter discount (in units)"
         android:background="@drawable/down"
         android:textColorHint="@android:color/white"
         android:padding="5dp"

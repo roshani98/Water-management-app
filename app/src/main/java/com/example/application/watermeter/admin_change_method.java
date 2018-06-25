@@ -80,30 +80,27 @@ public class admin_change_method extends AppCompatActivity {
         }else{
             variable.setChecked(true);
         }
-//        pricing_method.addView(fixed);
-//        pricing_method.addView(variable);
-
 
     }
 
     public void save_method_changes(View view){
-        final String pricing = ((RadioButton) findViewById(pricing_method.getCheckedRadioButtonId())).getText().toString().trim();
-//        Toast.makeText(getApplicationContext(),pricing,Toast.LENGTH_LONG).show();
+        String pricing = "";
+
+        if(fixed.isChecked()){
+            pricing="Fixed Costing";
+        }else{
+            pricing = "Variable Costing";
+        }
 
         Cost = cost.getText().toString().trim();
         Discount = discount.getText().toString().trim();
-
-//        if(pricing.equals("Method 1")){
-//            Method="1";
-//        }else{
-//            Method = "2";
-//        }
 
         Query query = mDatabase
                 .child("Admin").child(Username)
                 .orderByChild("username_password")
                 .equalTo(username_password);
 
+        final String finalPricing = pricing;
         query.addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -134,7 +131,7 @@ public class admin_change_method extends AppCompatActivity {
                         userData.put("Pincode",Pincode);
                         userData.put("Cost",Cost);
                         userData.put("Discount",Discount);
-                        if(pricing.equals("Fixed Costing")){
+                        if(finalPricing.equals("Fixed Costing")){
                             userData.put("Method",String.valueOf(1));
                         }else{
                             userData.put("Method",String.valueOf(2));
@@ -164,6 +161,7 @@ public class admin_change_method extends AppCompatActivity {
                 .child("Admin").child(Username)
                 .orderByChild("username_password");
 
+        final String finalPricing1 = pricing;
         query.addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -233,7 +231,7 @@ public class admin_change_method extends AppCompatActivity {
                             userData.put("Final Amount",map.get("Final Amount").toString());
                             userData.put("Cost", Cost);
                             userData.put("Discount", Discount);
-                            if(pricing.equals("Fixed Costing")){
+                            if(finalPricing1.equals("Fixed Costing")){
                                 userData.put("Method",String.valueOf(1));
                             }else{
                                 userData.put("Method",String.valueOf(2));

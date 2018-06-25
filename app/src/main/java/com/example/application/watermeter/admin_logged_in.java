@@ -70,7 +70,7 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
         startActivity(i);
-        finish();
+//        finish();
     }
 
     public void choosen_add_user_data(View view){
@@ -87,7 +87,7 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
         startActivity(i);
-        finish();
+//        finish();
     }
 
     public void change(View view){
@@ -103,7 +103,7 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
         startActivity(i);
-        finish();
+//        finish();
     }
 
     public void change_method(View view){
@@ -119,7 +119,7 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
         startActivity(i);
-        finish();
+//        finish();
     }
 
     public void generate_statement(View view) {
@@ -135,6 +135,6 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("City",City);
         i.putExtra("username_password",username_password);
         startActivity(i);
-        finish();
+//        finish();
     }
 }

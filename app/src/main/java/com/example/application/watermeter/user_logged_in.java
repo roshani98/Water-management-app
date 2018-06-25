@@ -11,9 +11,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class user_logged_in extends AppCompatActivity {
-//    private TextView user_info;
-//    private String username;
-//    private String password;
+
     private String admin;
     private String Amount0;
     private String Amount1;
@@ -67,15 +65,13 @@ public class user_logged_in extends AppCompatActivity {
     private String Society;
     private String Username;
     private String username_password;
-    // private Button user_password;
+    private String final_reading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_logged_in);
 
-//        user_info = (TextView)findViewById(R.id.user_info);
-        //user_password = (Button)findViewById(R.id.user_password);
 
         Intent intent = getIntent();
 
@@ -132,6 +128,7 @@ public class user_logged_in extends AppCompatActivity {
         Username = intent.getStringExtra("Username");
         username_password = intent.getStringExtra("username_password");
         admin = intent.getStringExtra("Admin");
+        final_reading = intent.getStringExtra("Final_Reading");
 
         String info = "Hello " + Username + ", \n\n" ;
         info = info + "Society Name :\t \t \t " + Society + "\n\n";
@@ -151,9 +148,9 @@ public class user_logged_in extends AppCompatActivity {
 
 
     public void choosen_change_password(View view){
+
         Intent i = new Intent(getApplicationContext(), user_change_password.class);
-//        i.putExtra("username", username);
-//        i.putExtra("password", password);
+
         i.putExtra("Admin",admin);
         i.putExtra("Amount0",Amount0);
         i.putExtra("Amount1",Amount1);
@@ -207,8 +204,8 @@ public class user_logged_in extends AppCompatActivity {
         i.putExtra("Society",Society);
         i.putExtra("Username",Username);
         i.putExtra("username_password",username_password);
+        i.putExtra("Final_Reading",final_reading);
         startActivity(i);
-        //startActivity(new Intent(this, user_change_password.class));
     }
 
     public void choosen_generate_bill(View view){
@@ -266,6 +263,7 @@ public class user_logged_in extends AppCompatActivity {
         i.putExtra("Society",Society);
         i.putExtra("Username",Username);
         i.putExtra("username_password",username_password);
+        i.putExtra("Final_Reading",final_reading);
         startActivity(i);
     }
 

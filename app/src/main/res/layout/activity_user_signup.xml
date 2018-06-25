@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.application.watermeter.user_signup">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/user_flat"
@@ -20,19 +23,32 @@
         android:inputType="textPersonName" />
 
     <EditText
+        android:id="@+id/bal_amt"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/user_flat"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:textColorHint="@android:color/white"
+        android:hint="Balance Amount"
+        android:inputType="number"
+        android:background="#569adf"/>
+
+    <EditText
         android:id="@+id/user_signup_mobile_number"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_below="@+id/bal_amt"
         android:layout_centerHorizontal="true"
         android:background="@drawable/down"
         android:ems="10"
         android:textColorHint="@android:color/white"
         android:padding="5dp"
-        android:hint="Enter your mobile number"
+        android:hint="Enter mobile number"
         android:inputType="number" />
 
     <RelativeLayout
+        android:id="@+id/dateView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -82,6 +98,7 @@
         android:layout_marginTop="40dp"/>
 
     <RelativeLayout
+        android:id="@+id/number_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -91,14 +108,14 @@
 
         <NumberPicker
             android:id="@+id/meter1"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:background="#E0E0E0">
         </NumberPicker>
 
         <NumberPicker
             android:id="@+id/meter2"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter1"
             android:background="#E0E0E0">
@@ -106,7 +123,7 @@
 
         <NumberPicker
             android:id="@+id/meter3"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter2"
             android:background="#E0E0E0">
@@ -114,7 +131,7 @@
 
         <NumberPicker
             android:id="@+id/meter4"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter3"
             android:background="#E0E0E0">
@@ -122,7 +139,7 @@
 
         <NumberPicker
             android:id="@+id/meter5"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter4"
             android:background="#E0E0E0">
@@ -130,7 +147,7 @@
 
         <NumberPicker
             android:id="@+id/meter6"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter5"
             android:background="#E0E0E0">
@@ -138,7 +155,7 @@
 
         <NumberPicker
             android:id="@+id/meter7"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter6"
             android:background="#FF8A65">
@@ -146,7 +163,7 @@
 
         <NumberPicker
             android:id="@+id/meter8"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter7"
             android:background="#FF8A65">
@@ -154,7 +171,7 @@
 
         <NumberPicker
             android:id="@+id/meter9"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/meter8"
             android:background="#FF8A65">
@@ -165,11 +182,12 @@
         android:id="@+id/user_signed_up"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/dateView"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
         android:background="@drawable/button_round"
         android:textColor="@android:color/white"
-        android:text="ADD user"
-        android:layout_alignParentBottom="true"/>
+        android:text="ADD user" />
 
 </RelativeLayout>
+</ScrollView>

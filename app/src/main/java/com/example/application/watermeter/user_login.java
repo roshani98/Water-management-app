@@ -145,6 +145,7 @@ public class user_login extends AppCompatActivity {
                         i.putExtra("Reading12",map.get("Reading12").toString());
                         i.putExtra("Society",map.get("Society").toString());
                         i.putExtra("Username",map.get("Username").toString());
+                        i.putExtra("Final_Reading",map.get("Final_Reading").toString());
                         i.putExtra("username_password",map.get("username_password").toString());
 
                         startActivity(i);
