@@ -25,15 +25,10 @@
         android:layout_height="50dp"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-<<<<<<< HEAD
         android:layout_marginTop="2dp"
-=======
         android:ems="10"
         android:hint="Enter discount (in units)"
->>>>>>> upstream/master
         android:background="@drawable/down"
-        android:ems="10"
-        android:hint="Enter free units of discount"
         android:inputType="number"
         android:padding="5dp"
         android:textColorHint="@android:color/white" />

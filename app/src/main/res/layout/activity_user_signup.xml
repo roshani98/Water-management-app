@@ -38,23 +38,16 @@
         android:id="@+id/user_signup_mobile_number"
         android:layout_width="300dp"
         android:layout_height="50dp"
-<<<<<<< HEAD
-=======
+
         android:layout_below="@+id/bal_amt"
->>>>>>> upstream/master
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/down"
         android:ems="10"
         android:hint="Enter mobile number"
-        android:inputType="number"
         android:padding="5dp"
-<<<<<<< HEAD
-        android:textColorHint="@android:color/white" />
-=======
-        android:hint="Enter mobile number"
+        android:textColorHint="@android:color/white"
         android:inputType="number" />
->>>>>>> upstream/master
 
     <RelativeLayout
         android:id="@+id/dateView"

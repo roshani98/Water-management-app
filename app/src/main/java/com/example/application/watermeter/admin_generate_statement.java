@@ -41,10 +41,7 @@ public class admin_generate_statement extends AppCompatActivity {
     private TextView textView;
 
     private TextView textView1;
-<<<<<<< HEAD
-=======
     private TextView textView2;
->>>>>>> upstream/master
 
     private List<TextView> TextList = new ArrayList<TextView>();
     private String final_reading;
@@ -60,13 +57,10 @@ public class admin_generate_statement extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-<<<<<<< HEAD
         textView = (TextView) findViewById(R.id.textView);
-=======
         month = (Spinner)findViewById(R.id.month);
 
         textView = (TextView)findViewById(R.id.textView);
->>>>>>> upstream/master
         textView1 = (TextView) findViewById(R.id.textView1);
         textView2 = (TextView) findViewById(R.id.textView2);
 
@@ -83,58 +77,6 @@ public class admin_generate_statement extends AppCompatActivity {
         Username = intent.getStringExtra("Username");
         City = intent.getStringExtra("City");
         username_password = intent.getStringExtra("username_password");
-
-
-<<<<<<< HEAD
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-
-                if (dataSnapshot.getValue() != null) {
-
-                    Log.d("dataSnapshot ", dataSnapshot.toString());
-
-
-                    if (dataSnapshot.getValue() != null) {
-
-                        Log.d("dataSnapshot ", dataSnapshot.toString());
-
-                        HashMap<String, Object> studentdata = (HashMap<String, Object>) dataSnapshot.getValue();
-                        Log.d("dataSnapshot ", studentdata.toString());
-
-
-                        for (String key : studentdata.keySet()) {
-
-                            Object mObject = studentdata.get(key);
-                            HashMap<String, Object> map = (HashMap<String, Object>) mObject;
-
-                            HashMap<String, Object> userData = new HashMap<String, Object>();
-
-                            if (!map.get("Username").toString().equals(Username)) {
-
-                                textView.append(map.get("Username").toString() + "\n\n");
-                                textView1.append(map.get("Final Amount").toString() + "\n\n");
-
-                            }
-                        }
-
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Sorry cant find the user in the database", Toast.LENGTH_LONG).show();
-
-                    }
-
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-    }
-}
-=======
 
         month.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -361,5 +303,3 @@ public class admin_generate_statement extends AppCompatActivity {
 
 }
 
-
->>>>>>> upstream/master

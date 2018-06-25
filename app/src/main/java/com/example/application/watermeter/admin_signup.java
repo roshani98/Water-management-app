@@ -168,10 +168,6 @@ public class admin_signup extends AppCompatActivity {
                             return;
                         } else {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
                             HashMap<String, String> userData = new HashMap<String, String>();
 
                             String y = username[0] + "_" + password;
@@ -185,10 +181,7 @@ public class admin_signup extends AppCompatActivity {
                             userData.put("pincode",pincode);
 
                             mDatabase.child("Admin").child(username[0]).push().setValue(userData);
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             Intent i = new Intent(getApplicationContext(), EnterSocietyDetails.class);
                             i.putExtra("username", username[0]);
                             i.putExtra("password", password);
@@ -199,10 +192,7 @@ public class admin_signup extends AppCompatActivity {
                             i.putExtra("area",area);
                             i.putExtra("city",city);
                             i.putExtra("pincode",pincode);
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             startActivity(i);
                             finish();
                         }

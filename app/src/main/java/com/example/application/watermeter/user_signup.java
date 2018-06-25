@@ -133,11 +133,7 @@ public class user_signup extends AppCompatActivity {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-<<<<<<< HEAD
-                String myFormat = "dd/MM/yy";
-=======
                 String myFormat = "dd/MM/yy"; //In which you need put here
->>>>>>> upstream/master
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
@@ -309,10 +305,6 @@ public class user_signup extends AppCompatActivity {
 
                             mDatabase.child("Admin").child(Username).push().setValue(userData);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
                             Intent i = new Intent(getApplicationContext(), admin_logged_in.class);
                             i.putExtra("Area",Area);
                             i.putExtra("Cost",Cost);

@@ -36,12 +36,9 @@
                 android:background="#EEEEEE"
                 android:padding="2dp"
                 android:text="Actual Reading"
-<<<<<<< HEAD
+
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold" />
-=======
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
->>>>>>> upstream/master
 
             <TextView
                 android:id="@+id/textView2"
@@ -51,13 +48,8 @@
                 android:background="#E3F2FD"
                 android:padding="2dp"
                 android:text="Discounted Units"
-<<<<<<< HEAD
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold" />
-=======
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
->>>>>>> upstream/master
-
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="0dp"
@@ -66,13 +58,8 @@
                 android:background="#EEEEEE"
                 android:padding="2dp"
                 android:text="Net Balance"
-<<<<<<< HEAD
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold" />
-=======
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
->>>>>>> upstream/master
-
         </TableRow>
 
 

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-#Mon Jun 25 12:54:13 IST 2018
-=======
-#Fri Jun 22 11:47:44 IST 2018
->>>>>>> upstream/master
+#Tue Jun 26 01:00:25 IST 2018

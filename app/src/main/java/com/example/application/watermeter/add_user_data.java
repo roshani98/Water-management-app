@@ -50,8 +50,6 @@ public class add_user_data extends AppCompatActivity {
     FirebaseDatabase fbDatabase;
     DatabaseReference fbDatabaseReference;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -177,11 +175,8 @@ public class add_user_data extends AppCompatActivity {
 
                 float read = Float.valueOf(reading);
 
-<<<<<<< HEAD
-=======
                 reading = String.valueOf(read);
 
->>>>>>> upstream/master
                 if(username!=null && reading!=null){
                     fetchData(username,reading,date);
                 }else if(username==null){
@@ -528,10 +523,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount2 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading3.equals("0")) {
                                 reading3 = reading;
                                 previous_reading = Float.parseFloat(reading2);
@@ -546,10 +538,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount3 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading4.equals("0")) {
                                 reading4 = reading;
                                 previous_reading = Float.parseFloat(reading3);
@@ -564,10 +553,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount4 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading5.equals("0")) {
                                 reading5 = reading;
                                 previous_reading = Float.parseFloat(reading4);
@@ -582,10 +568,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount5 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading6.equals("0")) {
                                 reading6 = reading;
                                 previous_reading = Float.parseFloat(reading5);
@@ -600,10 +583,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount6 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading7.equals("0")) {
                                 reading7 = reading;
                                 previous_reading = Float.parseFloat(reading6);
@@ -618,10 +598,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount7 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading8.equals("0")) {
                                 reading8 = reading;
                                 previous_reading = Float.parseFloat(reading7);
@@ -636,10 +613,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount8 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading9.equals("0")) {
                                 reading9 = reading;
                                 previous_reading = Float.parseFloat(reading8);
@@ -654,10 +628,6 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount9 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
                             } else if (reading10.equals("0")) {
                                 reading10 = reading;
                                 previous_reading = Float.parseFloat(reading9);
@@ -672,10 +642,6 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount10 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
                             } else if (reading11.equals("0")) {
                                 reading11 = reading;
                                 previous_reading = Float.parseFloat(reading10);
@@ -690,10 +656,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount11 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else if (reading12.equals("0")) {
                                 reading12 = reading;
                                 previous_reading = Float.parseFloat(reading11);
@@ -708,10 +671,7 @@ public class add_user_data extends AppCompatActivity {
                                     balance_in_float -= ans;
                                     amount12 = String.valueOf(ans);
                                 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
                             } else {
                                 reading0 = reading1;
                                 reading1 = reading2;
@@ -772,11 +732,8 @@ public class add_user_data extends AppCompatActivity {
                                 final_amount = String.valueOf(finalamount_in_float);
                             }
 
-<<<<<<< HEAD
-=======
                             balance = String.valueOf(balance_in_float);
 
->>>>>>> upstream/master
                         Intent intent = getIntent();
 
                         String username1 = intent.getStringExtra("Username");

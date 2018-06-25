@@ -72,10 +72,6 @@ public class user_logged_in extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_logged_in);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
         Intent intent = getIntent();
 
         Amount0 = intent.getStringExtra("Amount0");
@@ -209,10 +205,6 @@ public class user_logged_in extends AppCompatActivity {
         i.putExtra("username_password",username_password);
         i.putExtra("Final_Reading",final_reading);
         startActivity(i);
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/master
     }
 
     public void choosen_generate_bill(View view){

@@ -304,10 +304,6 @@ public class bill extends AppCompatActivity {
             reading0.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount0);
             amount0.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             discount0.setText("0");
         }
 
@@ -320,10 +316,6 @@ public class bill extends AppCompatActivity {
             reading1.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount1);
             amount1.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount1.setText(String.valueOf(discounted(Date1,Date0,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -340,10 +332,6 @@ public class bill extends AppCompatActivity {
             reading2.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount2);
             amount2.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount2.setText(String.valueOf(discounted(Date2,Date1,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -359,10 +347,6 @@ public class bill extends AppCompatActivity {
             reading3.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount3);
             amount3.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount3.setText(String.valueOf(discounted(Date3,Date2,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -378,10 +362,6 @@ public class bill extends AppCompatActivity {
             reading4.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount4);
             amount4.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount4.setText(String.valueOf(discounted(Date4,Date3,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -397,10 +377,6 @@ public class bill extends AppCompatActivity {
             reading5.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount5);
             amount5.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount5.setText(String.valueOf(discounted(Date5,Date4,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -416,10 +392,6 @@ public class bill extends AppCompatActivity {
             reading6.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount6);
             amount6.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount6.setText(String.valueOf(discounted(Date6,Date5,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -435,10 +407,6 @@ public class bill extends AppCompatActivity {
             reading7.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount7);
             amount7.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount7.setText(String.valueOf(discounted(Date7,Date6,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -454,20 +422,11 @@ public class bill extends AppCompatActivity {
             reading8.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount8);
             amount8.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount8.setText(String.valueOf(discounted(Date8,Date7,Float.valueOf(Discount))));
             } catch (ParseException e) {
                 e.printStackTrace();
-<<<<<<< HEAD
-            }
-        }
-=======
             }        }
->>>>>>> upstream/master
 
         if (Date9.length() == 1){
             setnull(date9,reading9,discount9,amount9);
@@ -477,20 +436,11 @@ public class bill extends AppCompatActivity {
             reading9.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount9);
             amount9.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount9.setText(String.valueOf(discounted(Date9,Date8,Float.valueOf(Discount))));
             } catch (ParseException e) {
                 e.printStackTrace();
-<<<<<<< HEAD
-            }
-        }
-=======
             }        }
->>>>>>> upstream/master
 
         if (Date10.length() == 1){
             setnull(date10,reading10,discount10,amount10);
@@ -500,10 +450,6 @@ public class bill extends AppCompatActivity {
             reading10.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount10);
             amount10.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount10.setText(String.valueOf(discounted(Date10,Date9,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -519,10 +465,6 @@ public class bill extends AppCompatActivity {
             reading11.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount11);
             amount11.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount11.setText(String.valueOf(discounted(Date11,Date10,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -538,10 +480,6 @@ public class bill extends AppCompatActivity {
             reading12.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount12);
             amount12.setText(String.valueOf(final_amt));
-<<<<<<< HEAD
-=======
-            Float discount = final_amt - reading;
->>>>>>> upstream/master
             try {
                 discount12.setText(String.valueOf(discounted(Date12,Date11,Float.valueOf(Discount))));
             } catch (ParseException e) {
@@ -610,12 +548,7 @@ public class bill extends AppCompatActivity {
         date3.set(Year1,Month1,Day1);
         days = date2.getTimeInMillis() - date3.getTimeInMillis();
         days = days/(24 * 60 * 60 * 1000);
-<<<<<<< HEAD
-        return (discount*days);
-    }
 
-=======
         return discount*days;
     }
->>>>>>> upstream/master
 }
