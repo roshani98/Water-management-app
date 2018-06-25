@@ -54,7 +54,6 @@ public class user_signup extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
         finish();
     }
 
@@ -128,7 +127,7 @@ public class user_signup extends AppCompatActivity {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-                String myFormat = "dd/MM/yy"; //In which you need put here
+                String myFormat = "dd/MM/yy";
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
@@ -136,7 +135,6 @@ public class user_signup extends AppCompatActivity {
 
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                // TODO Auto-generated method stub
                 myCalendar.set(Calendar.YEAR, year);
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -148,7 +146,6 @@ public class user_signup extends AppCompatActivity {
         selectDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO Auto-generated method stub
                 new DatePickerDialog(user_signup.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
@@ -292,10 +289,6 @@ public class user_signup extends AppCompatActivity {
                             userData.put("Final Amount","0");
 
                             mDatabase.child("Admin").child(Username).push().setValue(userData);
-
-                            //              mDatabase.child("Hello").setValue(userData);
-
-                            //Log.d("hello","how");
 
                             Intent i = new Intent(getApplicationContext(), admin_logged_in.class);
                             i.putExtra("Area",Area);

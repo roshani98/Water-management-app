@@ -11,9 +11,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class user_logged_in extends AppCompatActivity {
-//    private TextView user_info;
-//    private String username;
-//    private String password;
+
     private String admin;
     private String Amount0;
     private String Amount1;
@@ -73,9 +71,6 @@ public class user_logged_in extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_logged_in);
-
-//        user_info = (TextView)findViewById(R.id.user_info);
-        //user_password = (Button)findViewById(R.id.user_password);
 
         Intent intent = getIntent();
 
@@ -145,15 +140,14 @@ public class user_logged_in extends AppCompatActivity {
 
         int a = 0;
         info = info + "Final Amount : \t \t \t" + Final_Amount + "\n\n";
-//        user_info.setText(info);
+
     }
 
 
 
     public void choosen_change_password(View view){
         Intent i = new Intent(getApplicationContext(), user_change_password.class);
-//        i.putExtra("username", username);
-//        i.putExtra("password", password);
+
         i.putExtra("Admin",admin);
         i.putExtra("Amount0",Amount0);
         i.putExtra("Amount1",Amount1);
@@ -208,7 +202,7 @@ public class user_logged_in extends AppCompatActivity {
         i.putExtra("Username",Username);
         i.putExtra("username_password",username_password);
         startActivity(i);
-        //startActivity(new Intent(this, user_change_password.class));
+
     }
 
     public void choosen_generate_bill(View view){

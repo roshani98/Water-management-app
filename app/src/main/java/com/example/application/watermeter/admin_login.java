@@ -27,7 +27,6 @@ public class admin_login extends AppCompatActivity {
 
     FirebaseDatabase fbDatabase;
     DatabaseReference fbDatabaseReference;
-    //private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +58,6 @@ public class admin_login extends AppCompatActivity {
         });
     }
 
-//    public void choosen_admin_signup(View view){
-//        startActivity(new Intent(getApplicationContext(), admin_signup.class));
-//    }
-
     public void fetchData(String username,String password ){
 
         String y = username + "_" + password;
@@ -78,11 +73,7 @@ public class admin_login extends AppCompatActivity {
 
                 if(dataSnapshot.getValue()!=null) {
 
-                    Log.d("dataSnapshot ", dataSnapshot.toString());
-
                     HashMap<String, Object> studentdata = (HashMap<String, Object>) dataSnapshot.getValue();
-                    Log.d("dataSnapshot ", studentdata.toString());
-
 
                     for (String key : studentdata.keySet()) {
 
@@ -101,10 +92,6 @@ public class admin_login extends AppCompatActivity {
                         i.putExtra("City",map.get("City").toString());
                         i.putExtra("username_password",map.get("username_password").toString());
 
-//                        i.putExtra("cost",map.get("Cost").toString());
-//                        i.putExtra("discount",map.get("Discount").toString());
-//                        i.putExtra("method",map.get("Method").toString());
-
                         startActivity(i);
                         finish();
                         break;
@@ -115,7 +102,6 @@ public class admin_login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Not valid", Toast.LENGTH_LONG).show();
 
                 }
-
 
             }
 

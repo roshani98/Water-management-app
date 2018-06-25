@@ -36,8 +36,6 @@ import java.util.Objects;
 
 public class admin_signup extends AppCompatActivity {
 
-
-//    String[] languages = { "C","C++","Java","C#","PHP","JavaScript","jQuery","AJAX","JSON" };
     private EditText admin_signup_society;
     private EditText admin_signup_area;
     private Spinner admin_signup_city;
@@ -75,15 +73,6 @@ public class admin_signup extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         myDatabase = FirebaseDatabase.getInstance().getReference();
 
-
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.select_dialog_singlechoice, languages);
-//        //Find TextView control
-//        AutoCompleteTextView acTextView = (AutoCompleteTextView) findViewById(R.id.admin_signup_city);
-//        //Set the number of characters the user must type before the drop down list is shown
-//        acTextView.setThreshold(1);
-//        //Set the adapter
-//        acTextView.setAdapter(adapter);
-
         ArrayAdapter<CharSequence> arrayAdapter= ArrayAdapter.createFromResource(this,R.array.city_names,android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         admin_signup_city.setAdapter(arrayAdapter);
@@ -113,9 +102,6 @@ public class admin_signup extends AppCompatActivity {
 
             }
         });
-
-
-
 
         admin_signup_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,24 +154,6 @@ public class admin_signup extends AppCompatActivity {
                     return;
                 }
 
-//                if(TextUtils.isEmpty(costs)){
-//                    Toast.makeText(admin_signup.this,"Please enter the cost price",Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-
-//                AdapterView method = null;
-//                final String method1 = method.getSelectedItem().toString();
-
-//                int selectMethod = pricing_method.getCheckedRadioButtonId();
-//                radioButton = (RadioButton) findViewById(selectMethod);
-
-//                if(method1.equals("Method 2")){
-//                    if(TextUtils.isEmpty(discounts)){
-//                        Toast.makeText(admin_signup.this,"Please enter the units till which service is free",Toast.LENGTH_SHORT).show();
-//                        return;
-//                    }
-//                }
-
                 Query query = mDatabase
                         .child("Admin")
                         .orderByChild("username")
@@ -200,11 +168,6 @@ public class admin_signup extends AppCompatActivity {
                             return;
                         } else {
 
-//                            long size = dataSnapshot.getChildrenCount();
-//                            String t = "";
-//                            t = t + String.valueOf(size);
-//                            Toast.makeText(getApplicationContext(), t, Toast.LENGTH_LONG).show();
-
                             HashMap<String, String> userData = new HashMap<String, String>();
 
                             String y = username[0] + "_" + password;
@@ -216,24 +179,8 @@ public class admin_signup extends AppCompatActivity {
                             userData.put("city",city);
                             userData.put("area",area);
                             userData.put("pincode",pincode);
-//                            userData.put("Pricing_method",pricing);
-//                            userData.put("Pricing Method",);
-//                            if(method1.equals("Method 1")){
-//                                userData.put("Method",String.valueOf(1));
-//                                userData.put("Cost","0");
-//                                userData.put("Discount","0");
-//                            }else {
-//                                userData.put("Method", String.valueOf(2));
-//                                userData.put("Cost","0");
-//                                userData.put("Discount","0");
-//                            }
-
-                            Log.d("hello", "how");
 
                             mDatabase.child("Admin").child(username[0]).push().setValue(userData);
-
-                            //              mDatabase.child("Hello").setValue(userData);
-
                             Intent i = new Intent(getApplicationContext(), EnterSocietyDetails.class);
                             i.putExtra("username", username[0]);
                             i.putExtra("password", password);
@@ -244,17 +191,8 @@ public class admin_signup extends AppCompatActivity {
                             i.putExtra("area",area);
                             i.putExtra("city",city);
                             i.putExtra("pincode",pincode);
-//                            i.putExtra("pricing_method",pricing);
-//                            i.putExtra("method",method1);
                             startActivity(i);
                             finish();
-
-
-//                            startActivity(new Intent(getApplicationContext(), admin_login.class));
-//                            finish();
-//
-
-
                         }
                     }
 

@@ -31,8 +31,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -49,13 +53,6 @@ import org.w3c.dom.Text;
 
 
 public class bill extends AppCompatActivity {
-//    private Button b;
-//    private PdfPCell cell;
-//    private String textAnswer;
-//    ListView list;
-//    private String path;
-//    private File dir;
-//    private File file;
 
     private TextView discount0;
     private TextView discount1;
@@ -178,7 +175,6 @@ public class bill extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
-//        button = (Button) findViewById(R.id.button);
 
         date0 = (TextView) findViewById(R.id.textView4);
         reading0 = (TextView) findViewById(R.id.textView5);
@@ -308,8 +304,7 @@ public class bill extends AppCompatActivity {
             reading0.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount0);
             amount0.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount0.setText(String.valueOf(discount));
+            discount0.setText("0");
         }
 
         if (Date1.length() == 1) {
@@ -321,8 +316,11 @@ public class bill extends AppCompatActivity {
             reading1.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount1);
             amount1.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount1.setText(String.valueOf(discount));
+            try {
+                discount1.setText(String.valueOf(discounted(Date1,Date0,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date2.length() == 1) {
@@ -334,8 +332,11 @@ public class bill extends AppCompatActivity {
             reading2.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount2);
             amount2.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount2.setText(String.valueOf(discount));
+            try {
+                discount2.setText(String.valueOf(discounted(Date2,Date1,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date3.length() == 1){
@@ -346,8 +347,11 @@ public class bill extends AppCompatActivity {
             reading3.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount3);
             amount3.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount3.setText(String.valueOf(discount));
+            try {
+                discount3.setText(String.valueOf(discounted(Date3,Date2,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date4.length() == 1){
@@ -358,8 +362,11 @@ public class bill extends AppCompatActivity {
             reading4.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount4);
             amount4.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount4.setText(String.valueOf(discount));
+            try {
+                discount4.setText(String.valueOf(discounted(Date4,Date3,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date5.length() == 1){
@@ -370,8 +377,11 @@ public class bill extends AppCompatActivity {
             reading5.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount5);
             amount5.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount5.setText(String.valueOf(discount));
+            try {
+                discount5.setText(String.valueOf(discounted(Date5,Date4,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date6.length() == 1){
@@ -382,8 +392,11 @@ public class bill extends AppCompatActivity {
             reading6.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount6);
             amount6.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount6.setText(String.valueOf(discount));
+            try {
+                discount6.setText(String.valueOf(discounted(Date6,Date5,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date7.length() == 1){
@@ -394,8 +407,11 @@ public class bill extends AppCompatActivity {
             reading7.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount7);
             amount7.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount7.setText(String.valueOf(discount));
+            try {
+                discount7.setText(String.valueOf(discounted(Date7,Date6,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date8.length() == 1){
@@ -406,8 +422,11 @@ public class bill extends AppCompatActivity {
             reading8.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount8);
             amount8.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount8.setText(String.valueOf(discount));
+            try {
+                discount8.setText(String.valueOf(discounted(Date8,Date7,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date9.length() == 1){
@@ -418,8 +437,11 @@ public class bill extends AppCompatActivity {
             reading9.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount9);
             amount9.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount9.setText(String.valueOf(discount));
+            try {
+                discount9.setText(String.valueOf(discounted(Date9,Date8,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date10.length() == 1){
@@ -430,8 +452,11 @@ public class bill extends AppCompatActivity {
             reading10.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount10);
             amount10.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount10.setText(String.valueOf(discount));
+            try {
+                discount10.setText(String.valueOf(discounted(Date10,Date9,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date11.length() == 1){
@@ -442,8 +467,11 @@ public class bill extends AppCompatActivity {
             reading11.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount11);
             amount11.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount11.setText(String.valueOf(discount));
+            try {
+                discount11.setText(String.valueOf(discounted(Date11,Date10,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         if (Date12.length() == 1){
@@ -454,8 +482,11 @@ public class bill extends AppCompatActivity {
             reading12.setText(String.valueOf(reading));
             Float final_amt = Float.valueOf(Amount12);
             amount12.setText(String.valueOf(final_amt));
-            Float discount = final_amt - reading;
-            discount12.setText(String.valueOf(discount));
+            try {
+                discount12.setText(String.valueOf(discounted(Date12,Date11,Float.valueOf(Discount))));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
     }
@@ -496,26 +527,30 @@ public class bill extends AppCompatActivity {
         return "December";
     }
 
-
-//    public void createPdf(View view) {
-//
-//        Document document = new Document();
-//        String str = Environment.getExternalStorageDirectory() + "/myPdf.pdf";
-//
-//        try {
-//            PdfWriter.getInstance(document,new FileOutputStream(str));
-//            document.open();
-//            document.add(new Paragraph(editText.getText().toString()));
-//            document.setPageSize(PageSize.A4);
-//            document.addCreationDate();
-//            document.addAuthor("Android ");
-//            document.addCreator("Roshani");
-//            document.close();
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (DocumentException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public float discounted(String date0 , String date1 , float discount) throws ParseException {
+        long days;
+        DateFormat format = new SimpleDateFormat("dd/MM/yy", Locale.ENGLISH);
+        Date one = format.parse(date0);
+        Date two = format.parse(date1);
+        Calendar cCal = Calendar.getInstance();
+        cCal.setTime(one);
+        int Year0 = cCal.get(Calendar.YEAR);
+        int Month0 = cCal.get(Calendar.MONTH);
+        int Day0 = cCal.get(Calendar.DAY_OF_MONTH);
+        Calendar eCal = Calendar.getInstance();
+        eCal.setTime(two);
+        int Year1 = eCal.get(Calendar.YEAR);
+        int Month1 = eCal.get(Calendar.MONTH);
+        int Day1 = eCal.get(Calendar.DAY_OF_MONTH);
+        Calendar date2 = Calendar.getInstance();
+        Calendar date3 = Calendar.getInstance();
+        date2.clear();
+        date2.set(Year0,Month0,Day0);
+        date3.clear();
+        date3.set(Year1,Month1,Day1);
+        days = date2.getTimeInMillis() - date3.getTimeInMillis();
+        days = days/(24 * 60 * 60 * 1000);
+        return (discount*days);
+    }
 
 }

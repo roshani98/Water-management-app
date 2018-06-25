@@ -23,14 +23,14 @@
         android:id="@+id/user_signup_mobile_number"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
         android:background="@drawable/down"
         android:ems="10"
-        android:textColorHint="@android:color/white"
+        android:hint="Enter mobile number"
+        android:inputType="number"
         android:padding="5dp"
-        android:hint="Enter your mobile number"
-        android:inputType="number" />
+        android:textColorHint="@android:color/white" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
