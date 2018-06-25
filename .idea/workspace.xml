@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> upstream/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -19,7 +22,12 @@
   </component>
 =======
 >>>>>>> upstream/master
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
   <component name="ChangeListManager">
     <list default="true" id="b9c02571-c76e-41d0-a22f-645d819da881" name="Default" comment="">
       <change beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/build-info/debug/build-info.xml" />
@@ -2015,8 +2023,11 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" />
 =======
+>>>>>>> upstream/master
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" />
 =======
@@ -2048,19 +2059,34 @@
 >>>>>>> 53384af53de4dd2f5573710310265161ad5179ef
 >>>>>>> upstream/master
 =======
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" />
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-apk/debug/output.json" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
+=======
+>>>>>>> upstream/master
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/application/watermeter/admin_generate_statement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/application/watermeter/admin_generate_statement.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin_generate_statement.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin_generate_statement.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bill.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bill.xml" />
       <change beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
 =======
 >>>>>>> upstream/master
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -2075,7 +2101,10 @@
     </projectState>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> upstream/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2086,7 +2115,12 @@
 >>>>>>> upstream/master
 =======
 >>>>>>> upstream/master
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -2095,9 +2129,12 @@
     </system>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 =======
+>>>>>>> upstream/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2248,17 +2285,32 @@
 =======
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
+=======
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
       <file leaf-file-name="admin_generate_statement.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/application/watermeter/admin_generate_statement.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
 <<<<<<< HEAD
+<<<<<<< HEAD
+              <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+>>>>>>> upstream/master
+=======
+              <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+>>>>>>> upstream/master
+=======
               <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
 =======
               <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
 >>>>>>> upstream/master
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
               <folding />
             </state>
           </provider>
@@ -4303,7 +4355,10 @@
     </option>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> upstream/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -4340,7 +4395,12 @@
 >>>>>>> upstream/master
 =======
 >>>>>>> upstream/master
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
@@ -4380,7 +4440,10 @@
               <item name="watermeter" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> upstream/master
 <<<<<<< HEAD
             <path>
               <item name="Water-management-app" type="1abcf292:AndroidViewProjectNode" />
@@ -4398,7 +4461,12 @@
               <item name="Water-management-app" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
           </expand>
           <select />
         </subPane>
@@ -4406,8 +4474,11 @@
       <pane id="PackagesPane" />
       <pane id="Scratches" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
       <pane id="Scope" />
 =======
+>>>>>>> upstream/master
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -4453,7 +4524,13 @@
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
 >>>>>>> upstream/master
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4635,7 +4712,10 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> upstream/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -4665,16 +4745,27 @@
 >>>>>>> 53384af53de4dd2f5573710310265161ad5179ef
 >>>>>>> upstream/master
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
       <changelist id="b9c02571-c76e-41d0-a22f-645d819da881" name="Default" comment="" />
       <created>1529595971921</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529595971921</updated>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
+>>>>>>> upstream/master
+=======
 =======
 >>>>>>> upstream/master
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
     </task>
     <servers />
   </component>
@@ -4682,7 +4773,10 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> upstream/master
 <<<<<<< HEAD
 <<<<<<< HEAD
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -4690,7 +4784,12 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4713,11 +4812,14 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
 =======
+>>>>>>> upstream/master
 =======
 >>>>>>> upstream/master
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
@@ -4765,13 +4867,25 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> upstream/master
 =======
 >>>>>>> upstream/master
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -4808,7 +4922,12 @@
 =======
 >>>>>>> upstream/master
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -4820,8 +4939,11 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/application/watermeter/admin_generate_statement.java">
 =======
+>>>>>>> upstream/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -5233,7 +5355,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/incremental/ir_dep/debug/package_dependencies/dex-renamer-state.txt">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/application/watermeter/admin_generate_statement.java">
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -5242,11 +5370,14 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/application/watermeter/admin_generate_statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
 =======
+>>>>>>> upstream/master
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/incremental/ir_dep/debug/dependencies/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -5313,7 +5444,16 @@
         <state relative-caret-position="75">
           <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
 >>>>>>> upstream/master
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/application/watermeter/admin_generate_statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+>>>>>>> upstream/master
+=======
 >>>>>>> 63ed4888e548ed6b3e6a7b67a599b77558e00fbf
+>>>>>>> upstream/master
           <folding />
         </state>
       </provider>

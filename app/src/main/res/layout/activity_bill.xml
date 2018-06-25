@@ -59,7 +59,9 @@
                 android:textStyle="bold"
                 android:padding="2dp"
                 android:text="Net Balance"
+
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
+
 
         </TableRow>
 

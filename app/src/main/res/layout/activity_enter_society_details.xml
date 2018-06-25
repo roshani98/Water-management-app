@@ -24,6 +24,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@+id/editText"
+
         android:layout_marginTop="2dp"
         android:layout_centerHorizontal="true"
         android:ems="10"

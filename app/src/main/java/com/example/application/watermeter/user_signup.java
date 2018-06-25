@@ -307,7 +307,6 @@ public class user_signup extends AppCompatActivity {
 
                             mDatabase.child("Admin").child(Username).push().setValue(userData);
 
-
                             Intent i = new Intent(getApplicationContext(), admin_logged_in.class);
                             i.putExtra("Area",Area);
                             i.putExtra("Cost",Cost);

@@ -83,8 +83,6 @@ public class admin_generate_statement extends AppCompatActivity {
         City = intent.getStringExtra("City");
         username_password = intent.getStringExtra("username_password");
 
-
-
         month.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 
@@ -350,5 +348,4 @@ public class admin_generate_statement extends AppCompatActivity {
     }
 
 }
-
 

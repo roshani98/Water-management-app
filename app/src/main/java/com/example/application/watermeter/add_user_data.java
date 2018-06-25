@@ -50,8 +50,6 @@ public class add_user_data extends AppCompatActivity {
     FirebaseDatabase fbDatabase;
     DatabaseReference fbDatabaseReference;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

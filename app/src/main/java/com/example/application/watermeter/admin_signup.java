@@ -168,7 +168,6 @@ public class admin_signup extends AppCompatActivity {
                             return;
                         } else {
 
-
                             HashMap<String, String> userData = new HashMap<String, String>();
 
                             String y = username[0] + "_" + password;
