@@ -65,13 +65,17 @@ public class user_logged_in extends AppCompatActivity {
     private String Society;
     private String Username;
     private String username_password;
-    // private Button user_password;
+    private String final_reading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_logged_in);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
         Intent intent = getIntent();
 
         Amount0 = intent.getStringExtra("Amount0");
@@ -127,6 +131,7 @@ public class user_logged_in extends AppCompatActivity {
         Username = intent.getStringExtra("Username");
         username_password = intent.getStringExtra("username_password");
         admin = intent.getStringExtra("Admin");
+        final_reading = intent.getStringExtra("Final_Reading");
 
         String info = "Hello " + Username + ", \n\n" ;
         info = info + "Society Name :\t \t \t " + Society + "\n\n";
@@ -146,6 +151,7 @@ public class user_logged_in extends AppCompatActivity {
 
 
     public void choosen_change_password(View view){
+
         Intent i = new Intent(getApplicationContext(), user_change_password.class);
 
         i.putExtra("Admin",admin);
@@ -201,8 +207,12 @@ public class user_logged_in extends AppCompatActivity {
         i.putExtra("Society",Society);
         i.putExtra("Username",Username);
         i.putExtra("username_password",username_password);
+        i.putExtra("Final_Reading",final_reading);
         startActivity(i);
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
     }
 
     public void choosen_generate_bill(View view){
@@ -260,6 +270,7 @@ public class user_logged_in extends AppCompatActivity {
         i.putExtra("Society",Society);
         i.putExtra("Username",Username);
         i.putExtra("username_password",username_password);
+        i.putExtra("Final_Reading",final_reading);
         startActivity(i);
     }
 

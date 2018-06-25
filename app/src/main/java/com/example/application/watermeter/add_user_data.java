@@ -115,7 +115,10 @@ public class add_user_data extends AppCompatActivity {
 
         final Calendar myCalendar = Calendar.getInstance();
 
-        String currentDateTimeString = DateFormat.getDateInstance(DateFormat.SHORT).format(new Date());
+        String Format = "dd/MM/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
+
+        String currentDateTimeString = sdf.format(new Date());
 
         selectDate.setText(currentDateTimeString);
 
@@ -174,6 +177,11 @@ public class add_user_data extends AppCompatActivity {
 
                 float read = Float.valueOf(reading);
 
+<<<<<<< HEAD
+=======
+                reading = String.valueOf(read);
+
+>>>>>>> upstream/master
                 if(username!=null && reading!=null){
                     fetchData(username,reading,date);
                 }else if(username==null){
@@ -205,6 +213,7 @@ public class add_user_data extends AppCompatActivity {
         final String Username = intent.getStringExtra("Username");
         final String City = intent.getStringExtra("City");
         final String username_password = intent.getStringExtra("username_password");
+        final String Final_Reading = "";
 
         Query query = fbDatabaseReference
                 .child("Admin").child(Username)
@@ -229,23 +238,24 @@ public class add_user_data extends AppCompatActivity {
                         HashMap<String, Object> map = (HashMap<String, Object>) mObject;
 
 
-                        String cost = map.get("Cost").toString();
-                        String final_amount = map.get("Final Amount").toString();
+                        String cost = map.get("Cost").toString().trim();
+                        String final_amount = map.get("Final Amount").toString().trim();
+                        String balance = map.get("Balance").toString().trim();
 
 
-                        String reading0 = map.get("Reading0").toString();
-                        String reading1 = map.get("Reading1").toString();
-                        String reading2 = map.get("Reading2").toString();
-                        String reading3 = map.get("Reading3").toString();
-                        String reading4 = map.get("Reading4").toString();
-                        String reading5 = map.get("Reading5").toString();
-                        String reading6 = map.get("Reading6").toString();
-                        String reading7 = map.get("Reading7").toString();
-                        String reading8 = map.get("Reading8").toString();
-                        String reading9 = map.get("Reading9").toString();
-                        String reading10 = map.get("Reading10").toString();
-                        String reading11 = map.get("Reading11").toString();
-                        String reading12 = map.get("Reading12").toString();
+                        String reading0 = map.get("Reading0").toString().trim();
+                        String reading1 = map.get("Reading1").toString().trim();
+                        String reading2 = map.get("Reading2").toString().trim();
+                        String reading3 = map.get("Reading3").toString().trim();
+                        String reading4 = map.get("Reading4").toString().trim();
+                        String reading5 = map.get("Reading5").toString().trim();
+                        String reading6 = map.get("Reading6").toString().trim();
+                        String reading7 = map.get("Reading7").toString().trim();
+                        String reading8 = map.get("Reading8").toString().trim();
+                        String reading9 = map.get("Reading9").toString().trim();
+                        String reading10 = map.get("Reading10").toString().trim();
+                        String reading11 = map.get("Reading11").toString().trim();
+                        String reading12 = map.get("Reading12").toString().trim();
 
                         String date0 = map.get("Date0").toString().trim();
                         String date1 = map.get("Date1").toString().trim();
@@ -261,22 +271,24 @@ public class add_user_data extends AppCompatActivity {
                         String date11 = map.get("Date11").toString().trim();
                         String date12 = map.get("Date12").toString().trim();
 
-                        String amount0 = map.get("Amount0").toString();
-                        String amount1 = map.get("Amount1").toString();
-                        String amount2 = map.get("Amount2").toString();
-                        String amount3 = map.get("Amount3").toString();
-                        String amount4 = map.get("Amount4").toString();
-                        String amount5 = map.get("Amount5").toString();
-                        String amount6 = map.get("Amount6").toString();
-                        String amount7 = map.get("Amount7").toString();
-                        String amount8 = map.get("Amount8").toString();
-                        String amount9 = map.get("Amount9").toString();
-                        String amount10 = map.get("Amount10").toString();
-                        String amount11 = map.get("Amount11").toString();
-                        String amount12 = map.get("Amount12").toString();
-                        String finalamount = map.get("Final Amount").toString();
-                        String discount = map.get("Discount").toString();
-                        String method = map.get("Method").toString();
+                        String final_reading = map.get("Final_Reading").toString().trim();
+
+                        String amount0 = map.get("Amount0").toString().trim();
+                        String amount1 = map.get("Amount1").toString().trim();
+                        String amount2 = map.get("Amount2").toString().trim();
+                        String amount3 = map.get("Amount3").toString().trim();
+                        String amount4 = map.get("Amount4").toString().trim();
+                        String amount5 = map.get("Amount5").toString().trim();
+                        String amount6 = map.get("Amount6").toString().trim();
+                        String amount7 = map.get("Amount7").toString().trim();
+                        String amount8 = map.get("Amount8").toString().trim();
+                        String amount9 = map.get("Amount9").toString().trim();
+                        String amount10 = map.get("Amount10").toString().trim();
+                        String amount11 = map.get("Amount11").toString().trim();
+                        String amount12 = map.get("Amount12").toString().trim();
+                        String finalamount = map.get("Final Amount").toString().trim();
+                        String discount = map.get("Discount").toString().trim();
+                        String method = map.get("Method").toString().trim();
                         Float reading_in_float = Float.parseFloat(reading);
                         Float discount_in_float = Float.parseFloat(discount);
                         //reading_in_float = reading_in_float - discount_in_float;
@@ -284,7 +296,7 @@ public class add_user_data extends AppCompatActivity {
                         Float ans = null;
                         Float cost_in_float = Float.parseFloat(cost);
                         Float finalamount_in_float = Float.parseFloat(finalamount);
-
+                        Float balance_in_float = Float.parseFloat(balance);
                         String month = "";
                         month = String.valueOf(date.charAt(3)) + date.charAt(4);
 
@@ -499,6 +511,7 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount1 = String.valueOf(ans);
                                 }
                             } else if (reading2.equals("0")) {
@@ -512,8 +525,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount2 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading3.equals("0")) {
                                 reading3 = reading;
                                 previous_reading = Float.parseFloat(reading2);
@@ -525,8 +543,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount3 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading4.equals("0")) {
                                 reading4 = reading;
                                 previous_reading = Float.parseFloat(reading3);
@@ -538,8 +561,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount4 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading5.equals("0")) {
                                 reading5 = reading;
                                 previous_reading = Float.parseFloat(reading4);
@@ -551,8 +579,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount5 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading6.equals("0")) {
                                 reading6 = reading;
                                 previous_reading = Float.parseFloat(reading5);
@@ -564,8 +597,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount6 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading7.equals("0")) {
                                 reading7 = reading;
                                 previous_reading = Float.parseFloat(reading6);
@@ -577,8 +615,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount7 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading8.equals("0")) {
                                 reading8 = reading;
                                 previous_reading = Float.parseFloat(reading7);
@@ -590,8 +633,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount8 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading9.equals("0")) {
                                 reading9 = reading;
                                 previous_reading = Float.parseFloat(reading8);
@@ -603,8 +651,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount9 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading10.equals("0")) {
                                 reading10 = reading;
                                 previous_reading = Float.parseFloat(reading9);
@@ -616,8 +669,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount10 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading11.equals("0")) {
                                 reading11 = reading;
                                 previous_reading = Float.parseFloat(reading10);
@@ -629,8 +687,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount11 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else if (reading12.equals("0")) {
                                 reading12 = reading;
                                 previous_reading = Float.parseFloat(reading11);
@@ -642,8 +705,13 @@ public class add_user_data extends AppCompatActivity {
                                 }
                                 ans = (reading_in_float - previous_reading) * (cost_in_float);
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount12 = String.valueOf(ans);
                                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             } else {
                                 reading0 = reading1;
                                 reading1 = reading2;
@@ -692,6 +760,7 @@ public class add_user_data extends AppCompatActivity {
                                 amount10 = amount11;
                                 amount11 = amount12;
                                 if (ans > 0) {
+                                    balance_in_float -= ans;
                                     amount12 = String.valueOf(ans);
                                 } else {
                                     amount12 = "0";
@@ -703,6 +772,11 @@ public class add_user_data extends AppCompatActivity {
                                 final_amount = String.valueOf(finalamount_in_float);
                             }
 
+<<<<<<< HEAD
+=======
+                            balance = String.valueOf(balance_in_float);
+
+>>>>>>> upstream/master
                         Intent intent = getIntent();
 
                         String username1 = intent.getStringExtra("Username");
@@ -722,6 +796,7 @@ public class add_user_data extends AppCompatActivity {
                         userData.put("Reading10", reading10);
                         userData.put("Reading11", reading11);
                         userData.put("Reading12", reading12);
+                        userData.put("Balance",balance);
                         userData.put("Date0",date0);
                         userData.put("Date1",date1);
                         userData.put("Date2",date2);
@@ -761,9 +836,9 @@ public class add_user_data extends AppCompatActivity {
                         userData.put("Method", map.get("Method").toString());
                         userData.put("Mobile Number", map.get("Mobile Number").toString());
                         userData.put("Pincode", map.get("Pincode").toString());
+                        userData.put("Final_Reading",String.valueOf(reading).toString().trim());
 
                         fbDatabaseReference.child("Admin").child(username1).push().updateChildren(userData);
-
 
                         for(DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {
                             areaSnapshot.getRef().setValue(null);
@@ -802,6 +877,7 @@ public class add_user_data extends AppCompatActivity {
         });
     }
 
+    // To check two dates are of same given month
     public boolean check(String date0, String month){
         if(!date0.equals("0")){
             String months = "";
@@ -813,6 +889,7 @@ public class add_user_data extends AppCompatActivity {
         return false;
     }
 
+    // To deduct the discounted units from reading
     public float discounted(String date0 , String date1 , float discount , float reading) throws ParseException {
         long days;
         DateFormat format = new SimpleDateFormat("dd/MM/yy", Locale.ENGLISH);

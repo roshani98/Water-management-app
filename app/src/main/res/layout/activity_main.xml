@@ -6,27 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.application.watermeter.MainActivity">
 
-    <!--<Button-->
-        <!--android:id="@+id/Admin"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="122dp"-->
-        <!--android:onClick="choosen_admin"-->
-        <!--android:text="Admin" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/User"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignLeft="@+id/Admin"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignStart="@+id/Admin"-->
-        <!--android:layout_marginBottom="130dp"-->
-        <!--android:onClick="choosen_user"-->
-        <!--android:text="User" />-->
-
     <Button
         android:id="@+id/Admin"
         android:layout_width="300dp"

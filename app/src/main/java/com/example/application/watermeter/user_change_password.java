@@ -161,6 +161,7 @@ public class user_change_password extends AppCompatActivity {
                         userData.put("Discount", map.get("Discount").toString());
                         userData.put("Method", map.get("Method").toString());
                         userData.put("Mobile Number", map.get("Mobile Number").toString());
+                        userData.put("Final_Reading",map.get("Final_Reading").toString());
 
                         Intent i = new Intent(getApplicationContext(), user_logged_in.class);
                         i.putExtra("Admin",admin);
@@ -194,7 +195,6 @@ public class user_change_password extends AppCompatActivity {
                         i.putExtra("Date11",map.get("Date11").toString());
                         i.putExtra("Date12",map.get("Date12").toString());
                         i.putExtra("Discount",map.get("Discount").toString());
-//                        i.putExtra("Final_Amount",map.get("Final_Amount").toString());
                         i.putExtra("Flat",map.get("Flat").toString());
                         i.putExtra("Method",map.get("Method").toString());
                         i.putExtra("Mobile_Number",map.get("Mobile Number").toString());
@@ -216,6 +216,7 @@ public class user_change_password extends AppCompatActivity {
                         i.putExtra("Society",map.get("Society").toString());
                         i.putExtra("Username",Username);
                         i.putExtra("username_password",map.get("username_password").toString());
+                        i.putExtra("Final_Reading",map.get("Final_Reading").toString());
 
                         fbDatabaseReference.child("Admin").child(admin).push().updateChildren(userData);
                         for(DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {

@@ -72,6 +72,10 @@ public class EnterSocietyDetails extends AppCompatActivity {
         final String pincode = intent.getStringExtra("pincode");
         final String costs = intent.getStringExtra("cost");
         final String y = intent.getStringExtra("username_password");
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

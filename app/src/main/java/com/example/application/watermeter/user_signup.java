@@ -35,6 +35,7 @@ public class user_signup extends AppCompatActivity {
 
     private EditText user_flat;
     private EditText user_signup_mobile_number;
+    private EditText user_balance_amt;
 
     private NumberPicker numberPicker1;
     private NumberPicker numberPicker2;
@@ -65,6 +66,8 @@ public class user_signup extends AppCompatActivity {
         user_flat = (EditText)findViewById(R.id.user_flat);
         user_signed_up = (Button)findViewById(R.id.user_signed_up);
         user_signup_mobile_number = (EditText)findViewById(R.id.user_signup_mobile_number);
+        user_balance_amt = (EditText) findViewById(R.id.bal_amt);
+
         selectDate = (TextView) findViewById(R.id.sdate);
         cal = (ImageView) findViewById(R.id.calendar);
 
@@ -120,14 +123,21 @@ public class user_signup extends AppCompatActivity {
 
         final Calendar myCalendar = Calendar.getInstance();
 
-        String currentDateTimeString = DateFormat.getDateInstance(DateFormat.SHORT).format(new Date());
+        String myFormat = "dd/MM/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        String currentDateTimeString = sdf.format(new Date());
 
         selectDate.setText(currentDateTimeString);
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
+<<<<<<< HEAD
                 String myFormat = "dd/MM/yy";
+=======
+                String myFormat = "dd/MM/yy"; //In which you need put here
+>>>>>>> upstream/master
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 selectDate.setText(sdf.format(myCalendar.getTime()));
@@ -168,6 +178,7 @@ public class user_signup extends AppCompatActivity {
 
                 final String username = user_flat.getText().toString().trim();
                 final String mobile = user_signup_mobile_number.getText().toString().trim();
+                final String balance = user_balance_amt.getText().toString().trim();
                 final String date = selectDate.getText().toString().trim();
 
 
@@ -177,14 +188,20 @@ public class user_signup extends AppCompatActivity {
                     return;
                 }
 
+                if(TextUtils.isEmpty(balance)) {
+                    Toast.makeText(user_signup.this,"Please enter the balance amount",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if(TextUtils.isEmpty(mobile)) {
                     Toast.makeText(user_signup.this,"Please enter the mobile Number",Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                String reading = "";
-                reading = reading + numberPicker1.getValue() + numberPicker2.getValue() + numberPicker3.getValue() + numberPicker4.getValue() + numberPicker5.getValue() + numberPicker6.getValue() + "." + numberPicker7.getValue() + numberPicker8.getValue() + numberPicker9.getValue();
+                String reading1 = "";
+                reading1 = reading1 + numberPicker1.getValue() + numberPicker2.getValue() + numberPicker3.getValue() + numberPicker4.getValue() + numberPicker5.getValue() + numberPicker6.getValue() + "." + numberPicker7.getValue() + numberPicker8.getValue() + numberPicker9.getValue();
 
+                Float reading = Float.valueOf(reading1);
                 Intent intent = getIntent();
 
                 final String Area = intent.getStringExtra("Area");
@@ -204,7 +221,7 @@ public class user_signup extends AppCompatActivity {
                         .orderByChild("username")
                         .equalTo(username);
 
-                final String finalReading = reading;
+                final String finalReading = String.valueOf(reading);
                 query.addListenerForSingleValueEvent(new ValueEventListener(){
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -248,6 +265,7 @@ public class user_signup extends AppCompatActivity {
                             userData.put("Cost",Cost);
                             userData.put("Discount",Discount);
                             userData.put("Reading0", finalReading);
+                            userData.put("Final_Reading",finalReading);
                             userData.put("Reading1", "0");
                             userData.put("Reading2", "0");
                             userData.put("Reading3", "0");
@@ -287,9 +305,14 @@ public class user_signup extends AppCompatActivity {
                             userData.put("Amount11","0");
                             userData.put("Amount12","0");
                             userData.put("Final Amount","0");
+                            userData.put("Balance",balance);
 
                             mDatabase.child("Admin").child(Username).push().setValue(userData);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
                             Intent i = new Intent(getApplicationContext(), admin_logged_in.class);
                             i.putExtra("Area",Area);
                             i.putExtra("Cost",Cost);

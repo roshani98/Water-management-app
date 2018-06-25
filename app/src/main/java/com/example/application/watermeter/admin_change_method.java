@@ -83,6 +83,10 @@ public class admin_change_method extends AppCompatActivity {
 
     public void save_method_changes(View view){
         String pricing = "";
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
         if(fixed.isChecked()){
             pricing="Fixed Costing";
         }else{

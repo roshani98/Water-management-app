@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Mon Jun 25 11:58:50 IST 2018
+=======
+#Fri Jun 22 11:47:56 IST 2018
+>>>>>>> upstream/master
 base.0=/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/transforms/dexMerger/debug/5
 path.0=classes.dex
 renamed.0=classes.dex
