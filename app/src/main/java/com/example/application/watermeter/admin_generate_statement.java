@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,10 +40,12 @@ public class admin_generate_statement extends AppCompatActivity {
     private String City;
     private String username_password;
     private DatabaseReference mDatabase;
-    private TextView textView;
 
+    private TextView textView;
     private TextView textView1;
     private TextView textView2;
+    private TextView textView3;
+    private TextView textView4;
 
     private List<TextView> TextList = new ArrayList<TextView>();
     private String final_reading;
@@ -62,6 +66,8 @@ public class admin_generate_statement extends AppCompatActivity {
         textView = (TextView)findViewById(R.id.textView);
         textView1 = (TextView) findViewById(R.id.textView1);
         textView2 = (TextView) findViewById(R.id.textView2);
+        textView3 = (TextView) findViewById(R.id.textView3);
+        textView4 = (TextView) findViewById(R.id.textView4);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -90,6 +96,8 @@ public class admin_generate_statement extends AppCompatActivity {
                 textView.setText("");
                 textView1.setText("");
                 textView2.setText("");
+                textView3.setText("");
+                textView4.setText("");
 
                 final String converted  = convert(selectedmonth);
                 final String[] str = {""};
@@ -132,6 +140,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading0").toString().trim());
                                             appendTextView(textView2,map.get("Amount0").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount0").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date1").toString().trim().equals("0") && design(map.get("Date1").toString()).equals(converted)){
@@ -139,6 +150,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading1").toString().trim());
                                             appendTextView(textView2,map.get("Amount1").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount1").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date2").toString().trim().equals("0") && design(map.get("Date2").toString()).equals(converted)){
@@ -147,6 +161,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading2").toString().trim());
                                             appendTextView(textView2,map.get("Amount2").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount2").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date3").toString().trim().equals("0") && design(map.get("Date3").toString()).equals(converted)){
@@ -154,6 +171,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading3").toString().trim());
                                             appendTextView(textView2,map.get("Amount3").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount3").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date4").toString().trim().equals("0") && design(map.get("Date4").toString()).equals(converted)){
@@ -162,6 +182,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading4").toString().trim());
                                             appendTextView(textView2,map.get("Amount4").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount4").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date5").toString().trim().equals("0") &&  design(map.get("Date5").toString()).equals(converted)){
@@ -170,6 +193,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading5").toString().trim());
                                             appendTextView(textView2,map.get("Amount5").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount5").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date6").toString().trim().equals("0") && design(map.get("Date6").toString()).equals(converted)){
@@ -178,6 +204,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading6").toString().trim());
                                             appendTextView(textView2,map.get("Amount6").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount6").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date7").toString().trim().equals("0") && design(map.get("Date7").toString()).equals(converted)){
@@ -186,6 +215,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading7").toString().trim());
                                             appendTextView(textView2,map.get("Amount7").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount7").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date8").toString().trim().equals("0") && design(map.get("Date8").toString()).equals(converted)){
@@ -193,6 +225,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading8").toString().trim());
                                             appendTextView(textView2,map.get("Amount8").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount8").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date9").toString().trim().equals("0") && design(map.get("Date9").toString()).equals(converted)){
@@ -201,6 +236,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading9").toString().trim());
                                             appendTextView(textView2,map.get("Amount9").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount9").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date10").toString().trim().equals("0") && design(map.get("Date10").toString()).equals(converted)){
@@ -209,6 +247,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading10").toString().trim());
                                             appendTextView(textView2,map.get("Amount10").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount10").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date11").toString().trim().equals("0") && design(map.get("Date11").toString()).equals(converted)){
@@ -216,6 +257,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading11").toString().trim());
                                             appendTextView(textView2,map.get("Amount11").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount11").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }else if(!map.get("Date12").toString().trim().equals("0") && design(map.get("Date12").toString()).equals(converted)){
@@ -223,6 +267,9 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView,map.get("Username").toString().trim());
                                             appendTextView(textView1,map.get("Reading12").toString().trim());
                                             appendTextView(textView2,map.get("Amount12").toString().trim());
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount12").toString().trim());
+                                            appendTextView(textView4,String.valueOf(value));
 
                                             continue;
                                         }
