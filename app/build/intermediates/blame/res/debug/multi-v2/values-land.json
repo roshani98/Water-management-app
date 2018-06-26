@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/roshani/Documents/GitHub/Master/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/55e4233a5d38f4d0ae9ec4b991c4c13f/res/values-land/values-land.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/03ccb950cd7786d974ff77c625b791ee/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7a01b1f5ab9262b829a610fc7ff5aa4f/res/values-land/values-land.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f83acb3631cc7fca439be69f071e29ed/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

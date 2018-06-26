@@ -135,4 +135,19 @@ public class admin_logged_in extends AppCompatActivity {
         i.putExtra("username_password",username_password);
         startActivity(i);
     }
+
+    public void change_balance(View view) {
+        Intent i = new Intent(getApplicationContext(), update_balance.class);
+        i.putExtra("Area",Area);
+        i.putExtra("Cost",Cost);
+        i.putExtra("Discount",Discount);
+        i.putExtra("Method",Method);
+        i.putExtra("Password",Password);
+        i.putExtra("Pincode",Pincode);
+        i.putExtra("Society",Society);
+        i.putExtra("Username",Username);
+        i.putExtra("City",City);
+        i.putExtra("username_password",username_password);
+        startActivity(i);
+    }
 }

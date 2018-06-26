@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nish_1612/Documents/GitHub/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/Users/roshani/Documents/GitHub/Master/Water-management-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/55e4233a5d38f4d0ae9ec4b991c4c13f/res/values-v16/values-v16.xml",
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7be9ae85ef497d99184b04ffc6dbafa8/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/roshani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/03ccb950cd7786d974ff77c625b791ee/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/nish_1612/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7a76462ca9f2b718510a1d4c34458b71/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

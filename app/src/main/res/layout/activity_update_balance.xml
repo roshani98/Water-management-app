@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".update_balance">
+
+
+    <EditText
+        android:id="@+id/flat_no"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Enter Flat Number"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/up"
+        android:textColorHint="@android:color/white"
+        android:padding="5dp"/>
+    <EditText
+        android:id="@+id/amt"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Enter Amount"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/down"
+        android:textColorHint="@android:color/white"
+        android:padding="5dp"/>
+
+
+    <RadioGroup
+        android:id="@+id/option"
+        android:layout_below="@+id/amt"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/add_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add amount in current balance"
+            android:textSize="15sp"
+            android:layout_margin="5dp"/>
+
+        <RadioButton
+            android:id="@+id/update_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Balance"
+            android:textSize="15sp"
+            android:layout_margin="5dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/option"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_round"
+        android:onClick="change"
+        android:text="Update"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

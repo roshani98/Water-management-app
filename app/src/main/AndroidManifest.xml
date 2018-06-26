@@ -31,7 +31,8 @@
         <activity android:name=".bill" />
         <activity android:name=".admin_change_details" />
         <activity android:name=".admin_change_method" />
-        <activity android:name=".admin_generate_statement"></activity>
+        <activity android:name=".admin_generate_statement" />
+        <activity android:name=".update_balance"></activity>
     </application>
 
 </manifest>
