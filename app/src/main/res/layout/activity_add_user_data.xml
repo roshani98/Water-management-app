@@ -9,18 +9,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <EditText
-        android:id="@+id/add_user_data_username"
+    <Spinner
+        android:id="@+id/add_user_username"
         android:layout_marginTop="50dp"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/layout_round"
         android:ems="10"
-        android:hint="Enter Flat number"
-        android:textColorHint="@android:color/white"
-        android:padding="5dp"
-        android:inputType="textPersonName" />
+        android:padding="5dp"/>
 
     <Button
         android:id="@+id/add_data"
@@ -40,7 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
         android:background="@drawable/round"
-        android:layout_below="@+id/add_user_data_username"
+        android:layout_below="@+id/add_user_username"
         android:padding="5dp">
 
         <ImageView
@@ -80,14 +77,14 @@
         android:text="Enter Water meter reading"
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/add_user_data_username"
+        android:layout_below="@+id/add_user_username"
         android:layout_marginTop="40dp"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/add_user_data_username"
+        android:layout_below="@+id/add_user_username"
         android:padding="5dp"
         android:layout_marginTop="70dp">
 

@@ -3618,7 +3618,7 @@ public final class R {
     public static final int add_data=0x7f09001e;
     public static final int add_user=0x7f09001f;
     public static final int add_user_data=0x7f090020;
-    public static final int add_user_data_username=0x7f090021;
+    public static final int add_user_username=0x7f090021;
     public static final int adjust_height=0x7f090022;
     public static final int adjust_width=0x7f090023;
     public static final int admin_change_area=0x7f090024;

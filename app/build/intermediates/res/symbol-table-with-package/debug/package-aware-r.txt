@@ -856,7 +856,7 @@ int id add_balance 0x7f09001d
 int id add_data 0x7f09001e
 int id add_user 0x7f09001f
 int id add_user_data 0x7f090020
-int id add_user_data_username 0x7f090021
+int id add_user_username 0x7f090021
 int id adjust_height 0x7f090022
 int id adjust_width 0x7f090023
 int id admin_change_area 0x7f090024

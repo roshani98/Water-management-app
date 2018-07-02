@@ -6,15 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Date;
 
 import com.google.firebase.database.DataSnapshot;
@@ -32,7 +35,7 @@ import java.util.Locale;
 
 public class add_user_data extends AppCompatActivity {
 
-    private EditText add_user_data_username;
+    private Spinner add_user_data_username;
     private Button add_data;
 
     private NumberPicker numberPicker1;
@@ -47,6 +50,8 @@ public class add_user_data extends AppCompatActivity {
     private TextView selectDate;
     private ImageView cal;
 
+    private ArrayList<String> arr;
+
     FirebaseDatabase fbDatabase;
     DatabaseReference fbDatabaseReference;
 
@@ -55,9 +60,11 @@ public class add_user_data extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user_data);
 
-        add_user_data_username =(EditText)findViewById(R.id.add_user_data_username);
+        add_user_data_username =(Spinner) findViewById(R.id.add_user_username);
         add_data = (Button)findViewById(R.id.add_data);
         cal = (ImageView) findViewById(R.id.cal);
+
+        final ArrayList<String> arr = new ArrayList<String>();
 
         fbDatabase = FirebaseDatabase.getInstance();
         fbDatabaseReference = fbDatabase.getReference();
@@ -109,6 +116,68 @@ public class add_user_data extends AppCompatActivity {
         numberPicker7.setWrapSelectorWheel(true);
         numberPicker8.setWrapSelectorWheel(true);
         numberPicker9.setWrapSelectorWheel(true);
+
+        Intent intent = getIntent();
+
+        final String Area = intent.getStringExtra("Area");
+        final String Cost = intent.getStringExtra("Cost");
+        final String Discount = intent.getStringExtra("Discount");
+        final String Method = intent.getStringExtra("Method");
+        final String Password = intent.getStringExtra("Password");
+        final String Pincode = intent.getStringExtra("Pincode");
+        final String Society = intent.getStringExtra("Society");
+        final String Username = intent.getStringExtra("Username");
+        final String City = intent.getStringExtra("City");
+        final String username_password = intent.getStringExtra("username_password");
+        final String Final_Reading = "";
+
+
+        Query query = fbDatabaseReference
+                .child("Admin").child(Username)
+                .orderByChild("username_password");
+
+        arr.add("Select Flat Number");
+
+        query.addListenerForSingleValueEvent(new ValueEventListener(){
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.getValue()!=null) {
+
+                    //Log.d("dataSnapshot ", dataSnapshot.toString());
+
+                    HashMap<String, Object> studentdata = (HashMap<String, Object>) dataSnapshot.getValue();
+                    //Log.d("dataSnapshot ", studentdata.toString());
+
+                    for (String key : studentdata.keySet()) {
+
+                        Object mObject = studentdata.get(key);
+                        HashMap<String, Object> map = (HashMap<String, Object>) mObject;
+
+
+                        if(!map.get("Username").toString().equals(Username)){
+                            Log.d("Map",map.toString());
+
+                            String user = map.get("Username").toString().trim();
+                            arr.add(user);
+
+                        }
+                    }
+
+                    ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,arr);
+                    arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    add_user_data_username.setAdapter(arrayAdapter1);
+
+                }else {
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }});
 
 
         final Calendar myCalendar = Calendar.getInstance();
@@ -166,7 +235,12 @@ public class add_user_data extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String username = add_user_data_username.getText().toString();
+                String username = add_user_data_username.getSelectedItem().toString().trim();
+
+                if(username.equals("Select Flat Number")) {
+                    Toast.makeText(getApplicationContext(),"Select a flat number",Toast.LENGTH_LONG).show();
+                    return;
+                }
 
                 String date = selectDate.getText().toString().trim();
 

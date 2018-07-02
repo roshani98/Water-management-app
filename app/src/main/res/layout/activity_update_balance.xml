@@ -8,16 +8,25 @@
     tools:context=".update_balance">
 
 
-    <EditText
+    <!--<EditText-->
+        <!--android:id="@+id/flat_no"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:hint="Enter Flat Number"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:background="@drawable/up"-->
+        <!--android:textColorHint="@android:color/white"-->
+        <!--android:padding="5dp"/>-->
+
+    <Spinner
         android:id="@+id/flat_no"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:hint="Enter Flat Number"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/up"
-        android:textColorHint="@android:color/white"
-        android:padding="5dp"/>
+        android:background="@drawable/up"/>
+
     <EditText
         android:id="@+id/amt"
         android:layout_width="300dp"

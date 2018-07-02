@@ -270,6 +270,13 @@ public class admin_generate_statement extends AppCompatActivity {
                                             appendTextView(textView4,String.valueOf(value));
 
                                             continue;
+                                        }else{
+                                            appendTextView(textView,map.get("Username").toString().trim());
+                                            appendTextView(textView1,"-");
+                                            appendTextView(textView2,"-");
+                                            appendTextView(textView3,map.get("Balance").toString().trim());
+                                            //Float value = Float.parseFloat(map.get("Balance").toString().trim()) - Float.parseFloat(map.get("Amount12").toString().trim());
+                                            appendTextView(textView4,"-");
                                         }
 
 

@@ -3,11 +3,14 @@ package com.example.application.watermeter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -17,12 +20,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Vector;
 
 public class update_balance extends AppCompatActivity {
 
-
-    private EditText flatno;
+    private Spinner flatNo;
     private EditText amount;
     private Button update;
 
@@ -45,10 +51,17 @@ public class update_balance extends AppCompatActivity {
     private RadioButton add;
     private RadioButton updated;
 
+    private ArrayList<String> arr;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_balance);
+
+        flatNo = (Spinner) findViewById(R.id.flat_no);
+
+        final ArrayList<String> arr = new ArrayList<String>();
 
         Intent intent = getIntent();
         Area = intent.getStringExtra("Area");
@@ -62,11 +75,61 @@ public class update_balance extends AppCompatActivity {
         City = intent.getStringExtra("City");
         username_password = intent.getStringExtra("username_password");
 
-        flatno = (EditText)findViewById(R.id.flat_no);
         amount = (EditText)findViewById(R.id.amt);
 
         fbDatabase = FirebaseDatabase.getInstance();
         fbDatabaseReference = fbDatabase.getReference();
+
+        final int i = 0;
+
+        Query query = fbDatabaseReference
+                .child("Admin").child(Username)
+                .orderByChild("username_password");
+
+        arr.add("Select Flat Number");
+
+        query.addListenerForSingleValueEvent(new ValueEventListener(){
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.getValue()!=null) {
+
+                    //Log.d("dataSnapshot ", dataSnapshot.toString());
+
+                    HashMap<String, Object> studentdata = (HashMap<String, Object>) dataSnapshot.getValue();
+                    //Log.d("dataSnapshot ", studentdata.toString());
+
+                    for (String key : studentdata.keySet()) {
+
+                        Object mObject = studentdata.get(key);
+                        HashMap<String, Object> map = (HashMap<String, Object>) mObject;
+
+                        HashMap<String, Object> userData = new HashMap<String, Object>();
+
+                        if(!map.get("Username").toString().equals(Username)){
+                            Log.d("Map",map.toString());
+
+                            String user = map.get("Username").toString().trim();
+                            arr.add(user);
+
+                        }
+                    }
+
+                    ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,arr);
+                    arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                    flatNo.setAdapter(arrayAdapter1);
+
+                }else {
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }});
 
         update = (Button)findViewById(R.id.update);
 
@@ -77,8 +140,13 @@ public class update_balance extends AppCompatActivity {
     }
 
     public void change(View view){
-        final String username = flatno.getText().toString().trim();
+        final String username = flatNo.getSelectedItem().toString().trim();
         final String amt = amount.getText().toString().trim();
+
+        if(username.equals("Select Flat Number")) {
+            Toast.makeText(getApplicationContext(),"Select a flat number",Toast.LENGTH_LONG).show();
+            return;
+        }
 
         Query query = fbDatabaseReference
                 .child("Admin").child(Username).orderByChild("Username")
@@ -166,6 +234,8 @@ public class update_balance extends AppCompatActivity {
                         }
 
                         Toast.makeText(getApplicationContext(), "Updated Balance", Toast.LENGTH_LONG).show();
+
+                        finish();
                     }
                 }
             }
